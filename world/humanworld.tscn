@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cfgmwfq4ebx3h"]
+
+[ext_resource type="Texture2D" uid="uid://bi52jymbt8cs5" path="res://icon.svg" id="1_1fta8"]
+[ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://player/player.tscn" id="1_gb136"]
+[ext_resource type="Script" uid="uid://dhxbl5rjfu838" path="res://world/humanworld.gd" id="1_pwe01"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y00b8"]
+size = Vector2(278, 64)
+
+[sub_resource type="TileSet" id="TileSet_ggvup"]
+
+[node name="Node2D" type="Node2D" unique_id=722819845]
+script = ExtResource("1_pwe01")
+
+[node name="CharacterBody2D" parent="." unique_id=981155298 instance=ExtResource("1_gb136")]
+position = Vector2(28, 64)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2032163765]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=24244331]
+position = Vector2(139, 112)
+shape = SubResource("RectangleShape2D_y00b8")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=672770341]
+position = Vector2(139, 112)
+scale = Vector2(2.171875, 0.5)
+texture = ExtResource("1_1fta8")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=928712323]
+tile_set = SubResource("TileSet_ggvup")
