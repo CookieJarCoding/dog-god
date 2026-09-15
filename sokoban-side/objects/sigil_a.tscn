@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dpcsbyxv8dv7u"]
+
+[ext_resource type="Script" uid="uid://cd0nxyw003m8o" path="res://sokoban-side/scripts/sigil_a.gd" id="1_1n2wb"]
+[ext_resource type="Texture2D" uid="uid://cccyicpggywg7" path="res://sokoban-side/placeholder_sprites.png" id="2_wqhek"]
+
+[node name="Sigil_A" type="Node2D" unique_id=1375101206]
+script = ExtResource("1_1n2wb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=547649085]
+texture = ExtResource("2_wqhek")
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 16)
