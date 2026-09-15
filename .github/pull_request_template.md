@@ -5,11 +5,8 @@
 ## Type of change
 
 - [ ] Feature
-
 - [ ] Bug fix
-
 - [ ] Refactor
-
 - [ ] Miscellaneous
 
 ## How to test (optional)
