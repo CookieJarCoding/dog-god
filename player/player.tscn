@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dy20fqfm7y308"]
 
-[ext_resource type="Texture2D" uid="uid://cdkotatqvmfln" path="res://player/temp-brioche.png" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://bp1335h0jd2sh" path="res://player/temp-brioche.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://d2unxotvw3tin" path="res://player/player.gd" id="1_rkbax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbhhb"]
@@ -10,12 +10,13 @@ size = Vector2(16, 16)
 script = ExtResource("1_rkbax")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2062403349]
-position = Vector2(8, 8)
+position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_mbhhb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2024771709]
-position = Vector2(8, 8.125)
+position = Vector2(1.6940659e-21, -7.9999995)
 scale = Vector2(0.033195034, 0.045138888)
 texture = ExtResource("1_4flbx")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=92072074]
+offset = Vector2(0, -52)

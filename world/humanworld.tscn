@@ -1,30 +1,33 @@
-[gd_scene format=3 uid="uid://cfgmwfq4ebx3h"]
+[gd_scene format=4 uid="uid://cfgmwfq4ebx3h"]
 
-[ext_resource type="Texture2D" uid="uid://bi52jymbt8cs5" path="res://icon.svg" id="1_1fta8"]
 [ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://player/player.tscn" id="1_gb136"]
 [ext_resource type="Script" uid="uid://dhxbl5rjfu838" path="res://world/humanworld.gd" id="1_pwe01"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y00b8"]
-size = Vector2(278, 64)
-
-[sub_resource type="TileSet" id="TileSet_ggvup"]
+[ext_resource type="TileSet" uid="uid://bb1qw1x5mc1gu" path="res://world/doghouse.tres" id="4_pwe01"]
 
 [node name="Node2D" type="Node2D" unique_id=722819845]
 script = ExtResource("1_pwe01")
 
 [node name="CharacterBody2D" parent="." unique_id=981155298 instance=ExtResource("1_gb136")]
-position = Vector2(28, 64)
+z_index = 1
+position = Vector2(224, 127)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2032163765]
+[node name="TileMapLayer-Ground" type="TileMapLayer" parent="." unique_id=928712323]
+tile_map_data = PackedByteArray("AAAAAAgAAgAAAAAAAAABAAgAAgABAAAAAAACAAgAAgABAAAAAAADAAgAAgAAAAAAAAAEAAgAAgABAAAAAAAFAAgAAgAAAAAAAAAGAAgAAgABAAAAAAAHAAgAAgAAAAAAAAAIAAgAAgABAAAAAAAJAAgAAgAAAAAAAAANAAgAAgABAAAAAAAPAAgAAgABAAAAAAALAAgAAgABAAAAAAAMAAgAAgABAAAAAAAKAAgAAgAAAAAAAAAOAAgAAgAAAAAAAAAQAAgAAgAAAAAAAAARAAgAAgAAAAAAAAA=")
+tile_set = ExtResource("4_pwe01")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=24244331]
-position = Vector2(139, 112)
-shape = SubResource("RectangleShape2D_y00b8")
+[node name="TileMapLayer-Background" type="TileMapLayer" parent="." unique_id=694501250]
+tile_map_data = PackedByteArray("AAAOAAUAAgACAAAAAAAOAAYAAgACAAEAAAAOAAcAAgACAAIAAAAPAAUAAgADAAAAAAAPAAYAAgADAAEAAAAPAAcAAgADAAIAAAAQAAUAAgAEAAAAAAAQAAYAAgAEAAEAAAAQAAcAAgAEAAIAAAARAAUAAgAFAAAAAAARAAYAAgAFAAEAAAARAAcAAgAFAAIAAAARAAQAAgABAAEAAAAQAAQAAgABAAEAAAAPAAQAAgABAAEAAAAOAAQAAgABAAEAAAANAAQAAgABAAEAAAAMAAQAAgABAAEAAAALAAQAAgABAAEAAAAKAAQAAgABAAEAAAAJAAQAAgABAAEAAAAIAAQAAgABAAEAAAAHAAQAAgABAAEAAAAGAAQAAgABAAEAAAAFAAQAAgABAAEAAAAEAAQAAgABAAEAAAADAAQAAgABAAEAAAACAAQAAgABAAEAAAABAAQAAgABAAEAAAAAAAQAAgABAAEAAAAAAAMAAgAAAAEAAAABAAMAAgAAAAEAAAACAAMAAgAAAAEAAAADAAMAAgAAAAEAAAAEAAMAAgAAAAEAAAAFAAMAAgAAAAEAAAAGAAMAAgAAAAEAAAAHAAMAAgAAAAEAAAAIAAMAAgAAAAEAAAAJAAMAAgAAAAEAAAAKAAMAAgAAAAEAAAALAAMAAgAAAAEAAAAMAAMAAgAAAAEAAAANAAMAAgAAAAEAAAAOAAMAAgAAAAEAAAAPAAMAAgAAAAEAAAAQAAMAAgAAAAEAAAARAAMAAgAAAAEAAAA=")
+tile_set = ExtResource("4_pwe01")
+collision_enabled = false
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=672770341]
-position = Vector2(139, 112)
-scale = Vector2(2.171875, 0.5)
-texture = ExtResource("1_1fta8")
+[node name="ColorRect-Sky" type="ColorRect" parent="TileMapLayer-Background" unique_id=252595910]
+offset_right = 288.0
+offset_bottom = 50.0
+color = Color(0.32941177, 0.30588236, 0.40784314, 1)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=928712323]
-tile_set = SubResource("TileSet_ggvup")
+[node name="ColorRect-Fence" type="ColorRect" parent="TileMapLayer-Background" unique_id=441322373]
+z_index = -1
+offset_top = 80.0
+offset_right = 288.0
+offset_bottom = 143.0
+color = Color(0.050980393, 0.16862746, 0.27058825, 1)
