@@ -7,6 +7,10 @@
 script = ExtResource("1_72ac4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1618899605]
+visibility_layer = 4
+z_index = 10
+z_as_relative = false
+y_sort_enabled = true
 texture = ExtResource("2_gkies")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
