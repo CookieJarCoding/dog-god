@@ -48,11 +48,30 @@ func adjust_tag_position(pos: int, source_string: String) -> int:
 	var any_tag_regex = RegEx.new()
 	any_tag_regex.compile("({(.*?)})")
 	
+	## Account for previous tags
+	
 	var new_pos := pos
 	var left_of_pos := source_string.left(pos)
 	var all_previous_tags := any_tag_regex.search_all(left_of_pos)
 	
 	for tag in all_previous_tags:
+		new_pos -= tag.get_string().length()
+	
+	## Account for previous BBCodes
+	# NOTE: regex might not be 100% accurate apparently?
+	
+	var bbcode_i_regex := RegEx.new()
+	var bbcode_e_regex := RegEx.new()
+	
+	bbcode_i_regex.compile("\\[(?!\\/)(.*?)\\]")
+	bbcode_e_regex.compile("\\[\\/(.*?)\\]")
+	
+	var all_prev_start_bbcodes := bbcode_i_regex.search_all(left_of_pos)
+	for tag in all_prev_start_bbcodes:
+		new_pos -= tag.get_string().length()
+	
+	var all_prev_end_bbcodes := bbcode_e_regex.search_all(left_of_pos)
+	for tag in all_prev_end_bbcodes:
 		new_pos -= tag.get_string().length()
 	
 	return new_pos
