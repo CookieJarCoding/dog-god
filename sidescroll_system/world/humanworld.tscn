@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://cfgmwfq4ebx3h"]
 
-[ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://player/player.tscn" id="1_gb136"]
-[ext_resource type="Script" uid="uid://dhxbl5rjfu838" path="res://world/humanworld.gd" id="1_pwe01"]
-[ext_resource type="TileSet" uid="uid://bb1qw1x5mc1gu" path="res://world/doghouse.tres" id="4_pwe01"]
-[ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://oldman/oldman.tscn" id="4_uaoea"]
+[ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://sidescroll_system/player/player.tscn" id="1_gb136"]
+[ext_resource type="Script" uid="uid://dhxbl5rjfu838" path="res://sidescroll_system/world/humanworld.gd" id="1_pwe01"]
+[ext_resource type="TileSet" uid="uid://bb1qw1x5mc1gu" path="res://sidescroll_system/world/doghouse.tres" id="4_pwe01"]
+[ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://sidescroll_system/oldman/oldman.tscn" id="4_uaoea"]
 
 [node name="Node2D" type="Node2D" unique_id=722819845]
 script = ExtResource("1_pwe01")
