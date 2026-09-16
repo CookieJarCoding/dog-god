@@ -22,7 +22,10 @@ scale = Vector2(0.06639004, 0.08888888)
 texture = ExtResource("1_4flbx")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=92072074]
-offset = Vector2(0, -55)
+offset = Vector2(0, -39)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
 
 [node name="Label-Bark" type="Label" parent="." unique_id=523306035]
 visible = false

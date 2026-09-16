@@ -26,7 +26,13 @@ func calculate_horizontal_bounds() -> void:
 	player_horizontal_bounds = Vector2(
 		left_edge - player_offsets.x,
 		right_edge - player_offsets.y
-)
+	)
+	set_camera_bounds(left_edge, right_edge)
 
 func constrain_player() -> void:
 	player.position.x = clampf(player.position.x, player_horizontal_bounds.x, player_horizontal_bounds.y)
+
+func set_camera_bounds(left, right) -> void:
+	var camera_node = player.get_node("Camera2D")
+	camera_node.limit_left = left
+	camera_node.limit_right = right
