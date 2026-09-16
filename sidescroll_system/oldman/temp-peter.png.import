@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dopv36wown4ph"
-path="res://.godot/imported/temp-peter.png-a5bc6736122b0a3e598f2a2ad1615032.ctex"
+path="res://.godot/imported/temp-peter.png-6c721475221d0221b3f633b690b8b610.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://oldman/temp-peter.png"
-dest_files=["res://.godot/imported/temp-peter.png-a5bc6736122b0a3e598f2a2ad1615032.ctex"]
+source_file="res://sidescroll_system/oldman/temp-peter.png"
+dest_files=["res://.godot/imported/temp-peter.png-6c721475221d0221b3f633b690b8b610.ctex"]
 
 [params]
 

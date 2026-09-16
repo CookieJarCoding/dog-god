@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://player/player.tscn" id="1_gb136"]
 [ext_resource type="Script" uid="uid://dhxbl5rjfu838" path="res://world/humanworld.gd" id="1_pwe01"]
 [ext_resource type="TileSet" uid="uid://bb1qw1x5mc1gu" path="res://world/doghouse.tres" id="4_pwe01"]
+[ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://oldman/oldman.tscn" id="4_uaoea"]
 
 [node name="Node2D" type="Node2D" unique_id=722819845]
 script = ExtResource("1_pwe01")
@@ -31,3 +32,6 @@ offset_top = 80.0
 offset_right = 288.0
 offset_bottom = 143.0
 color = Color(0.050980393, 0.16862746, 0.27058825, 1)
+
+[node name="Area2D" parent="." unique_id=533569569 instance=ExtResource("4_uaoea")]
+position = Vector2(191, 127)

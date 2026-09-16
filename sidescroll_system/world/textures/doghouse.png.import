@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fglbi3at1g6x"
-path="res://.godot/imported/doghouse.png-bf08ba062705b2c2a8246fec2c64f235.ctex"
+path="res://.godot/imported/doghouse.png-f56a93ca9c8de8e0dbeaca83d21530fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/textures/doghouse.png"
-dest_files=["res://.godot/imported/doghouse.png-bf08ba062705b2c2a8246fec2c64f235.ctex"]
+source_file="res://sidescroll_system/world/textures/doghouse.png"
+dest_files=["res://.godot/imported/doghouse.png-f56a93ca9c8de8e0dbeaca83d21530fc.ctex"]
 
 [params]
 
