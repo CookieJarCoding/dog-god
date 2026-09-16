@@ -3,7 +3,9 @@ class_name Player
 
 @export var speed := 75.0
 
-func _process(_delta):
+@onready var collision_shape = $CollisionShape2D
+
+func _physics_process(_delta: float) -> void:
 	velocity = Vector2.ZERO
 
 	if Input.is_action_pressed("right"):
@@ -13,3 +15,8 @@ func _process(_delta):
 
 	velocity = velocity.normalized() * speed
 	move_and_slide()
+
+func get_horizontal_collision() -> Vector2:
+	var shape = collision_shape.shape
+	var half_width = shape.size.x * 0.5
+	return Vector2(collision_shape.position.x - half_width, collision_shape.position.x + half_width)
