@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://ccnj075abovx"]
 
 [ext_resource type="Texture2D" uid="uid://dopv36wown4ph" path="res://sidescroll_system/oldman/temp-peter.png" id="1_4q5nd"]
+[ext_resource type="Script" uid="uid://be5rlk05h31wb" path="res://sidescroll_system/oldman/oldman.gd" id="1_mnlrb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmglj"]
 size = Vector2(32, 80)
 
 [node name="Area2D" type="Area2D" unique_id=533569569]
+script = ExtResource("1_mnlrb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1916171360]
 position = Vector2(0, -40)

@@ -5,6 +5,9 @@ class_name Player
 
 @onready var collision_shape = $CollisionShape2D
 @onready var bark_indicator = $"Label-Bark"
+@onready var dialogue_indicator = $"Label-Dialogue"
+
+var current_interactable: Area2D = null
 
 func _physics_process(_delta: float) -> void:
 	velocity = Vector2.ZERO
@@ -21,6 +24,17 @@ func _physics_process(_delta: float) -> void:
 		bark_indicator.show()
 		await get_tree().create_timer(0.25).timeout
 		bark_indicator.hide()
+	
+	if Input.is_action_just_pressed("A") and current_interactable != null:
+		trigger_dialogue()
+
+func trigger_dialogue() -> void:
+	# BASIC PLACEHOLDER IMPLEMENTATION
+	current_interactable.print_dialogue()
+	dialogue_indicator.text = current_interactable.interact_dialogue
+	dialogue_indicator.show()
+	await get_tree().create_timer(1).timeout
+	dialogue_indicator.hide()
 
 func get_horizontal_collision() -> Vector2:
 	var shape = collision_shape.shape
