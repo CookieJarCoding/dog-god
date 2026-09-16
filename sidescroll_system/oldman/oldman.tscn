@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://ccnj075abovx"]
 
-[ext_resource type="Texture2D" uid="uid://dopv36wown4ph" path="res://oldman/temp-peter.png" id="1_4q5nd"]
+[ext_resource type="Texture2D" uid="uid://dopv36wown4ph" path="res://sidescroll_system/oldman/temp-peter.png" id="1_4q5nd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmglj"]
-size = Vector2(32, 64)
+size = Vector2(32, 80)
 
 [node name="Area2D" type="Area2D" unique_id=533569569]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1916171360]
-position = Vector2(0, -32)
+position = Vector2(0, -40)
 shape = SubResource("RectangleShape2D_dmglj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1120787858]
-position = Vector2(0, -32)
-scale = Vector2(0.09726444, 0.09653093)
+position = Vector2(7.6293945e-06, -39.999996)
+scale = Vector2(0.09726444, 0.12066366)
 texture = ExtResource("1_4q5nd")
