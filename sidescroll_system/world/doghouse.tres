@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://bb1qw1x5mc1gu"]
 
-[ext_resource type="Texture2D" uid="uid://fglbi3at1g6x" path="res://world/textures/doghouse.png" id="1_y7vlu"]
+[ext_resource type="Texture2D" uid="uid://fglbi3at1g6x" path="res://sidescroll_system/world/textures/doghouse.png" id="1_y7vlu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uaoea"]
 resource_name = "doghouse"
