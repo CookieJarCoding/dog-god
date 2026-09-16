@@ -30,7 +30,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if OS.is_debug_build() and Input.is_action_just_pressed("debug_m"):
-		update_message("Hello!{p=0.5} This is a {p=0.5}piece{p=0.5} of dialogue.")
+		update_message("[wave amp=7.0 freq=10.0]Hello![/wave]{p=0.5} This is a {p=0.5}piece{p=0.5} of dialogue.")
 	
 	if timer > (1.0 / message_speed):
 		display_next_character()
@@ -47,7 +47,7 @@ func update_message(message: String) -> void:
 
 
 func display_next_character() -> void:
-	if dialogue_label.visible_characters < dialogue_label.text.length():
+	if dialogue_label.visible_characters < dialogue_label.get_parsed_text().length():
 		pause_calculator.check_at_position(dialogue_label.visible_characters)
 		
 		dialogue_label.visible_characters += 1

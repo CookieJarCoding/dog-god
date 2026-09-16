@@ -35,9 +35,6 @@ func find_pauses(source_string: String) -> void:
 		var tag_string: String = result.get_string()
 		var tag_position: int = adjust_tag_position(result.get_start(), source_string)
 		
-		if OS.is_debug_build():
-			print(tag_string, tag_position)
-		
 		var pause = Pause.new(tag_position, tag_string)
 		pauses.append(pause)
 
