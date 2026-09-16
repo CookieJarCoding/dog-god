@@ -27,5 +27,16 @@ func get_tile_type(target: Vector2i) -> int:
 				return 0
 	else:
 		return 0
+		
+func get_sigil_at_tile(tile: Vector2i) -> TileSigil:
+	for s in tile_sigils:
+		if tile == s.tile:
+			return s
+	return null
+	
+func pop_first_sigil() -> void:
+	sigil_queue.pop_front()
+
+	
 	
 		

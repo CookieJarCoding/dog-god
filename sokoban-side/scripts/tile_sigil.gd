@@ -14,9 +14,16 @@ func _exit_tree() -> void:
 
 func light_up() -> void:
 	is_lit = true
+	set_sprite()
 	
 func unlight() -> void:
 	is_lit = false
-	
+	set_sprite()
+
 func set_sprite() -> void:
-	pass # Will do this if theres actual sigil sprits im too lazy bleh
+	if is_lit:
+		$Button.region_rect.position.x = 16*4
+		$SigilSymbol.region_rect.position.y = 96 + 16
+	else:
+		$Button.region_rect.position.x = 16*3
+		$SigilSymbol.region_rect.position.y = 96
