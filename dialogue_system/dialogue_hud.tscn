@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bjl2llqhnxyfc"]
+
+[ext_resource type="FontFile" uid="uid://dyp15uxivo52b" path="res://fonts/16bfZX.ttf" id="1_8nvcn"]
+
+[node name="DialogueHUD" type="CanvasLayer" unique_id=737158445]
+
+[node name="Container" type="MarginContainer" parent="." unique_id=312694899]
+anchors_preset = -1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="_TOCHANGETO9PR" type="ColorRect" parent="Container" unique_id=1931216845]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Dialogue" type="RichTextLabel" parent="Container" unique_id=1287762183]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("1_8nvcn")
+theme_override_font_sizes/normal_font_size = 16
+text = "assadads"
