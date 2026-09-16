@@ -8,8 +8,8 @@ class_name Dialogue
 
 
 @onready var dialogue_label: RichTextLabel = $MainContainer/ContentContainer/DialogueLabel
-# NOTE: Currently unused
 @onready var pause_timer: Timer = $PauseTimer
+@onready var pause_calculator: PauseCalculator = $PauseCalculator
 @onready var blip: AudioStreamPlayer = $DialogueBlip
 
 
@@ -30,7 +30,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if OS.is_debug_build() and Input.is_action_just_pressed("debug_m"):
-		update_message("Hello! This is a piece of dialogue.")
+		update_message("Hello!{p=0.5} This is a {p=0.5}piece{p=0.5} of dialogue.")
 	
 	if timer > (1.0 / message_speed):
 		display_next_character()
@@ -41,13 +41,15 @@ func _process(delta: float) -> void:
 
 
 func update_message(message: String) -> void:
-	dialogue_label.text = message
+	dialogue_label.text = pause_calculator.extract_pauses_from_string(message)
 	dialogue_label.visible_characters = 0
 	start_timer()
 
 
 func display_next_character() -> void:
 	if dialogue_label.visible_characters < dialogue_label.text.length():
+		pause_calculator.check_at_position(dialogue_label.visible_characters)
+		
 		dialogue_label.visible_characters += 1
 		# NOTE: Using this implementation, the MINIMUM blip length is set by
 		# the length of the .wav file.
@@ -67,3 +69,14 @@ Helper functions
 
 func start_timer() -> void:
 	is_timer_running = true
+
+func stop_timer() -> void:
+	is_timer_running = false
+
+func _on_PauseCalculator_pause_requested(duration: float) -> void:
+	stop_timer()
+	pause_timer.wait_time = duration
+	pause_timer.start()
+
+func _on_PauseTimer_timeout() -> void:
+	start_timer()
