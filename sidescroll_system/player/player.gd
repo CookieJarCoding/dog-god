@@ -21,14 +21,17 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("B"):
-		bark_indicator.show()
-		await get_tree().create_timer(0.25).timeout
-		bark_indicator.hide()
+		bark();
 	
 	if Input.is_action_just_pressed("A") and current_interactable != null:
-		trigger_dialogue()
+		trigger_interaction()
 
-func trigger_dialogue() -> void:
+func bark() -> void:
+	bark_indicator.show()
+	await get_tree().create_timer(0.25).timeout
+	bark_indicator.hide()
+
+func trigger_interaction() -> void:
 	# BASIC PLACEHOLDER IMPLEMENTATION
 	current_interactable.print_dialogue()
 	dialogue_indicator.text = current_interactable.interact_dialogue
