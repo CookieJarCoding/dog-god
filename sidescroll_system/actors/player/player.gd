@@ -44,12 +44,19 @@ func _physics_process(_delta: float) -> void:
 
 	velocity = velocity.normalized() * speed
 	move_and_slide()
+	face_direction(velocity)
 	
 	if Input.is_action_just_pressed("B"):
 		bark();
 	
 	if Input.is_action_just_pressed("A") and current_interactable != null:
 		trigger_interaction()
+
+func face_direction(v: Vector2) -> void:
+	if v.x > 0:
+		$Sprite2D.flip_h = true
+	elif v.x < 0:
+		$Sprite2D.flip_h = false
 
 func get_horizontal_collision() -> Vector2:
 	var shape = collision_shape.shape
