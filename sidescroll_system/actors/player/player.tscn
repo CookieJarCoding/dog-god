@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dy20fqfm7y308"]
 
-[ext_resource type="Texture2D" uid="uid://bp1335h0jd2sh" path="res://sidescroll_system/actors/player/temp-brioche.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://d2unxotvw3tin" path="res://sidescroll_system/actors/player/player.gd" id="1_rkbax"]
+[ext_resource type="Texture2D" uid="uid://cu0tocvqxc7sn" path="res://sidescroll_system/actors/player/temp-brioche-2.png" id="2_12cir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbhhb"]
 size = Vector2(32, 32)
@@ -17,12 +17,12 @@ position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_mbhhb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2024771709]
-position = Vector2(-1.6940659e-21, -16)
-scale = Vector2(0.06639004, 0.08888888)
-texture = ExtResource("1_4flbx")
+position = Vector2(1.3709068e-06, -16.011112)
+scale = Vector2(0.13617022, 0.12946469)
+texture = ExtResource("2_12cir")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=92072074]
-offset = Vector2(0, -55)
+offset = Vector2(0, -39)
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
