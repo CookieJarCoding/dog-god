@@ -49,8 +49,3 @@ shape = SubResource("RectangleShape2D_dmglj")
 
 [node name="Dogbowl" parent="." unique_id=2036189083 instance=ExtResource("6_l6ibe")]
 position = Vector2(232, 127)
-
-[connection signal="body_entered" from="Oldman" to="Oldman" method="_on_body_entered"]
-[connection signal="body_exited" from="Oldman" to="Oldman" method="_on_body_exited"]
-[connection signal="body_entered" from="Doghouse" to="Doghouse" method="_on_body_entered"]
-[connection signal="body_exited" from="Doghouse" to="Doghouse" method="_on_body_exited"]

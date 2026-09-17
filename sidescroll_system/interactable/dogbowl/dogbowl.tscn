@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://6721d6fb36ed"]
+
+[ext_resource type="Script" uid="uid://co6e63bdtuk3i" path="res://sidescroll_system/interactable/dogbowl/dogbowl.gd" id="1_g2yob"]
+[ext_resource type="Texture2D" uid="uid://b4xml67s7wcvu" path="res://sidescroll_system/interactable/dogbowl/dogbowl.png" id="2_rs4or"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y00b8"]
+size = Vector2(16, 16)
+
+[sub_resource type="Animation" id="Animation_rs4or"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_lx752"]
+resource_name = "glow"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.083333336, 0, 0, 0, 0, -0.083333336, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.75, 1.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xtq7a"]
+_data = {
+&"RESET": SubResource("Animation_rs4or"),
+&"glow": SubResource("Animation_lx752")
+}
+
+[node name="Dogbowl" type="Area2D" unique_id=2036189083]
+script = ExtResource("1_g2yob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1974680570]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_y00b8")
+
+[node name="BaseSprite" type="Sprite2D" parent="." unique_id=503732391]
+position = Vector2(0, -8)
+texture = ExtResource("2_rs4or")
+hframes = 2
+vframes = 2
+
+[node name="GlowSprite" type="Sprite2D" parent="." unique_id=1959736632]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -8)
+texture = ExtResource("2_rs4or")
+hframes = 2
+vframes = 2
+frame = 1
+
+[node name="Animation" type="AnimationPlayer" parent="GlowSprite" unique_id=13525608]
+libraries/ = SubResource("AnimationLibrary_xtq7a")
