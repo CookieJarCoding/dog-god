@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0caaadwl5q1m"
-path="res://.godot/imported/human-test-1.png-6bc4e1c0e874630ca2b86c64d6885c58.ctex"
+uid="uid://dopv36wown4ph"
+path="res://.godot/imported/temp-peter.png-16118ee20521207b7ee84a96c6d0f473.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sidescroll_system/world/textures/human-test-1.png"
-dest_files=["res://.godot/imported/human-test-1.png-6bc4e1c0e874630ca2b86c64d6885c58.ctex"]
+source_file="res://sidescroll_system/actors/oldman/temp-peter.png"
+dest_files=["res://.godot/imported/temp-peter.png-16118ee20521207b7ee84a96c6d0f473.ctex"]
 
 [params]
 

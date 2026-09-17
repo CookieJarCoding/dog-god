@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://cfgmwfq4ebx3h"]
 
-[ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://sidescroll_system/player/player.tscn" id="1_gb136"]
-[ext_resource type="Script" uid="uid://dhxbl5rjfu838" path="res://sidescroll_system/world/humanworld.gd" id="1_pwe01"]
-[ext_resource type="TileSet" uid="uid://bmthdftunli1l" path="res://sidescroll_system/world/textures/human-test-2.tres" id="2_w3jey"]
-[ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://sidescroll_system/oldman/oldman.tscn" id="4_uaoea"]
-[ext_resource type="Script" uid="uid://dtnkeroq2rihw" path="res://sidescroll_system/world/interactable_doghouse.gd" id="5_e8gki"]
+[ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://sidescroll_system/actors/player/player.tscn" id="1_gb136"]
+[ext_resource type="Script" uid="uid://dhxbl5rjfu838" path="res://sidescroll_system/rooms/backyard/backyard.gd" id="1_pwe01"]
+[ext_resource type="TileSet" uid="uid://bmthdftunli1l" path="res://sidescroll_system/rooms/backyard/human-test-2.tres" id="2_w3jey"]
+[ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://sidescroll_system/actors/oldman/oldman.tscn" id="4_uaoea"]
+[ext_resource type="Script" uid="uid://dtnkeroq2rihw" path="res://sidescroll_system/rooms/backyard/doghouse.gd" id="5_e8gki"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmglj"]
 size = Vector2(57, 46)

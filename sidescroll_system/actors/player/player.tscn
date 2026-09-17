@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dy20fqfm7y308"]
 
-[ext_resource type="Texture2D" uid="uid://bp1335h0jd2sh" path="res://sidescroll_system/player/temp-brioche.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://d2unxotvw3tin" path="res://sidescroll_system/player/player.gd" id="1_rkbax"]
+[ext_resource type="Texture2D" uid="uid://bp1335h0jd2sh" path="res://sidescroll_system/actors/player/temp-brioche.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://d2unxotvw3tin" path="res://sidescroll_system/actors/player/player.gd" id="1_rkbax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbhhb"]
 size = Vector2(32, 32)

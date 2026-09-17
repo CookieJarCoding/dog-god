@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dopv36wown4ph"
-path="res://.godot/imported/temp-peter.png-6c721475221d0221b3f633b690b8b610.ctex"
+uid="uid://bp1335h0jd2sh"
+path="res://.godot/imported/temp-brioche.png-5b2496a103aeb6172533e4c2236d2afe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sidescroll_system/oldman/temp-peter.png"
-dest_files=["res://.godot/imported/temp-peter.png-6c721475221d0221b3f633b690b8b610.ctex"]
+source_file="res://sidescroll_system/actors/player/temp-brioche.png"
+dest_files=["res://.godot/imported/temp-brioche.png-5b2496a103aeb6172533e4c2236d2afe.ctex"]
 
 [params]
 
