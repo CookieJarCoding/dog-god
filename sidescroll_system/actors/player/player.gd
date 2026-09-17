@@ -4,8 +4,8 @@ class_name Player
 @export var speed := 75.0
 
 @onready var collision_shape = $CollisionShape2D
-@onready var bark_indicator = $"Label-Bark"
-@onready var dialogue_indicator = $"Label-Dialogue"
+@onready var bark_indicator: Label = $Bark
+@onready var dialogue_indicator: Label = $Dialogue
 
 var nearby_objects: Array[Interactable] = []
 var current_interactable: Interactable = null
@@ -34,7 +34,7 @@ func bark() -> void:
 	await get_tree().create_timer(0.25).timeout
 	bark_indicator.hide()
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(_delta: float) -> void:	
 	velocity = Vector2.ZERO
 
 	if Input.is_action_pressed("right"):
