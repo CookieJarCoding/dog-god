@@ -7,6 +7,10 @@ extends CanvasLayer
 class_name Dialogue
 
 
+# NOTE: Maybe these can be automatically set somehow..?
+const INITIAL_Y = 200.0
+const FINAL_Y = 128.0
+
 @onready var dialogue_label: RichTextLabel = $MainContainer/ContentContainer/DialogueLabel
 @onready var pause_timer: Timer = $PauseTimer
 @onready var pause_calculator: PauseCalculator = $PauseCalculator
@@ -15,9 +19,13 @@ class_name Dialogue
 
 var timer: float = 0
 var is_timer_running: bool = false
+var is_fully_visible: bool = false
 # NOTE: Letters rendered per second.
 var message_speed: float = 30.0
 var rng = RandomNumberGenerator.new()
+
+
+signal message_completed
 
 
 '''
@@ -25,15 +33,21 @@ Main functions
 '''
 
 
-func _process(delta: float) -> void:
-	if OS.is_debug_build() and Input.is_action_just_pressed("debug_m"):
-		update_message("[wave amp=7.0 freq=10.0]Hello![/wave]{p=0.5} This is a {p=0.5}piece{p=0.5} of dialogue.")
+func _enter_tree() -> void:
+	$MainContainer.position.y = INITIAL_Y
+	var tween = create_tween()
+	tween.tween_property($MainContainer, "position:y", FINAL_Y, 0.8).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
 	
+	await tween.finished
+	is_fully_visible = true
+
+
+func _process(delta: float) -> void:
 	if timer > (1.0 / message_speed):
 		display_next_character()
 		timer = 0
 	
-	if is_timer_running:
+	if is_timer_running and is_fully_visible:
 		timer += delta
 
 
@@ -56,7 +70,14 @@ func display_next_character() -> void:
 			# WARNING/TODO: There seems to be a short delay when playing an AudioStream
 			# for the first time. To be fixed
 			blip.play(0)
+	else:
+		message_completed.emit()
 
+
+# TODO: Placeholder for now.
+func slide_down() -> void:
+	var tween = create_tween()
+	tween.tween_property($MainContainer, "position:y", INITIAL_Y, 0.8).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
 
 
 '''
@@ -77,3 +98,7 @@ func _on_PauseCalculator_pause_requested(duration: float) -> void:
 
 func _on_PauseTimer_timeout() -> void:
 	start_timer()
+
+## TODO
+func message_is_fully_visible() -> bool:
+	return is_fully_visible

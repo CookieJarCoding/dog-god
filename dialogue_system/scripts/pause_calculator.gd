@@ -88,4 +88,4 @@ func check_at_position(pos: int) -> void:
 		# next line is unnecessary but I like having autocomplete
 		if pause is Pause:
 			if pause.pause_pos == pos:
-				emit_signal("pause_requested", pause.duration)
+				pause_requested.emit(pause.duration)

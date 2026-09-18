@@ -7,8 +7,7 @@ class_name DialogueManager
 
 const DIALOGUE_SCENE := preload("res://dialogue_system/dialogue_hud.tscn")
 
-# tween here
-
+# WARNING: Signals currently unused
 signal message_requested
 signal message_completed
 signal finished
@@ -20,34 +19,67 @@ var current_dialogue_instance: Dialogue
 
 
 
+func _ready() -> void:
+	load_messages([
+		"First{p=0.2}.{p=0.2}.{p=0.2}.{p=0.5} hello!", "This is a [shake rate=20.0 level=5][color=green]{p=0.2}c{p=0.2}o{p=0.2}o{p=0.2}l{p=0.2}[/color][/shake] dialogue system!", "Goodbye now!"
+	])
+
+
 func _process(_delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("A"):
+		# NOTE: We *could* make it so that messages can only be moved forward iff
+		# the message has been fully rendered
+		if is_active and current_dialogue_instance.message_is_fully_visible():
+			if active_dialogue_index < messages.size() - 1:
+				active_dialogue_index += 1
+				show_current_message()
+			else:
+				hide()
 
 
-# NOTE: Why the position parameter?
-func show_messages(message_list: Array, _position: Vector2) -> void:
-	if is_active:
+# NOTE: Opted to call this 'load_' instead of 'show_messages'
+# NOTE: load_messages() WILL immediately show the first dialogue with this implementation.
+func load_messages(message_list: Array) -> void:
+	if is_active or message_list.is_empty():
 		return
+	is_active = true
 	
 	messages = message_list
 	active_dialogue_index = 0
 	
-	var dialogue: Dialogue = DIALOGUE_SCENE.instance()
-	dialogue.connect("message_completed", on_message_completed)
+	var dialogue: Dialogue = DIALOGUE_SCENE.instantiate()
+	# NOTE: This might be a little confusing, but basically
+	# Dialogue.message_completed --TRIGGERS--> DialogueManager.on_message_completed()
+	# on_message_completed() --EMITS--> DialogueManager.message_completed
+	# The last signal can then be used to, say, show a button indicator for when to move dialogue.
+	dialogue.message_completed.connect(on_message_completed)
 	
-	# NOTE: Why as child of the root in the tutorial? I opted to add it as sibling instead.
-	add_sibling(dialogue)
+	# NOTE: I opted to add dialogue HUD as sibling instead.
+	add_sibling.call_deferred(dialogue)
 	
 	current_dialogue_instance = dialogue
 	
-	show_current()
+	# WARNING: This is apparently necessary to make this work. Without it,
+	# show_current_messages() -> dialogue.update_message() internally does something 
+	# that requires the scene to be ready.
+	await dialogue.ready
+	show_current_message()
 
 
-func show_current() -> void:
-	emit_signal("message_requested")
+func show_current_message() -> void:
+	message_requested.emit()
 	var message: String = messages[active_dialogue_index]
 	current_dialogue_instance.update_message(message)
 
 
+func hide() -> void:
+	# Nice, this is being responsible with signals LOL
+	current_dialogue_instance.disconnect("message_completed", on_message_completed)
+	current_dialogue_instance.slide_down()
+	current_dialogue_instance = null
+	is_active = false
+	finished.emit()
+
+
 func on_message_completed() -> void:
-	pass
+	message_completed.emit()
