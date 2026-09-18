@@ -24,6 +24,7 @@ func _input(event: InputEvent) -> void:
 
 func move(direction: Vector2i) -> void:
 	var sigil := Level.get_sigil_at_tile(tile + direction)
+	var pickup := Level.get_interactable_at_tile(tile + direction)
 	
 	if sigil != null: # HANDLES SIGIL LOGIC
 		if sigil.is_lit:
@@ -35,7 +36,10 @@ func move(direction: Vector2i) -> void:
 				Level.pop_first_sigil()
 			else:
 				return
-
+	
+	elif pickup != null:
+		pickup.on_pickup()
+	
 	slide(direction)
 
 func edit_sprite(direction: Vector2i) -> void:

@@ -9,6 +9,7 @@ var sigil_queue = [] # Contains the queue of sigils
 
 var tile_sigils: Array[TileSigil] = []
 var moveables: Array[Moveable] = []
+var interactables: Array[Interactable] = []
 var tilemap : TileMapLayer
 
 func _ready() -> void:
@@ -34,9 +35,18 @@ func get_sigil_at_tile(tile: Vector2i) -> TileSigil:
 			return s
 	return null
 	
+func get_interactable_at_tile(tile: Vector2i) -> Interactable:
+	for i in interactables:
+		if tile == i.tile:
+			return i
+	return null
+	
+	
 func pop_first_sigil() -> void:
 	sigil_queue.pop_front()
 
+func add_sigil_at_front(sigil: Sigil) -> void:
+	sigil_queue.push_front(sigil)
 	
 	
 		
