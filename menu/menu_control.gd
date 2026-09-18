@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://sidescroll_system/world/humanworld.tscn")
+	get_tree().change_scene_to_file("res://sidescroll_system/rooms/backyard/backyard.tscn")
 
 func _on_debug_pressed() -> void:
 	main_menu.hide()
