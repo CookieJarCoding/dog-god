@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b7atww0li68x2"]
+
+[ext_resource type="PackedScene" uid="uid://02oi7giyfewt" path="res://sidescroll_system/rooms/backyard/phase1/doggydoor.tscn" id="1_fnxfd"]
+[ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://sidescroll_system/actors/oldman/oldman.tscn" id="2_vu307"]
+
+[node name="BackyardPhase1" type="Node2D" unique_id=479091806]
+
+[node name="Doggydoor" parent="." unique_id=2126403347 instance=ExtResource("1_fnxfd")]
+
+[node name="Oldman" parent="." unique_id=533569569 instance=ExtResource("2_vu307")]
+position = Vector2(45, -2)

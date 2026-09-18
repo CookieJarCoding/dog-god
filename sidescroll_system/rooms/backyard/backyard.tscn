@@ -31,6 +31,6 @@ tile_set = ExtResource("2_w3jey")
 
 [node name="Player" parent="." unique_id=981155298 instance=ExtResource("1_gb136")]
 z_index = 1
-position = Vector2(155, 111)
+position = Vector2(94, 111)
 
 [node name="LevelContent" type="Node2D" parent="." unique_id=1738126087]

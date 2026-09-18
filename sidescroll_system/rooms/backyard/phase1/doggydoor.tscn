@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://02oi7giyfewt"]
 
-[ext_resource type="Script" uid="uid://crebxn5vh0k4t" path="res://sidescroll_system/rooms/backyard/doggydoor.gd" id="1_f52q3"]
+[ext_resource type="Script" uid="uid://crebxn5vh0k4t" path="res://sidescroll_system/rooms/backyard/phase1/doggydoor.gd" id="1_f52q3"]
 [ext_resource type="Texture2D" uid="uid://du34scndhtm3f" path="res://sidescroll_system/rooms/backyard/human-test-2.png" id="2_88rby"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y00b8"]
