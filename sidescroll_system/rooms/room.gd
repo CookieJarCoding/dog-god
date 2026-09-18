@@ -1,16 +1,39 @@
 class_name Room
 extends Node2D
 
+@export var room_phases: Array[PackedScene] = []
+
 @onready var ground: TileMapLayer = $Map/Ground
 @onready var player: Player = $Player
 @onready var camera: Camera2D = $Player/Camera2D
+@onready var _level_content: Node2D = $LevelContent
 
 var _player_horizontal_bounds := Vector2.ZERO
+var _phase_idx: int = 0 # Initial phase
+var _phase_instance: Node
 
 func _ready() -> void:
 	process_physics_priority = 1
+	_load_phase()
 	_calculate_horizontal_bounds()
 	_constrain_player()
+
+
+func advance_phase() -> void:
+	if (_phase_idx + 1) >= room_phases.size():
+		return
+	_phase_idx += 1
+	_load_phase()
+
+
+func _load_phase() -> void:
+	if room_phases.size() == 0:
+		push_error("Room has no phases defined.")
+	if is_instance_valid(_phase_instance):
+		_phase_instance.queue_free()
+	
+	_phase_instance = room_phases[_phase_idx].instantiate()
+	_level_content.add_child(_phase_instance)
 
 
 func _physics_process(_delta: float) -> void:
