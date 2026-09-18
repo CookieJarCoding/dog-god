@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://sidescroll_system/actors/player/player.tscn" id="1_gb136"]
 [ext_resource type="Script" uid="uid://dhxbl5rjfu838" path="res://sidescroll_system/rooms/backyard/backyard.gd" id="1_pwe01"]
 [ext_resource type="TileSet" uid="uid://bmthdftunli1l" path="res://sidescroll_system/rooms/backyard/human-test-2.tres" id="2_w3jey"]
-[ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://sidescroll_system/actors/oldman/oldman.tscn" id="4_uaoea"]
 [ext_resource type="PackedScene" uid="uid://6721d6fb36ed" path="res://sidescroll_system/interactable/dogbowl/dogbowl.tscn" id="6_l6ibe"]
+[ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://sidescroll_system/actors/oldman/oldman.tscn" id="6_th4ll"]
 [ext_resource type="PackedScene" uid="uid://02oi7giyfewt" path="res://sidescroll_system/rooms/backyard/doggydoor.tscn" id="7_th4ll"]
 
 [node name="Backyard" type="Node2D" unique_id=722819845]
@@ -34,12 +34,11 @@ tile_set = ExtResource("2_w3jey")
 z_index = 1
 position = Vector2(155, 111)
 
-[node name="Oldman" parent="." unique_id=533569569 instance=ExtResource("4_uaoea")]
-visible = false
-position = Vector2(113, 127)
-
 [node name="Dogbowl" parent="." unique_id=2036189083 instance=ExtResource("6_l6ibe")]
 position = Vector2(248, 111)
 
 [node name="Doggydoor" parent="." unique_id=2126403347 instance=ExtResource("7_th4ll")]
 position = Vector2(24, 112)
+
+[node name="Area2D" parent="." unique_id=533569569 instance=ExtResource("6_th4ll")]
+position = Vector2(82, 111)
