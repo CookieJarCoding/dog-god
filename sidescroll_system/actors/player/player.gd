@@ -5,7 +5,6 @@ extends CharacterBody2D
 
 @onready var _collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var _bark_indicator: Label = $Bark
-@onready var _dialogue_indicator: Label = $Dialogue
 
 var _nearby_objects: Array[Interactable] = []
 var _current_interactable: Interactable = null
@@ -26,7 +25,7 @@ func _physics_process(_delta: float) -> void:
 		_bark()
 	
 	if Input.is_action_just_pressed("A") and _current_interactable != null:
-		_trigger_interaction()
+		_current_interactable.interact()
 
 
 func register_interactable(object: Interactable) -> void:
@@ -49,15 +48,6 @@ func get_horizontal_collision() -> Vector2:
 			_collision_shape.position.x - half_width,
 			_collision_shape.position.x + half_width
 	)
-
-
-func _trigger_interaction() -> void:
-	# BASIC PLACEHOLDER IMPLEMENTATION
-	_current_interactable.print_dialogue()
-	_dialogue_indicator.text = _current_interactable.interact()
-	_dialogue_indicator.show()
-	await get_tree().create_timer(1).timeout
-	_dialogue_indicator.hide()
 
 
 func _bark() -> void:

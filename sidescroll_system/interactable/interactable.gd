@@ -3,9 +3,7 @@ extends Area2D
 ## For objects that need to keep track of collision with the Player for triggering events
 ## Optionally accepts an AnimationPlayer to animate the object's sprite when Player is in range
 
-# TEMP placeholder for dialogue system
-@export var interact_dialogue: String = ""
-### END TEMP
+
 # If a "glowing state" sprite is available
 @export var glow_animation: AnimationPlayer = null
 
@@ -15,14 +13,10 @@ func _init() -> void:
 	body_exited.connect(_on_body_exited)
 
 
-func interact() -> String:
-	return interact_dialogue
-
-
-# TEMP debug only
-func print_dialogue() -> void:
-	print(interact_dialogue)
-### END TEMP
+func interact() -> void:
+	# Shared function for all Interactables.
+	# Subclasses with specific interactions must override this method.
+	pass
 
 
 func _on_body_entered(body: Node2D) -> void:
