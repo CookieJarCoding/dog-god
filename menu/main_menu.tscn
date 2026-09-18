@@ -1,0 +1,240 @@
+[gd_scene format=3 uid="uid://hum8rxcvj5wh"]
+
+[ext_resource type="FontFile" uid="uid://dyp15uxivo52b" path="res://fonts/16bfZX.ttf" id="1_4twx3"]
+[ext_resource type="Script" uid="uid://dihp14mr82jsq" path="res://menu/menu_control.gd" id="1_v88uf"]
+[ext_resource type="Script" uid="uid://ckunywl1rl0pm" path="res://menu/debug_control.gd" id="3_nibp5"]
+
+[sub_resource type="Theme" id="Theme_5aqg7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tgfgl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nibp5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vrov6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g75r8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_btdj1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v88uf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ayuj8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h8ecv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6hfiy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fucbx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tm2m2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4pces"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fad7p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fivbd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vcg0d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uhyed"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eukt3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ay0s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3nrwi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bnd6y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4twx3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ojlt0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x4uwf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mc64p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t8tr2"]
+
+[node name="BaseControl" type="Control" unique_id=169010688]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_5aqg7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=969728408]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 144.0
+color = Color(0, 0, 0, 1)
+
+[node name="FocusMark" type="Label" parent="." unique_id=1345534648]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 89.0
+offset_right = 128.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("1_4twx3")
+text = ">"
+
+[node name="Menu" type="MarginContainer" parent="." unique_id=460834250]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 144.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="MenuContainer" type="VBoxContainer" parent="Menu" unique_id=1197720143]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Menu/MenuContainer" unique_id=491381072]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_4twx3")
+theme_override_font_sizes/font_size = 32
+text = "doggod"
+horizontal_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="Menu/MenuContainer" unique_id=1959641911]
+layout_mode = 2
+theme_override_constants/separation = 4
+script = ExtResource("1_v88uf")
+
+[node name="Start" type="Button" parent="Menu/MenuContainer/Buttons" unique_id=182255088]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_4twx3")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tgfgl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nibp5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vrov6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g75r8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btdj1")
+text = "Start"
+
+[node name="Debug" type="Button" parent="Menu/MenuContainer/Buttons" unique_id=1767965354]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_4twx3")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v88uf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ayuj8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h8ecv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6hfiy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fucbx")
+text = "Debug"
+
+[node name="Credits" type="Button" parent="Menu/MenuContainer/Buttons" unique_id=1216209456]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_4twx3")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tm2m2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4pces")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fad7p")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fivbd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vcg0d")
+text = "Credits"
+
+[node name="Quit" type="Button" parent="Menu/MenuContainer/Buttons" unique_id=215021041]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_4twx3")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uhyed")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_eukt3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ay0s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3nrwi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bnd6y")
+text = "Quit"
+
+[node name="DebugButtons" type="VBoxContainer" parent="Menu/MenuContainer" unique_id=1999016310]
+layout_mode = 2
+script = ExtResource("3_nibp5")
+
+[node name="Slot1" type="Button" parent="Menu/MenuContainer/DebugButtons" unique_id=82498481]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_4twx3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4twx3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ojlt0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x4uwf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mc64p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t8tr2")
+text = "Slot 1"
+
+[node name="Slot2" type="Button" parent="Menu/MenuContainer/DebugButtons" unique_id=931682033]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_4twx3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4twx3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ojlt0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x4uwf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mc64p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t8tr2")
+text = "Slot 2"
+
+[node name="Slot3" type="Button" parent="Menu/MenuContainer/DebugButtons" unique_id=344558861]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_4twx3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4twx3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ojlt0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x4uwf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mc64p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t8tr2")
+text = "Slot 3"
+
+[node name="Slot4" type="Button" parent="Menu/MenuContainer/DebugButtons" unique_id=301242263]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_4twx3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4twx3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ojlt0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x4uwf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mc64p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t8tr2")
+text = "Slot 4"
+
+[node name="Back" type="Button" parent="Menu/MenuContainer/DebugButtons" unique_id=1674236564]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_4twx3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4twx3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ojlt0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x4uwf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mc64p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t8tr2")
+text = "Back"
+
+[connection signal="pressed" from="Menu/MenuContainer/Buttons/Start" to="Menu/MenuContainer/Buttons" method="_on_start_pressed"]
+[connection signal="pressed" from="Menu/MenuContainer/Buttons/Debug" to="Menu/MenuContainer/Buttons" method="_on_debug_pressed"]
+[connection signal="pressed" from="Menu/MenuContainer/Buttons/Credits" to="Menu/MenuContainer/Buttons" method="_on_credits_pressed"]
+[connection signal="pressed" from="Menu/MenuContainer/Buttons/Quit" to="Menu/MenuContainer/Buttons" method="_on_quit_pressed"]
+[connection signal="pressed" from="Menu/MenuContainer/DebugButtons/Slot1" to="Menu/MenuContainer/DebugButtons" method="_on_slot_1_pressed"]
+[connection signal="pressed" from="Menu/MenuContainer/DebugButtons/Slot2" to="Menu/MenuContainer/DebugButtons" method="_on_slot_2_pressed"]
+[connection signal="pressed" from="Menu/MenuContainer/DebugButtons/Slot3" to="Menu/MenuContainer/DebugButtons" method="_on_slot_3_pressed"]
+[connection signal="pressed" from="Menu/MenuContainer/DebugButtons/Slot4" to="Menu/MenuContainer/DebugButtons" method="_on_slot_4_pressed"]
+[connection signal="pressed" from="Menu/MenuContainer/DebugButtons/Back" to="Menu/MenuContainer/DebugButtons" method="_on_back_pressed"]
