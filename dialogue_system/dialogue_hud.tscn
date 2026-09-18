@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dyp15uxivo52b" path="res://fonts/16bfZX.ttf" id="1_8nvcn"]
 [ext_resource type="Script" uid="uid://d4doeipo4ptol" path="res://dialogue_system/scripts/dialogue_hud.gd" id="1_kx7sa"]
+[ext_resource type="Texture2D" uid="uid://cjm36j6jfjngd" path="res://dialogue_system/gfx/textbox.png" id="2_3hxhr"]
 [ext_resource type="AudioStream" uid="uid://b7sfujslol2gg" path="res://dialogue_system/sfx/blop.wav" id="3_nfsvw"]
 [ext_resource type="Script" uid="uid://cml1m6vqsx8hk" path="res://dialogue_system/scripts/pause_calculator.gd" id="4_o24c0"]
 
@@ -17,9 +18,13 @@ grow_horizontal = 2
 grow_vertical = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="_TOCHANGETO9PR" type="ColorRect" parent="MainContainer" unique_id=1931216845]
+[node name="TextboxGraphic" type="NinePatchRect" parent="MainContainer" unique_id=1508550164]
 layout_mode = 2
-color = Color(0, 0, 0, 1)
+texture = ExtResource("2_3hxhr")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
 
 [node name="ContentContainer" type="MarginContainer" parent="MainContainer" unique_id=1180044505]
 layout_mode = 2
@@ -34,7 +39,7 @@ layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("1_8nvcn")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "Hello! This is a piece of dialogue."
+text = "sdfds"
 scroll_active = false
 visible_characters_behavior = 1
 
