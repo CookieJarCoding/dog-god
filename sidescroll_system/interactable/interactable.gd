@@ -1,11 +1,11 @@
 class_name Interactable
 extends Area2D
 ## For objects that need to keep track of collision with the Player for triggering events
-## Optionally accepts an AnimationPlayer to animate the object's sprite when Player is in range
+## Optionally accepts a Sprite2D to show a "lit up" state when Player is in range
 
 
 # If a "glowing state" sprite is available
-@export var glow_animation: AnimationPlayer = null
+@export var lit_sprite: Sprite2D = null
 
 
 func _init() -> void:
@@ -22,12 +22,12 @@ func interact() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		body.register_interactable(self)
-		if glow_animation:
-			glow_animation.play("glow")
+		if lit_sprite:
+			lit_sprite.show()
 
 
 func _on_body_exited(body: Node2D) -> void:
 	if body is Player:
 		body.unregister_interactable(self)
-		if glow_animation:
-			glow_animation.play("RESET")
+		if lit_sprite:
+			lit_sprite.hide()
