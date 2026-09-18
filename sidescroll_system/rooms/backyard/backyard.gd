@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var ground: TileMapLayer = $Ground
+@onready var ground: TileMapLayer = $Map/Ground
 @onready var player: Player = $Player
 
 var player_horizontal_bounds := Vector2.ZERO
