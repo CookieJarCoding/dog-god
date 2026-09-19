@@ -2,10 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://sidescroll_system/actors/player/player.tscn" id="1_gb136"]
 [ext_resource type="Script" uid="uid://dhxbl5rjfu838" path="res://sidescroll_system/rooms/backyard/backyard.gd" id="1_pwe01"]
+[ext_resource type="PackedScene" uid="uid://bb6086ts53cno" path="res://dialogue_system/dialogue_manager.tscn" id="2_mq5yl"]
 [ext_resource type="TileSet" uid="uid://bmthdftunli1l" path="res://sidescroll_system/rooms/backyard/human-test-2.tres" id="2_w3jey"]
 
 [node name="Backyard" type="Node2D" unique_id=722819845]
 script = ExtResource("1_pwe01")
+
+[node name="DialogueManager" parent="." unique_id=838245424 groups=["dialogue_manager"] instance=ExtResource("2_mq5yl")]
 
 [node name="Map" type="Node2D" parent="." unique_id=786366201]
 

@@ -20,9 +20,7 @@ var current_dialogue_instance: Dialogue
 
 
 func _ready() -> void:
-	load_messages([
-		"First{p=0.2}.{p=0.2}.{p=0.2}.{p=0.5} hello!", "This is a [shake rate=20.0 level=5][color=green]{p=0.2}c{p=0.2}o{p=0.2}o{p=0.2}l{p=0.2}[/color][/shake] dialogue system!", "Goodbye now!"
-	])
+	pass
 
 
 func _process(_delta: float) -> void:
