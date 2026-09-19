@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bjl2llqhnxyfc"]
+
+[ext_resource type="FontFile" uid="uid://dyp15uxivo52b" path="res://fonts/16bfZX.ttf" id="1_8nvcn"]
+[ext_resource type="Script" uid="uid://d4doeipo4ptol" path="res://dialogue_system/scripts/dialogue_hud.gd" id="1_kx7sa"]
+[ext_resource type="Texture2D" uid="uid://cjm36j6jfjngd" path="res://dialogue_system/gfx/textbox.png" id="2_3hxhr"]
+[ext_resource type="AudioStream" uid="uid://b7sfujslol2gg" path="res://dialogue_system/sfx/blop.wav" id="3_nfsvw"]
+[ext_resource type="Script" uid="uid://cml1m6vqsx8hk" path="res://dialogue_system/scripts/pause_calculator.gd" id="4_o24c0"]
+
+[node name="DialogueHUD" type="CanvasLayer" unique_id=737158445]
+script = ExtResource("1_kx7sa")
+
+[node name="MainContainer" type="MarginContainer" parent="." unique_id=312694899]
+anchors_preset = -1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.2000046
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextboxGraphic" type="NinePatchRect" parent="MainContainer" unique_id=1508550164]
+layout_mode = 2
+texture = ExtResource("2_3hxhr")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="ContentContainer" type="MarginContainer" parent="MainContainer" unique_id=1180044505]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="DialogueLabel" type="RichTextLabel" parent="MainContainer/ContentContainer" unique_id=1287762183]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("1_8nvcn")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+scroll_active = false
+visible_characters_behavior = 1
+
+[node name="PauseTimer" type="Timer" parent="." unique_id=2106539943]
+
+[node name="DialogueBlip" type="AudioStreamPlayer" parent="." unique_id=1672902213]
+stream = ExtResource("3_nfsvw")
+
+[node name="PauseCalculator" type="Node" parent="." unique_id=2017400399]
+script = ExtResource("4_o24c0")
+
+[connection signal="timeout" from="PauseTimer" to="." method="_on_PauseTimer_timeout"]
+[connection signal="pause_requested" from="PauseCalculator" to="." method="_on_PauseCalculator_pause_requested"]
