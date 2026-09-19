@@ -45,7 +45,7 @@ func _enter_tree() -> void:
 
 
 func _ready() -> void:
-	$MainContainer.size.y = dialogue_box_size
+	$MainContainer.set_deferred("size:y", dialogue_box_size)
 
 
 func _process(delta: float) -> void:

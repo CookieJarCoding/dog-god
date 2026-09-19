@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="dog-god"
-run/main_scene="uid://hum8rxcvj5wh"
+run/main_scene="uid://bjl2llqhnxyfc"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+PaletteSwapper="*uid://dmyktgkui3gwl"
 
 [display]
 
