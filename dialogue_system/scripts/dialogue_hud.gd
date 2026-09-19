@@ -9,6 +9,10 @@ class_name Dialogue
 
 const SLIDE_ANIM_DURATION = 0.8
 
+# NOTE: Changing these is only effective in editor, because DialogueManager
+# cannot set these values right now.
+# WARNING: If we want to dynamically change the size and position of the text box during
+# runtime, we'll have to support these values via DialogueManager too.
 @export var initial_y_position: float = 200.0
 @export var final_y_position: float = 112.0
 @export var dialogue_box_size: float = 32.0
@@ -38,6 +42,10 @@ Main functions
 func _enter_tree() -> void:
 	$MainContainer.position.y = initial_y_position
 	slide_up()
+
+
+func _ready() -> void:
+	$MainContainer.size.y = dialogue_box_size
 
 
 func _process(delta: float) -> void:
