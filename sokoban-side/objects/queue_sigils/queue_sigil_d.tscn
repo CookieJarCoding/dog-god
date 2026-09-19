@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dvjakeu0hn5cq"]
 
+[ext_resource type="Script" uid="uid://c7eqfbphjkrk5" path="res://sokoban-side/scripts/queue_sigils/queue_sigil_d.gd" id="1_cxhp5"]
 [ext_resource type="Texture2D" uid="uid://hwool50hewpt" path="res://sokoban-side/sprites/eldritch-test-1.png" id="1_m7np3"]
 
 [node name="QueueSigilA" type="Node2D" unique_id=2077213951]
+script = ExtResource("1_cxhp5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=25786807]
 texture = ExtResource("1_m7np3")

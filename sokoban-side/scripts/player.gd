@@ -3,6 +3,12 @@ class_name Player
 
 var direction := Vector2i.UP
 
+func _enter_tree() -> void:
+	Level.player = self
+
+func _exit_tree() -> void:
+	Level.player = null
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("up"):
 		direction = (Vector2i.UP)
@@ -12,10 +18,11 @@ func _input(event: InputEvent) -> void:
 		direction = (Vector2i.LEFT)
 	elif event.is_action_pressed("right"):
 		direction = (Vector2i.RIGHT)
+	elif event.is_action_pressed("Q"):
+		Level.restart()
+		return
 	else:
 		return
-
-	print(Level.sigil_queue)
 
 	edit_sprite(direction)
 	
@@ -30,8 +37,8 @@ func move(direction: Vector2i) -> void:
 		if sigil.is_lit:
 			sigil.unlight()
 		
-		elif len(Level.sigil_queue) != 0:
-			if sigil.sigil == Level.sigil_queue[0]:
+		elif len(Level.sigil_queue.queue) != 0:
+			if sigil.sigil == Level.get_first_at_queue():
 				sigil.light_up()
 				Level.pop_first_sigil()
 			else:
@@ -40,18 +47,20 @@ func move(direction: Vector2i) -> void:
 	elif pickup != null:
 		pickup.on_pickup()
 	
+	print(Level.if_win())
+	
 	slide(direction)
 
 func edit_sprite(direction: Vector2i) -> void:
 	var sprite_region := Rect2(0, 0, 16, 16)
 	match direction:
 		Vector2i.UP:
-			sprite_region = Rect2(0, 0, 16, 16)
+			sprite_region = Rect2(0, 32, 16, 16)
 		Vector2i.RIGHT:
-			sprite_region = Rect2(16, 0, 16, 16)
-		Vector2i.LEFT:
 			sprite_region = Rect2(0, 16, 16, 16)
+		Vector2i.LEFT:
+			sprite_region = Rect2(0, 48, 16, 16)
 		Vector2i.DOWN:
-			sprite_region = Rect2(16, 16, 16, 16)
+			sprite_region = Rect2(0, 0, 16, 16)
 					
 	$Sprite2D.region_rect = sprite_region

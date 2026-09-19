@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cgxl5ob6r3pav"]
+
+[ext_resource type="Script" uid="uid://b2c2qgou4biyp" path="res://sokoban-side/scripts/candle.gd" id="1_yf48x"]
+[ext_resource type="Texture2D" uid="uid://csvcar0l00p2n" path="res://sokoban-side/sprites/final/eldritch-tileset.png" id="2_n2f3o"]
+
+[node name="CandleLit" type="Node2D" unique_id=1495872301]
+script = ExtResource("1_yf48x")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2003737008]
+texture = ExtResource("2_n2f3o")
+region_enabled = true
+region_rect = Rect2(112, 48, 16, 16)

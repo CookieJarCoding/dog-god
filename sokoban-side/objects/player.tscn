@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxtmikhf3wbgo"]
 
 [ext_resource type="Script" uid="uid://bdivj4n886n0w" path="res://sokoban-side/scripts/player.gd" id="1_72ac4"]
-[ext_resource type="Texture2D" uid="uid://ck856op1sq7ld" path="res://sokoban-side/placeholder_character.png" id="2_gkies"]
+[ext_resource type="Texture2D" uid="uid://ds8q8grdm84vw" path="res://sokoban-side/sprites/final/eldritch-dog-movement-sheet.png" id="2_72ac4"]
 
 [node name="Player" type="Node2D" unique_id=2079116234]
 script = ExtResource("1_72ac4")
@@ -11,6 +11,6 @@ visibility_layer = 4
 z_index = 10
 z_as_relative = false
 y_sort_enabled = true
-texture = ExtResource("2_gkies")
+texture = ExtResource("2_72ac4")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)

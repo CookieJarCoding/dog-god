@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck856op1sq7ld"
-path="res://.godot/imported/placeholder_character.png-2354064e7ba619d477f56a39ab8a7284.ctex"
+uid="uid://cedkprb6tu8dm"
+path="res://.godot/imported/eye-wall-sheet-1.png-8edca821cf7062b23d2e321b92d61926.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sokoban-side/placeholder_character.png"
-dest_files=["res://.godot/imported/placeholder_character.png-2354064e7ba619d477f56a39ab8a7284.ctex"]
+source_file="res://sokoban-side/sprites/final/eye-wall-sheet-1.png"
+dest_files=["res://.godot/imported/eye-wall-sheet-1.png-8edca821cf7062b23d2e321b92d61926.ctex"]
 
 [params]
 

@@ -33,3 +33,8 @@ func slide(direction: Vector2i) -> void:
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(self, "position", target_pos, 0.1)
+	
+	
+func set_pos(pos: Vector2i) -> void:
+	tile = pos
+	position = tile * Vector2i(16, 16) + Level.TILE_SIZE / 2

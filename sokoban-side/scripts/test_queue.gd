@@ -1,9 +1,15 @@
-extends Node2D
-
-var sigil_queue = [
-	Level.Sigil.A, 
-	Level.Sigil.A,
-	]
+extends LevelData
 
 func _enter_tree() -> void:
-	Level.sigil_queue = sigil_queue
+	level_name = "Test Level"
+	sigil_queue = [
+		Level.Sigil.A, 
+		Level.Sigil.B,
+		Level.Sigil.C,
+		Level.Sigil.D,
+	]
+	
+	Level.lvl_data = self
+
+func _exit_tree() -> void:
+	Level.lvl_data = null

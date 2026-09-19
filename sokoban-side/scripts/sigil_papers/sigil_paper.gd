@@ -4,7 +4,7 @@ class_name SigilPaper
 var sigil := Level.Sigil.A
 
 func on_pickup() -> void:
-	if is_active and len(Level.sigil_queue) < 10:
+	if is_active and len(Level.sigil_queue.queue) < Level.QUEUE_LIMIT:
 		Level.add_sigil_at_front(sigil)
 		deactivate()
 		
