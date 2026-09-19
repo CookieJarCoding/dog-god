@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://qlfkhjkcexmh"]
+
+[node name="PlaceholderEldritchworld" type="Node2D" unique_id=980034521]
+
+[node name="Label" type="Label" parent="." unique_id=675836434]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "eldritch world level"

@@ -14,23 +14,14 @@ var _phase_instance: Node
 
 func _ready() -> void:
 	process_physics_priority = 1
-	_load_phase()
+	_load_active_phase()
 	_calculate_horizontal_bounds()
 	_constrain_player()
 
 
-func advance_phase() -> void:
-	if (_phase_idx + 1) >= room_phases.size():
-		return
-	_phase_idx += 1
-	_load_phase()
-
-
-func _load_phase() -> void:
+func _load_active_phase() -> void:
 	if room_phases.size() == 0:
 		push_error("Room has no phases defined.")
-	if is_instance_valid(_phase_instance):
-		_phase_instance.queue_free()
 	
 	_phase_instance = room_phases[_phase_idx].instantiate()
 	_level_content.add_child(_phase_instance)

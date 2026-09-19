@@ -3,6 +3,8 @@ extends Interactable
 static var has_finished_tutorial = false
 
 @export var is_full := true
+# For each Dogbowl instance, assign correct sokoban scene in the Inspector
+@export var sokoban_scene: PackedScene
 
 var is_dialogue_playing = false
 
@@ -19,7 +21,8 @@ func interact() -> void:
 		has_finished_tutorial = true
 	else:
 		# Switch to eldritch world
-		pass
+		$"TEMP-TeleportIndicator".show() # Animation placeholder (optional)
+		RoomLoader.start_sokoban(sokoban_scene)
 
 
 func _trigger_intro_dialogue() -> void:
