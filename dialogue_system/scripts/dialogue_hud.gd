@@ -7,9 +7,11 @@ extends CanvasLayer
 class_name Dialogue
 
 
-# NOTE: Maybe these can be automatically set somehow..?
-const INITIAL_Y = 200.0
-const FINAL_Y = 128.0
+const SLIDE_ANIM_DURATION = 0.8
+
+@export var initial_y_position: float = 200.0
+@export var final_y_position: float = 112.0
+@export var dialogue_box_size: float = 32.0
 
 @onready var dialogue_label: RichTextLabel = $MainContainer/ContentContainer/DialogueLabel
 @onready var pause_timer: Timer = $PauseTimer
@@ -34,12 +36,8 @@ Main functions
 
 
 func _enter_tree() -> void:
-	$MainContainer.position.y = INITIAL_Y
-	var tween = create_tween()
-	tween.tween_property($MainContainer, "position:y", FINAL_Y, 0.8).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
-	
-	await tween.finished
-	is_fully_visible = true
+	$MainContainer.position.y = initial_y_position
+	slide_up()
 
 
 func _process(delta: float) -> void:
@@ -74,10 +72,22 @@ func display_next_character() -> void:
 		message_completed.emit()
 
 
-# TODO: Placeholder for now.
+# NOTE: Animation can be changed if we want. Just make sure to set
+# `is_fully_visible" at the end of animation.
+func slide_up() -> void:
+	var tween = create_tween()
+	tween.tween_property($MainContainer, "position:y", final_y_position, SLIDE_ANIM_DURATION).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
+	
+	await tween.finished
+	is_fully_visible = true
+
+
 func slide_down() -> void:
 	var tween = create_tween()
-	tween.tween_property($MainContainer, "position:y", INITIAL_Y, 0.8).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property($MainContainer, "position:y", initial_y_position, SLIDE_ANIM_DURATION).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
+	
+	await tween.finished
+	is_fully_visible = false
 
 
 '''
