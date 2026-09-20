@@ -56,5 +56,5 @@ func _on_dialogue_trigger_area_body_entered(_body: Node2D) -> void:
 	dogbowl.set_bowl_full(true)
 	await get_tree().create_timer(1).timeout
 	_dialogue_manager.load_messages([
-		"[color=#1f1f1f](The sigils must be activated...)[/color]",
+		"[tornado radius=1.0 freq=2.0][color=#1f1f1f](The sigils must be activated...)[/color][/tornado]",
 	])

@@ -19,7 +19,7 @@ func _ready() -> void:
 		"[color=#1f1f1f]Hello? Who goes there...[/color]",
 		"[color=#1f1f1f]Brioche stays still, until she hears Pita go down[/color]",
 		"[color=#1f1f1f]the stairs.[/color]",
-		"[color=#1f1f1f](I must continue.)[/color]",
+		"[color=#1f1f1f][tornado radius=1.0 freq=2.0](I must continue.)[/tornado][/color]",
 	])
 	await _dialogue_manager.finished
 	RoomLoader.start_sokoban(sokoban_scene)
