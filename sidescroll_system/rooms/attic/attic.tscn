@@ -5,6 +5,8 @@
 [ext_resource type="TileSet" uid="uid://dfqhs8tr80ui1" path="res://sidescroll_system/rooms/human_world_tileset.tres" id="2_x0p77"]
 [ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://sidescroll_system/actors/player/player.tscn" id="3_2we6v"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y00b8"]
+
 [node name="Attic" type="Node2D" unique_id=1168420187]
 script = ExtResource("1_x0p77")
 
@@ -25,13 +27,22 @@ tile_map_data = PackedByteArray("AAAAAAYAAAAEABEAAAAAAAUAAAAEABAAAAABAAYAAAAJAAI
 tile_set = ExtResource("2_x0p77")
 
 [node name="Foreground" type="TileMapLayer" parent="Map" unique_id=495809942]
-tile_map_data = PackedByteArray("AAADAAIAAAADAA8AAAADAAMAAAADABAAAAADAAYAAAAEAAgAAAADAAUAAAAEAAYAAAAEAAUAAAABAAgAAAAFAAUAAAACAA8AAAAFAAYAAAAFAAgAAAAJAAUAAAAHAA0AAAAJAAYAAAAHAA4AAAAKAAUAAAAIAA0AAAAKAAYAAAAIAA4AAAAMAAMAAAALAA4AAAAMAAQAAAALAA8AAAAMAAUAAAALABAAAAAMAAYAAAALABEAAAANAAMAAAAMAA4AAAANAAQAAAAMAA8AAAANAAUAAAAMABAAAAANAAYAAAAMABEAAAANAAIAAAAJABAAAAAPAAYAAAAJAAIAAAAQAAYAAAAJAAIAAAA=")
+tile_map_data = PackedByteArray("AAADAAIAAAADAA8AAAADAAMAAAADABAAAAADAAYAAAAEAAgAAAADAAUAAAAEAAYAAAAEAAUAAAABAAgAAAAFAAUAAAACAA8AAAAFAAYAAAAFAAgAAAAJAAUAAAAHAA0AAAAJAAYAAAAHAA4AAAAKAAUAAAAIAA0AAAAKAAYAAAAIAA4AAAAMAAMAAAALAA4AAAAMAAQAAAALAA8AAAAMAAUAAAALABAAAAAMAAYAAAALABEAAAANAAMAAAAMAA4AAAANAAQAAAAMAA8AAAANAAUAAAAMABAAAAANAAYAAAAMABEAAAANAAIAAAAJABAAAAAPAAYAAAAJAAIAAAAQAAYAAAAJAAIAAAACAAcAAAAAABEAAAADAAcAAAABABEAAAA=")
 tile_set = ExtResource("2_x0p77")
 
 [node name="Props" type="TileMapLayer" parent="Map" unique_id=625354737]
+tile_map_data = PackedByteArray("AAAQAAYAAAAHAAIAAAAEAAYAAAANABAAAAAEAAcAAAANABEAAAAFAAYAAAAOABAAAAAFAAcAAAAOABEAAAAGAAYAAAANAA4AAAAHAAYAAAAOAA4AAAAHAAcAAAAOAA8AAAAGAAcAAAANAA8AAAA=")
 tile_set = ExtResource("2_x0p77")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Map" unique_id=2027234051]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/StaticBody2D" unique_id=1328682673]
+position = Vector2(272, 91)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_y00b8")
+
 [node name="Player" parent="." unique_id=981155298 instance=ExtResource("3_2we6v")]
+z_index = 1
 position = Vector2(255, 112)
 
 [node name="LevelContent" type="Node2D" parent="." unique_id=1267080622]
