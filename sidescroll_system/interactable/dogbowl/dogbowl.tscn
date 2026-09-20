@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://6721d6fb36ed"]
+
+[ext_resource type="Script" uid="uid://co6e63bdtuk3i" path="res://sidescroll_system/interactable/dogbowl/dogbowl.gd" id="1_g2yob"]
+[ext_resource type="PackedScene" uid="uid://qlfkhjkcexmh" path="res://sidescroll_system/rooms/PLACEHOLDER_eldritchworld.tscn" id="2_lx752"]
+[ext_resource type="Texture2D" uid="uid://b4xml67s7wcvu" path="res://sidescroll_system/interactable/dogbowl/dogbowl.png" id="2_rs4or"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y00b8"]
+size = Vector2(16, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rs4or"]
+font_size = 7
+
+[node name="Dogbowl" type="Area2D" unique_id=2036189083]
+script = ExtResource("1_g2yob")
+sokoban_scene = ExtResource("2_lx752")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1974680570]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_y00b8")
+
+[node name="BaseSprite" type="Sprite2D" parent="." unique_id=503732391]
+position = Vector2(0, -8)
+texture = ExtResource("2_rs4or")
+hframes = 2
+vframes = 2
+
+[node name="GlowSprite" type="Sprite2D" parent="." unique_id=1959736632]
+visible = false
+position = Vector2(0, -8)
+texture = ExtResource("2_rs4or")
+hframes = 2
+vframes = 2
+frame = 1
+
+[node name="TEMP-TeleportIndicator" type="Label" parent="." unique_id=1235927583]
+visible = false
+offset_left = -40.0
+offset_top = -28.0
+offset_right = 50.0
+offset_bottom = -15.0
+text = "switching to eldritch world"
+label_settings = SubResource("LabelSettings_rs4or")

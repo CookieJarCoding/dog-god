@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://qlfkhjkcexmh"]
+
+[ext_resource type="Script" uid="uid://cyrj3acsx4usa" path="res://sidescroll_system/rooms/placeholder_eldritchworld.gd" id="1_v2bww"]
+
+[node name="PlaceholderEldritchworld" type="Node2D" unique_id=980034521]
+script = ExtResource("1_v2bww")
+
+[node name="Label" type="Label" parent="." unique_id=675836434]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "eldritch world level
+press B to complete"

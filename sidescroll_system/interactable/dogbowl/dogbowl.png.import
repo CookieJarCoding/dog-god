@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp1335h0jd2sh"
-path="res://.godot/imported/temp-brioche.png-ae5407e895feb194cea9ea8ba53d7e9e.ctex"
+uid="uid://b4xml67s7wcvu"
+path="res://.godot/imported/dogbowl.png-5473c5396509b135bd3395152793736e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sidescroll_system/player/temp-brioche.png"
-dest_files=["res://.godot/imported/temp-brioche.png-ae5407e895feb194cea9ea8ba53d7e9e.ctex"]
+source_file="res://sidescroll_system/interactable/dogbowl/dogbowl.png"
+dest_files=["res://.godot/imported/dogbowl.png-5473c5396509b135bd3395152793736e.ctex"]
 
 [params]
 

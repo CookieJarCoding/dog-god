@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://lcu0gpn1of27"]
+
+[ext_resource type="PackedScene" uid="uid://6721d6fb36ed" path="res://sidescroll_system/interactable/dogbowl/dogbowl.tscn" id="1_a8xup"]
+
+[node name="BackyardPhase0" type="Node2D" unique_id=1909149254]
+z_index = 1
+
+[node name="Dogbowl" parent="." unique_id=2036189083 instance=ExtResource("1_a8xup")]
+position = Vector2(232, 112)
