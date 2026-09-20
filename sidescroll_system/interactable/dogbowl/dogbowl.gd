@@ -10,7 +10,7 @@ static var has_finished_tutorial = false
 
 func _ready() -> void:
 	lit_sprite = $GlowSprite
-	_set_bowl_full(is_full)
+	set_bowl_full(is_full)
 
 
 func interact() -> void:
@@ -59,6 +59,7 @@ func _trigger_intro_dialogue(dialogue: DialogueManager) -> void:
 	await dialogue.finished
 
 
-func _set_bowl_full(full: bool) -> void:
+func set_bowl_full(full: bool) -> void:
+	is_full = full
 	_sprite.frame = 0 if full else 2
 	lit_sprite.frame = 1 if full else 3
