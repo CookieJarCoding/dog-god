@@ -54,10 +54,12 @@ func flip() -> void:
 		camera.set_to_dark()
 		player.set_pos(Vector2i(player.tile.x, player.tile.y + 9))
 		PaletteSwapper.set_palette(lvl_data.palette_dark)
+		MusicHandler.switch_to_dark()
 	else:
 		camera.set_to_light() 
 		player.set_pos(Vector2i(player.tile.x, player.tile.y - 9))
 		PaletteSwapper.set_palette(lvl_data.palette)
+		MusicHandler.switch_to_light()
 	
 
 func get_first_at_queue() -> Level.Sigil:

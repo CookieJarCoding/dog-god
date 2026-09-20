@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dx128woj1t6gv"]
 
-[ext_resource type="Script" uid="uid://g0sg1wwp6738" path="res://sokoban-side/scripts/test_queue.gd" id="1_7ydx3"]
+[ext_resource type="Script" uid="uid://g0sg1wwp6738" path="res://sokoban-side/demo_levels/music_demo_1.gd" id="1_7ydx3"]
 [ext_resource type="Script" uid="uid://bkxkhfq4nety6" path="res://sokoban-side/scripts/sokoban_camera.gd" id="2_b1n8m"]
 [ext_resource type="FontFile" uid="uid://buydju4w5k7bh" path="res://sokoban-side/16bfZX.ttf" id="3_tcqmr"]
 [ext_resource type="Script" uid="uid://deywahrp8syx7" path="res://sokoban-side/scripts/label.gd" id="4_cpn6g"]

@@ -1,30 +1,30 @@
-[gd_scene format=4 uid="uid://cs34iivycs663"]
+[gd_scene format=4 uid="uid://c6a0i8t7h6f74"]
 
-[ext_resource type="Texture2D" uid="uid://vtytkm3kyc88" path="res://sokoban-side/sprites/eldritch test.png" id="1_h317n"]
-[ext_resource type="Script" uid="uid://g0sg1wwp6738" path="res://sokoban-side/demo_levels/music_demo_1.gd" id="1_n8tvs"]
-[ext_resource type="PackedScene" uid="uid://bxtmikhf3wbgo" path="res://sokoban-side/objects/player.tscn" id="2_01gnx"]
-[ext_resource type="Script" uid="uid://bkxkhfq4nety6" path="res://sokoban-side/scripts/sokoban_camera.gd" id="2_oy0v0"]
-[ext_resource type="Texture2D" uid="uid://hwool50hewpt" path="res://sokoban-side/sprites/eldritch-test-1.png" id="2_xyv0v"]
-[ext_resource type="PackedScene" uid="uid://dpcsbyxv8dv7u" path="res://sokoban-side/objects/tile_sigils/sigil_a.tscn" id="3_h317n"]
-[ext_resource type="FontFile" uid="uid://buydju4w5k7bh" path="res://sokoban-side/16bfZX.ttf" id="3_lehud"]
-[ext_resource type="PackedScene" uid="uid://bd2513j5vrry6" path="res://sokoban-side/objects/tile_sigils/sigil_b.tscn" id="3_mf824"]
-[ext_resource type="PackedScene" uid="uid://c4adt26dktsf" path="res://sokoban-side/objects/tile_sigils/sigil_c.tscn" id="6_xyv0v"]
-[ext_resource type="PackedScene" uid="uid://cdkd68luk3eic" path="res://sokoban-side/objects/tile_sigils/sigil_d.tscn" id="7_utpct"]
-[ext_resource type="PackedScene" uid="uid://wyl6tilb08mr" path="res://sokoban-side/objects/tile_sigils/sigil_e.tscn" id="8_dnw0q"]
-[ext_resource type="PackedScene" uid="uid://cs2877gd3xgo2" path="res://sokoban-side/objects/tile_sigils/sigil_f.tscn" id="9_2mbxn"]
-[ext_resource type="PackedScene" uid="uid://dccu3vgd71pv6" path="res://sokoban-side/objects/sigil_paper/sigil_paper_a.tscn" id="10_n8tvs"]
-[ext_resource type="PackedScene" uid="uid://dyjvvgg1j5qs6" path="res://sokoban-side/objects/sigil_paper/sigil_paper_b.tscn" id="11_oy0v0"]
-[ext_resource type="Script" uid="uid://bmp3hmrdphdj0" path="res://sokoban-side/scripts/sigil_queue.gd" id="11_utpct"]
-[ext_resource type="PackedScene" uid="uid://86scsjawkl62" path="res://sokoban-side/objects/sigil_paper/sigil_paper_c.tscn" id="12_2f1ov"]
-[ext_resource type="PackedScene" uid="uid://ykggqan4tfgs" path="res://sokoban-side/objects/sigil_paper/sigil_paper_d.tscn" id="13_xbtym"]
-[ext_resource type="PackedScene" uid="uid://rfyso0jchd5m" path="res://sokoban-side/objects/sigil_paper/sigil_paper_e.tscn" id="14_onik7"]
-[ext_resource type="PackedScene" uid="uid://cfaoi4a04pp45" path="res://sokoban-side/objects/sigil_paper/sigil_paper_f.tscn" id="15_lehud"]
-[ext_resource type="PackedScene" uid="uid://da8lfxbjsok43" path="res://sokoban-side/objects/candle_lit.tscn" id="17_xbtym"]
-[ext_resource type="PackedScene" uid="uid://cgxl5ob6r3pav" path="res://sokoban-side/objects/candle_unlit.tscn" id="18_onik7"]
-[ext_resource type="Script" uid="uid://deywahrp8syx7" path="res://sokoban-side/scripts/label.gd" id="21_onik7"]
+[ext_resource type="Script" uid="uid://chex4b3gmlnyl" path="res://sokoban-side/demo_levels/music_demo_3.gd" id="1_6bjvh"]
+[ext_resource type="Script" uid="uid://bkxkhfq4nety6" path="res://sokoban-side/scripts/sokoban_camera.gd" id="2_erauk"]
+[ext_resource type="FontFile" uid="uid://buydju4w5k7bh" path="res://sokoban-side/16bfZX.ttf" id="3_nu3po"]
+[ext_resource type="Script" uid="uid://deywahrp8syx7" path="res://sokoban-side/scripts/label.gd" id="4_y5gsu"]
+[ext_resource type="Script" uid="uid://bmp3hmrdphdj0" path="res://sokoban-side/scripts/sigil_queue.gd" id="5_4gpqf"]
+[ext_resource type="Texture2D" uid="uid://hwool50hewpt" path="res://sokoban-side/sprites/eldritch-test-1.png" id="6_qy7dq"]
+[ext_resource type="PackedScene" uid="uid://bd2513j5vrry6" path="res://sokoban-side/objects/tile_sigils/sigil_b.tscn" id="7_ql4mh"]
+[ext_resource type="PackedScene" uid="uid://bxtmikhf3wbgo" path="res://sokoban-side/objects/player.tscn" id="8_hnggg"]
+[ext_resource type="PackedScene" uid="uid://dpcsbyxv8dv7u" path="res://sokoban-side/objects/tile_sigils/sigil_a.tscn" id="9_23vus"]
+[ext_resource type="PackedScene" uid="uid://c4adt26dktsf" path="res://sokoban-side/objects/tile_sigils/sigil_c.tscn" id="10_87uwi"]
+[ext_resource type="PackedScene" uid="uid://cdkd68luk3eic" path="res://sokoban-side/objects/tile_sigils/sigil_d.tscn" id="11_jul3g"]
+[ext_resource type="PackedScene" uid="uid://wyl6tilb08mr" path="res://sokoban-side/objects/tile_sigils/sigil_e.tscn" id="12_4nbuy"]
+[ext_resource type="PackedScene" uid="uid://cs2877gd3xgo2" path="res://sokoban-side/objects/tile_sigils/sigil_f.tscn" id="13_l2eqg"]
+[ext_resource type="PackedScene" uid="uid://dccu3vgd71pv6" path="res://sokoban-side/objects/sigil_paper/sigil_paper_a.tscn" id="14_oh65j"]
+[ext_resource type="PackedScene" uid="uid://dyjvvgg1j5qs6" path="res://sokoban-side/objects/sigil_paper/sigil_paper_b.tscn" id="15_t03dg"]
+[ext_resource type="PackedScene" uid="uid://86scsjawkl62" path="res://sokoban-side/objects/sigil_paper/sigil_paper_c.tscn" id="16_6qhhj"]
+[ext_resource type="PackedScene" uid="uid://ykggqan4tfgs" path="res://sokoban-side/objects/sigil_paper/sigil_paper_d.tscn" id="17_tcte5"]
+[ext_resource type="PackedScene" uid="uid://rfyso0jchd5m" path="res://sokoban-side/objects/sigil_paper/sigil_paper_e.tscn" id="18_3hoyu"]
+[ext_resource type="PackedScene" uid="uid://cfaoi4a04pp45" path="res://sokoban-side/objects/sigil_paper/sigil_paper_f.tscn" id="19_eh3q8"]
+[ext_resource type="PackedScene" uid="uid://da8lfxbjsok43" path="res://sokoban-side/objects/candle_lit.tscn" id="20_8jbw0"]
+[ext_resource type="PackedScene" uid="uid://cgxl5ob6r3pav" path="res://sokoban-side/objects/candle_unlit.tscn" id="21_qgte2"]
+[ext_resource type="Texture2D" uid="uid://vtytkm3kyc88" path="res://sokoban-side/sprites/eldritch test.png" id="22_xdk0h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_utpct"]
-texture = ExtResource("2_xyv0v")
+texture = ExtResource("6_qy7dq")
 0:0/0 = 0
 1:0/0 = 0
 3:0/0 = 0
@@ -83,27 +83,27 @@ texture = ExtResource("2_xyv0v")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_h317n"]
 resource_name = "Grid Sigils"
-scenes/1/scene = ExtResource("3_mf824")
-scenes/2/scene = ExtResource("2_01gnx")
-scenes/3/scene = ExtResource("3_h317n")
-scenes/4/scene = ExtResource("6_xyv0v")
-scenes/5/scene = ExtResource("7_utpct")
-scenes/6/scene = ExtResource("8_dnw0q")
-scenes/8/scene = ExtResource("9_2mbxn")
+scenes/1/scene = ExtResource("7_ql4mh")
+scenes/2/scene = ExtResource("8_hnggg")
+scenes/3/scene = ExtResource("9_23vus")
+scenes/4/scene = ExtResource("10_87uwi")
+scenes/5/scene = ExtResource("11_jul3g")
+scenes/6/scene = ExtResource("12_4nbuy")
+scenes/8/scene = ExtResource("13_l2eqg")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_3buxc"]
 resource_name = "Sigil Papers"
-scenes/1/scene = ExtResource("10_n8tvs")
-scenes/2/scene = ExtResource("11_oy0v0")
-scenes/3/scene = ExtResource("12_2f1ov")
-scenes/4/scene = ExtResource("13_xbtym")
-scenes/5/scene = ExtResource("14_onik7")
-scenes/6/scene = ExtResource("15_lehud")
+scenes/1/scene = ExtResource("14_oh65j")
+scenes/2/scene = ExtResource("15_t03dg")
+scenes/3/scene = ExtResource("16_6qhhj")
+scenes/4/scene = ExtResource("17_tcte5")
+scenes/5/scene = ExtResource("18_3hoyu")
+scenes/6/scene = ExtResource("19_eh3q8")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_lehud"]
-scenes/1/scene = ExtResource("17_xbtym")
-scenes/2/scene = ExtResource("18_onik7")
-scenes/3/scene = ExtResource("2_01gnx")
+scenes/1/scene = ExtResource("20_8jbw0")
+scenes/2/scene = ExtResource("21_qgte2")
+scenes/3/scene = ExtResource("8_hnggg")
 
 [sub_resource type="TileSet" id="TileSet_g4v7s"]
 sources/1 = SubResource("TileSetScenesCollectionSource_h317n")
@@ -112,7 +112,7 @@ sources/2 = SubResource("TileSetScenesCollectionSource_3buxc")
 sources/3 = SubResource("TileSetScenesCollectionSource_lehud")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dnw0q"]
-texture = ExtResource("2_xyv0v")
+texture = ExtResource("6_qy7dq")
 0:0/0 = 0
 1:0/0 = 0
 3:0/0 = 0
@@ -170,7 +170,7 @@ texture = ExtResource("2_xyv0v")
 5:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h317n"]
-texture = ExtResource("1_h317n")
+texture = ExtResource("22_xdk0h")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
@@ -204,11 +204,11 @@ sources/2 = SubResource("TileSetAtlasSource_h317n")
 sources/0 = SubResource("TileSetAtlasSource_dnw0q")
 
 [node name="Main" type="Node2D" unique_id=1196459089]
-script = ExtResource("1_n8tvs")
+script = ExtResource("1_6bjvh")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1047449224]
 position = Vector2(80, 72)
-script = ExtResource("2_oy0v0")
+script = ExtResource("2_erauk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=545682268]
 
@@ -217,19 +217,19 @@ offset_top = 1.0
 offset_right = 160.0
 offset_bottom = 15.0
 theme_override_colors/font_color = Color(0.8156863, 0.8156863, 0.8156863, 1)
-theme_override_fonts/font = ExtResource("3_lehud")
+theme_override_fonts/font = ExtResource("3_nu3po")
 theme_override_font_sizes/font_size = 12
 text = "Label"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("21_onik7")
+script = ExtResource("4_y5gsu")
 
 [node name="SigilQueue" type="Node2D" parent="CanvasLayer" unique_id=733819604]
 position = Vector2(40, 137)
-script = ExtResource("11_utpct")
+script = ExtResource("5_4gpqf")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2072392325 groups=["LevelTileMap"]]
-tile_map_data = PackedByteArray("AAD//wUAAAABAAAAAAD//wYAAAABAAAAAAD//wcAAAABAAAAAAD//wMAAAABAAAAAAD//wIAAAABAAAAAAD//wEAAAABAAAAAAD//wQAAAABAAAAAAD//wgAAAABAAAAAAAAAAgAAAACAAUAAAABAAgAAAADAAUAAAACAAgAAAADAAUAAAADAAgAAAADAAUAAAAEAAgAAAADAAUAAAAFAAgAAAADAAUAAAAGAAgAAAADAAUAAAAHAAgAAAADAAUAAAAIAAgAAAADAAUAAAAJAAgAAAAEAAUAAAAKAAEAAAABAAAAAAAKAAIAAAABAAAAAAAKAAMAAAABAAAAAAAKAAQAAAABAAAAAAAKAAUAAAABAAAAAAAKAAYAAAABAAAAAAAKAAcAAAABAAAAAAAKAAgAAAABAAAAAAAKAAAAAAABAAAAAAAJAAAAAAAEAAQAAAAIAAAAAAADAAQAAAAHAAAAAAADAAQAAAAGAAAAAAADAAQAAAAFAAAAAAADAAQAAAAEAAAAAAADAAQAAAADAAAAAAADAAQAAAACAAAAAAADAAQAAAABAAAAAAADAAQAAAAAAAAAAAACAAQAAAD//wAAAAABAAAAAAD//wkAAAABAAAAAAD//woAAAABAAAAAAD//wsAAAABAAAAAAD//wwAAAABAAAAAAD//w0AAAABAAAAAAD//w4AAAABAAAAAAD//w8AAAABAAAAAAD//xAAAAABAAAAAAD//xEAAAABAAAAAAAAAAkAAAACAAQAAAAAABEAAAACAAUAAAABAAkAAAADAAQAAAABABEAAAADAAUAAAACAAkAAAADAAQAAAACABEAAAADAAUAAAADAAkAAAADAAQAAAADABEAAAADAAUAAAAEAAkAAAADAAQAAAAEABEAAAADAAUAAAAFAAkAAAADAAQAAAAGAAkAAAADAAQAAAAGABEAAAADAAUAAAAHAAkAAAADAAQAAAAHABEAAAADAAUAAAAIAAkAAAADAAQAAAAIABEAAAADAAUAAAAJAAkAAAAEAAQAAAAJABEAAAAEAAUAAAAKAAkAAAABAAAAAAAKAAoAAAABAAAAAAAKAAsAAAABAAAAAAAKAAwAAAABAAAAAAAKAA0AAAABAAAAAAAKAA4AAAABAAAAAAAKAA8AAAABAAAAAAAKABAAAAABAAAAAAAKABEAAAABAAAAAAACAAQAAwAAAAAAAwAFABEAAAADAAUAAAAJAA0AAAAHAAAAAAAFAAEAAAADAAAAAAAFAAMAAAADAAEAAAAFAAIAAAADAAEAAAAFAAQAAAADAAEAAAAFAAUAAAADAAIAAAAEAAcAAAAEAAIAAAAEAAYAAAAEAAEAAAAEAAUAAAAEAAEAAAAEAAQAAAAEAAEAAAAEAAMAAAAEAAAAAAAAAA0AAAAFAAEAAAABAA0AAAAGAAEAAAACAA0AAAAGAAEAAAADAA0AAAAGAAEAAAAEAA0AAAAGAAEAAAAFAA0AAAAGAAEAAAAGAA0AAAAGAAEAAAAHAA0AAAAGAAEAAAAIAA0AAAAGAAEAAAACAAIAAwAAAAAAAQAHAAIAAwAAAAAAAQACAAYAAwAAAAAAAQAHAAYAAwAAAAAAAQACAAsAAwAAAAAAAgAHAAsAAwAAAAAAAgACAA8AAwAAAAAAAgAHAA8AAwAAAAAAAgABAAUAAQAAAAAABAAIAAwAAQAAAAAAAQAIAA4AAQAAAAAABQAIAAMAAgAAAAAAAQAIAAUAAgAAAAAAAgABAAwAAgAAAAAAAwABAA4AAgAAAAAABAABAAMAAQAAAAAAAwA=")
+tile_map_data = PackedByteArray("AAD//wUAAAABAAAAAAD//wYAAAABAAAAAAD//wcAAAABAAAAAAD//wMAAAABAAAAAAD//wIAAAABAAAAAAD//wEAAAABAAAAAAD//wQAAAABAAAAAAD//wgAAAABAAAAAAAAAAgAAAACAAUAAAABAAgAAAADAAUAAAACAAgAAAADAAUAAAADAAgAAAADAAUAAAAEAAgAAAADAAUAAAAFAAgAAAADAAUAAAAGAAgAAAADAAUAAAAHAAgAAAADAAUAAAAIAAgAAAADAAUAAAAJAAgAAAAEAAUAAAAKAAEAAAABAAAAAAAKAAIAAAABAAAAAAAKAAMAAAABAAAAAAAKAAQAAAABAAAAAAAKAAUAAAABAAAAAAAKAAYAAAABAAAAAAAKAAcAAAABAAAAAAAKAAgAAAABAAAAAAAKAAAAAAABAAAAAAAJAAAAAAAEAAQAAAAIAAAAAAADAAQAAAAHAAAAAAADAAQAAAAGAAAAAAADAAQAAAAFAAAAAAADAAQAAAAEAAAAAAADAAQAAAADAAAAAAADAAQAAAACAAAAAAADAAQAAAABAAAAAAADAAQAAAAAAAAAAAACAAQAAAD//wAAAAABAAAAAAD//wkAAAABAAAAAAD//woAAAABAAAAAAD//wsAAAABAAAAAAD//wwAAAABAAAAAAD//w0AAAABAAAAAAD//w4AAAABAAAAAAD//w8AAAABAAAAAAD//xAAAAABAAAAAAD//xEAAAABAAAAAAAAAAkAAAACAAQAAAAAABEAAAACAAUAAAABAAkAAAADAAQAAAABABEAAAADAAUAAAACAAkAAAADAAQAAAACABEAAAADAAUAAAADAAkAAAADAAQAAAADABEAAAADAAUAAAAEAAkAAAADAAQAAAAEABEAAAADAAUAAAAFAAkAAAADAAQAAAAGAAkAAAADAAQAAAAGABEAAAADAAUAAAAHAAkAAAADAAQAAAAHABEAAAADAAUAAAAIAAkAAAADAAQAAAAIABEAAAADAAUAAAAJAAkAAAAEAAQAAAAJABEAAAAEAAUAAAAKAAkAAAABAAAAAAAKAAoAAAABAAAAAAAKAAsAAAABAAAAAAAKAAwAAAABAAAAAAAKAA0AAAABAAAAAAAKAA4AAAABAAAAAAAKAA8AAAABAAAAAAAKABAAAAABAAAAAAAKABEAAAABAAAAAAACAAQAAwAAAAAAAwAFABEAAAADAAUAAAAJAA0AAAAHAAAAAAAFAAEAAAADAAAAAAAFAAMAAAADAAEAAAAFAAIAAAADAAEAAAAFAAQAAAADAAEAAAAFAAUAAAADAAIAAAAEAAcAAAAEAAIAAAAEAAYAAAAEAAEAAAAEAAUAAAAEAAEAAAAEAAQAAAAEAAEAAAAEAAMAAAAEAAAAAAAAAA0AAAAFAAEAAAABAA0AAAAGAAEAAAACAA0AAAAGAAEAAAADAA0AAAAGAAEAAAAEAA0AAAAGAAEAAAAFAA0AAAAGAAEAAAAGAA0AAAAGAAEAAAAHAA0AAAAGAAEAAAAIAA0AAAAGAAEAAAACAAIAAwAAAAAAAQAHAAIAAwAAAAAAAQACAAYAAwAAAAAAAQAHAAYAAwAAAAAAAQACAAsAAwAAAAAAAgAHAAsAAwAAAAAAAgACAA8AAwAAAAAAAgAHAA8AAwAAAAAAAgABAAMAAQAAAAAAAwABAAUAAQAAAAAABAAIAAwAAQAAAAAAAQAIAA4AAQAAAAAABQAIAAMAAgAAAAAAAQAIAAUAAgAAAAAAAgABAAwAAgAAAAAAAwABAA4AAgAAAAAABAA=")
 tile_set = SubResource("TileSet_g4v7s")
 
 [node name="Background1" type="TileMapLayer" parent="TileMapLayer" unique_id=228871251 groups=["LevelTileMap"]]

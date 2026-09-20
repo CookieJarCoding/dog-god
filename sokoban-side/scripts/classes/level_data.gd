@@ -9,3 +9,5 @@ var level_name : String
 var palette : Palette
 var palette_dark : Palette
 var next_level : String
+var music_light := ""
+var music_dark := ""

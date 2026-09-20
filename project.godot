@@ -13,11 +13,12 @@ config_version=5
 config/name="dog-god"
 run/main_scene="uid://cg1s2o17vud68"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://music/icon.svg"
 
 [autoload]
 
 PaletteSwapper="*uid://dmyktgkui3gwl"
+MusicHandler="*uid://brehu4v8qno1t"
 Level="*uid://cc0qeiuagkodd"
 
 [display]
