@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://clkf446obp2fl"]
+[gd_scene format=4 uid="uid://cg1s2o17vud68"]
 
 [ext_resource type="Script" uid="uid://ki68u6esjum0" path="res://sokoban-side/levels/1-doghouse/1-1-data.gd" id="1_2lndk"]
 [ext_resource type="Script" uid="uid://bkxkhfq4nety6" path="res://sokoban-side/scripts/sokoban_camera.gd" id="2_ucbh3"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://da8lfxbjsok43" path="res://sokoban-side/objects/candle_lit.tscn" id="20_im5p2"]
 [ext_resource type="PackedScene" uid="uid://cgxl5ob6r3pav" path="res://sokoban-side/objects/candle_unlit.tscn" id="21_yo4wy"]
 [ext_resource type="Texture2D" uid="uid://vtytkm3kyc88" path="res://sokoban-side/sprites/eldritch test.png" id="22_yag1r"]
+[ext_resource type="PackedScene" uid="uid://cuibjeqdgoslu" path="res://sokoban-side/objects/blinking_eye_1.tscn" id="23_6842o"]
+[ext_resource type="PackedScene" uid="uid://ch8xp82dcj3ei" path="res://sokoban-side/objects/blinking_eye-2.tscn" id="24_m1c6a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_utpct"]
 texture = ExtResource("6_nb5ta")
@@ -243,3 +245,18 @@ tile_set = SubResource("TileSet_yf5fn")
 
 [node name="Timer" type="Timer" parent="." unique_id=956596654]
 one_shot = true
+
+[node name="BlinkingEye" parent="." unique_id=1573144750 instance=ExtResource("23_6842o")]
+position = Vector2(26, 108)
+
+[node name="BlinkingEye2" parent="." unique_id=130548940 instance=ExtResource("24_m1c6a")]
+position = Vector2(124, 34)
+
+[node name="BlinkingEye3" parent="." unique_id=2056862550 instance=ExtResource("23_6842o")]
+position = Vector2(117, 93)
+
+[node name="BlinkingEye4" parent="." unique_id=1345289894 instance=ExtResource("24_m1c6a")]
+position = Vector2(16, 32)
+
+[node name="BlinkingEye5" parent="." unique_id=1975333375 instance=ExtResource("23_6842o")]
+position = Vector2(47, 36)

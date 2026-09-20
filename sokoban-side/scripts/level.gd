@@ -30,6 +30,8 @@ func get_tile_type(target: Vector2i) -> int:
 		match tilemap.get_cell_source_id(target):
 			0:
 				return 1
+			4:
+				return 1
 			_:
 				return 0
 	else:
@@ -74,6 +76,7 @@ func restart() -> void:
 	get_tree().reload_current_scene()
 
 func if_win() -> bool:
+	
 	var x = 0
 	for s in tile_sigils:
 		if s.is_lit:
@@ -89,7 +92,12 @@ func start_next_level() -> void:
 	await fade_to_black()
 
 	is_won = false
-	get_tree().change_scene_to_file(lvl_data.next_level)
+	if lvl_data.next_level == "":
+		#RoomLoader.exit_sokoban() # external code that terminates the sokoban section after the final level
+		pass
+	
+	else:
+		get_tree().change_scene_to_file(lvl_data.next_level)
 	
 
 		

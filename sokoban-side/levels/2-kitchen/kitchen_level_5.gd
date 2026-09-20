@@ -1,17 +1,15 @@
 extends LevelData
 
 func _enter_tree() -> void:
-	level_name = "Windowways"
+	level_name = "A Recipe for Disaster"
 	sigil_queue = [
 		Level.Sigil.A, 
-		Level.Sigil.B,
-		Level.Sigil.C, 
+		Level.Sigil.B, 
 		Level.Sigil.D, 
-		Level.Sigil.E,
-		Level.Sigil.F,
+		Level.Sigil.C, 
 	]
 	
-	palette = PaletteList.DOGHOUSE
+	palette = PaletteList.KITCHEN
 	palette_dark = PaletteList.ATTIC_DARK
 	next_level = ""
 	
