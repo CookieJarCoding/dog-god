@@ -54,11 +54,13 @@ func flip() -> void:
 		camera.set_to_dark()
 		player.set_pos(Vector2i(player.tile.x, player.tile.y + 9))
 		PaletteSwapper.set_palette(lvl_data.palette_dark)
+		PaletteSwapper.set_brightness(-0.25)
 		MusicHandler.switch_to_dark()
 	else:
 		camera.set_to_light() 
 		player.set_pos(Vector2i(player.tile.x, player.tile.y - 9))
 		PaletteSwapper.set_palette(lvl_data.palette)
+		PaletteSwapper.set_brightness(0.0)
 		MusicHandler.switch_to_light()
 	
 
