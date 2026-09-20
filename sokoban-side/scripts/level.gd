@@ -93,9 +93,10 @@ func fade_to_black() -> void:
 	await get_tree().create_timer(0.5).timeout
 	
 func start_next_level() -> void:
+	MusicHandler.level_complete.play()
 	await fade_to_black()
 
-	is_won = false
+	
 	if lvl_data.next_level == "":
 		#RoomLoader.exit_sokoban() # external code that terminates the sokoban section after the final level
 		pass

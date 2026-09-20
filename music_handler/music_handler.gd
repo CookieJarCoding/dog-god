@@ -3,6 +3,11 @@ extends Node2D
 @onready var light = $BaseMusic
 @onready var dark = $DarkMusic
 
+# SOKOBAN SFX
+@onready var sigil_collect = $SigilCollect
+@onready var sigil_paper = $SigilPaper
+@onready var level_complete = $LevelComplete
+
 func _ready() -> void:
 	light.volume_db = 0
 	dark.volume_db = -80.0

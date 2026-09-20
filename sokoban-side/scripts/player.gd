@@ -41,6 +41,7 @@ func move(direction: Vector2i) -> void:
 		
 		elif len(Level.sigil_queue.queue) != 0:
 			if sigil.sigil == Level.get_first_at_queue():
+				MusicHandler.sigil_collect.play()
 				sigil.light_up()
 				Level.pop_first_sigil()
 				
@@ -48,6 +49,8 @@ func move(direction: Vector2i) -> void:
 				return
 	
 	elif pickup != null:
+		if pickup is SigilPaper and pickup.is_active:
+			MusicHandler.sigil_paper.play()
 		pickup.on_pickup()
 	
 	slide(direction)
