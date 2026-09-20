@@ -21,8 +21,8 @@ func _ready() -> void:
 func _load_active_phase() -> void:
 	if room_phases.size() == 0:
 		push_error("Room has no phases defined.")
-	
-	_phase_instance = room_phases[RoomLoader._active_phase].instantiate()
+
+	_phase_instance = room_phases[RoomLoader.get_active_phase()].instantiate()
 	_position_player()
 	_level_content.add_child(_phase_instance)
 

@@ -18,11 +18,11 @@ func interact() -> void:
 	if dialogue_manager == null:
 		push_error("No DialogueManager defined for this room.")
 		return
-	
+
 	# Block interactions when dialogue is playing
 	if dialogue_manager.is_active:
 		return
-	
+
 	if is_full:
 		if not has_finished_tutorial:
 			await _trigger_intro_dialogue(dialogue_manager)
@@ -32,7 +32,7 @@ func interact() -> void:
 			$"TEMP-TeleportIndicator".show() # Animation placeholder (optional)
 			RoomLoader.start_sokoban(sokoban_scene)
 	else:
-		if RoomLoader._active_phase != 0:
+		if RoomLoader.get_active_phase() != 0:
 			dialogue_manager.load_messages([
 				"[color=#1f1f1f](My work is done here.)[/color]",
 			])
