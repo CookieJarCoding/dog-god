@@ -20,6 +20,7 @@ sokoban_scene = null
 
 [node name="Oldman" parent="." unique_id=533569569 instance=ExtResource("4_vlcig")]
 position = Vector2(157, 111)
+dialogue = "Time for bed!"
 
 [node name="SpawnMarker" type="Marker2D" parent="." unique_id=1579946933]
 position = Vector2(221, 111)
