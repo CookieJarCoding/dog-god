@@ -9,7 +9,6 @@ extends Node2D
 @onready var _level_content: Node2D = $LevelContent
 
 var _player_horizontal_bounds := Vector2.ZERO
-var _phase_idx: int = 0 # Initial phase
 var _phase_instance: Node
 
 func _ready() -> void:
@@ -23,7 +22,7 @@ func _load_active_phase() -> void:
 	if room_phases.size() == 0:
 		push_error("Room has no phases defined.")
 	
-	_phase_instance = room_phases[_phase_idx].instantiate()
+	_phase_instance = room_phases[RoomLoader._active_phase].instantiate()
 	_level_content.add_child(_phase_instance)
 
 

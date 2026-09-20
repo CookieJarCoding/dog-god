@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://sidescroll_system/actors/oldman/oldman.tscn" id="2_vu307"]
 
 [node name="BackyardPhase1" type="Node2D" unique_id=479091806]
+position = Vector2(24, 112)
 
 [node name="Doggydoor" parent="." unique_id=2126403347 instance=ExtResource("1_fnxfd")]
 
