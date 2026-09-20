@@ -13,3 +13,8 @@ func interact() -> void:
 		_dialogue_manager.load_messages([
 			formatted_dialogue
 		])
+		await _dialogue_manager.finished
+		return
+	# Special case for Attic
+	if RoomLoader.get_active_phase() == 2:
+		get_tree().change_scene_to_file("res://sidescroll_system/ending_scene/destroy_end.tscn")

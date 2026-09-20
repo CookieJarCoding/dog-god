@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bw2quya54ubp7"]
+
+[node name="StayEnd" type="Node2D" unique_id=1494377601]
+
+[node name="Label" type="Label" parent="." unique_id=133884046]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "good end"

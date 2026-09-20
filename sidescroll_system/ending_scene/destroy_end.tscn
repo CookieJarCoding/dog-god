@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bu5fnh7dt85i1"]
+
+[node name="DestroyEnd" type="Node2D" unique_id=1337686665]
+
+[node name="Label" type="Label" parent="." unique_id=227248055]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "bad end"

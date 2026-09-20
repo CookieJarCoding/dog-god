@@ -52,6 +52,7 @@ offset_bottom = 145.0
 color = Color(0.16078432, 0.16078432, 0.16078432, 1)
 
 [node name="Choice" type="Control" parent="." unique_id=1981991040]
+z_index = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

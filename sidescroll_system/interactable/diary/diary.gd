@@ -13,4 +13,5 @@ func enable_diary() -> void:
 func interact() -> void:
 	if not _is_enabled:
 		return
+	get_tree().change_scene_to_file("res://sidescroll_system/ending_scene/stay_end.tscn")
 	
