@@ -1,0 +1,66 @@
+[gd_scene format=4 uid="uid://y163ugonwsfy"]
+
+[ext_resource type="Script" uid="uid://dhxbl5rjfu838" path="res://sidescroll_system/world/humanworld.gd" id="1_cfvuw"]
+[ext_resource type="TileSet" uid="uid://bb1qw1x5mc1gu" path="res://sidescroll_system/world/doghouse.tres" id="2_ws2yq"]
+[ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://sidescroll_system/player/player.tscn" id="3_otlxv"]
+[ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://sidescroll_system/oldman/oldman.tscn" id="4_rqqmx"]
+[ext_resource type="Script" uid="uid://dtnkeroq2rihw" path="res://sidescroll_system/world/interactable_doghouse.gd" id="5_cqn32"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmglj"]
+size = Vector2(57, 46)
+
+[sub_resource type="LabelSettings" id="LabelSettings_y00b8"]
+font_size = 7
+font_color = Color(1, 0.14901961, 0.09411765, 1)
+
+[node name="Node2D" type="Node2D" unique_id=722819845]
+script = ExtResource("1_cfvuw")
+
+[node name="TileMapLayer-Ground" type="TileMapLayer" parent="." unique_id=928712323]
+tile_map_data = PackedByteArray("AAAAAAgAAgAAAAAAAAABAAgAAgABAAAAAAACAAgAAgABAAAAAAADAAgAAgAAAAAAAAAEAAgAAgABAAAAAAAFAAgAAgAAAAAAAAAGAAgAAgABAAAAAAAHAAgAAgAAAAAAAAAIAAgAAgABAAAAAAAJAAgAAgAAAAAAAAANAAgAAgABAAAAAAAPAAgAAgABAAAAAAALAAgAAgABAAAAAAAMAAgAAgABAAAAAAAKAAgAAgAAAAAAAAAOAAgAAgAAAAAAAAAQAAgAAgAAAAAAAAARAAgAAgAAAAAAAAA=")
+tile_set = ExtResource("2_ws2yq")
+
+[node name="TileMapLayer-Background" type="TileMapLayer" parent="." unique_id=694501250]
+tile_map_data = PackedByteArray("AAAOAAUAAgACAAAAAAAOAAYAAgACAAEAAAAOAAcAAgACAAIAAAAPAAUAAgADAAAAAAAPAAYAAgADAAEAAAAPAAcAAgADAAIAAAAQAAUAAgAEAAAAAAAQAAYAAgAEAAEAAAAQAAcAAgAEAAIAAAARAAUAAgAFAAAAAAARAAYAAgAFAAEAAAARAAcAAgAFAAIAAAARAAQAAgABAAEAAAAQAAQAAgABAAEAAAAPAAQAAgABAAEAAAAOAAQAAgABAAEAAAANAAQAAgABAAEAAAAMAAQAAgABAAEAAAALAAQAAgABAAEAAAAKAAQAAgABAAEAAAAJAAQAAgABAAEAAAAIAAQAAgABAAEAAAAHAAQAAgABAAEAAAAGAAQAAgABAAEAAAAFAAQAAgABAAEAAAAEAAQAAgABAAEAAAADAAQAAgABAAEAAAACAAQAAgABAAEAAAABAAQAAgABAAEAAAAAAAQAAgABAAEAAAAAAAMAAgAAAAEAAAABAAMAAgAAAAEAAAACAAMAAgAAAAEAAAADAAMAAgAAAAEAAAAEAAMAAgAAAAEAAAAFAAMAAgAAAAEAAAAGAAMAAgAAAAEAAAAHAAMAAgAAAAEAAAAIAAMAAgAAAAEAAAAJAAMAAgAAAAEAAAAKAAMAAgAAAAEAAAALAAMAAgAAAAEAAAAMAAMAAgAAAAEAAAANAAMAAgAAAAEAAAAOAAMAAgAAAAEAAAAPAAMAAgAAAAEAAAAQAAMAAgAAAAEAAAARAAMAAgAAAAEAAAA=")
+tile_set = ExtResource("2_ws2yq")
+collision_enabled = false
+
+[node name="ColorRect-Sky" type="ColorRect" parent="TileMapLayer-Background" unique_id=252595910]
+offset_right = 288.0
+offset_bottom = 50.0
+color = Color(0.32941177, 0.30588236, 0.40784314, 1)
+
+[node name="ColorRect-Fence" type="ColorRect" parent="TileMapLayer-Background" unique_id=441322373]
+z_index = -1
+offset_top = 80.0
+offset_right = 288.0
+offset_bottom = 143.0
+color = Color(0.050980393, 0.16862746, 0.27058825, 1)
+
+[node name="CharacterBody2D" parent="." unique_id=981155298 instance=ExtResource("3_otlxv")]
+z_index = 1
+position = Vector2(156, 127)
+
+[node name="Area2D-Oldman" parent="." unique_id=533569569 instance=ExtResource("4_rqqmx")]
+position = Vector2(71, 127)
+
+[node name="Area2D-Doghouse" type="Area2D" parent="." unique_id=419824449]
+script = ExtResource("5_cqn32")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D-Doghouse" unique_id=1244803194]
+position = Vector2(259.5, 104)
+shape = SubResource("RectangleShape2D_dmglj")
+
+[node name="(TEMP)Label-Controls" type="Label" parent="." unique_id=158253581]
+offset_left = 207.0
+offset_top = 17.0
+offset_right = 287.0
+offset_bottom = 66.0
+text = "A - inspect
+B - bark"
+label_settings = SubResource("LabelSettings_y00b8")
+
+[connection signal="body_entered" from="Area2D-Oldman" to="Area2D-Oldman" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D-Oldman" to="Area2D-Oldman" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D-Doghouse" to="Area2D-Doghouse" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D-Doghouse" to="Area2D-Doghouse" method="_on_body_exited"]
