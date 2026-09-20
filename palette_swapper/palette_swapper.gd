@@ -11,6 +11,7 @@ signal tween_done
 @onready var screen_filter := $CanvasLayer/BackBufferCopy/ScreenFilter
 
 var current_palette: Palette
+var tween
 
 
 func _ready() -> void:
@@ -45,12 +46,16 @@ func set_brightness(new_brightness: float) -> void:
 
 func tween_to_brightness(new_brightness: float, duration: float) -> void:
 	new_brightness = clampf(new_brightness, -1, 1)
-	var tween = create_tween()
+	if tween:
+		return
+	
+	tween = create_tween()
 	tween.tween_property(screen_filter.material, "shader_parameter/brightness", new_brightness, duration)
 	
 	await tween.finished
 	tween_done.emit()
 	tween.kill()
+	tween = null
 
 
 

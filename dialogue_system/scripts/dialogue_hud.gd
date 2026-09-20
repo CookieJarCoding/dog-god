@@ -7,6 +7,8 @@ extends CanvasLayer
 class_name Dialogue
 
 
+signal dialogue_ended
+
 const SLIDE_ANIM_DURATION = 0.8
 
 # NOTE: Changing these is only effective in editor, because DialogueManager
@@ -63,6 +65,10 @@ func update_message(message: String) -> void:
 	start_timer()
 
 
+func set_blip_sfx(sfx: AudioStream) -> void:
+	$DialogueBlip.stream = sfx
+
+
 func display_next_character() -> void:
 	if dialogue_label.visible_characters < dialogue_label.get_parsed_text().length():
 		pause_calculator.check_at_position(dialogue_label.visible_characters)
@@ -96,6 +102,7 @@ func slide_down() -> void:
 	
 	await tween.finished
 	is_fully_visible = false
+	dialogue_ended.emit()
 
 
 '''

@@ -3,12 +3,231 @@
 [ext_resource type="Texture2D" uid="uid://dfmowamdklh3i" path="res://cutscenes/intro/gfx/cutscene-cg-1.png" id="1_5d7a4"]
 [ext_resource type="Script" uid="uid://bm2d2wt8j2oty" path="res://cutscenes/intro/cutscene.gd" id="1_gvd6d"]
 [ext_resource type="FontFile" uid="uid://dyp15uxivo52b" path="res://fonts/16bfZX.ttf" id="2_x71j5"]
+[ext_resource type="Texture2D" uid="uid://dmigelfisbl3h" path="res://cutscenes/intro/gfx/cutscene-cg-8.png" id="3_e4x2e"]
+[ext_resource type="Texture2D" uid="uid://b4owkkcjjxvwn" path="res://cutscenes/intro/gfx/cutscene-cg-3.png" id="3_t6f8l"]
+[ext_resource type="Texture2D" uid="uid://b8lcj1cxf73og" path="res://cutscenes/intro/gfx/cutscene-cg-4.png" id="4_etq66"]
 [ext_resource type="Script" uid="uid://cml1m6vqsx8hk" path="res://dialogue_system/scripts/pause_calculator.gd" id="4_os728"]
+[ext_resource type="Texture2D" uid="uid://dyqedn0w1sbki" path="res://cutscenes/intro/gfx/cutscene-cg-5.png" id="5_8u6cp"]
 [ext_resource type="AudioStream" uid="uid://b7sfujslol2gg" path="res://dialogue_system/sfx/blop.wav" id="5_nimc8"]
 [ext_resource type="Script" uid="uid://cx6vf4wv3nhr2" path="res://cutscenes/intro/cutscene_dialogue_manager.gd" id="6_mkja3"]
+[ext_resource type="Texture2D" uid="uid://b0r1w12pw8ygw" path="res://cutscenes/intro/gfx/cutscene-cg-6.png" id="6_yj4xp"]
+[ext_resource type="Texture2D" uid="uid://dviaf4x0ymr8c" path="res://cutscenes/intro/gfx/cutscene-cg-7.png" id="7_bvcij"]
+[ext_resource type="AudioStream" uid="uid://csq73ovqp6ay2" path="res://cutscenes/intro/sfx/doggod intro.mp3" id="7_sint0"]
+[ext_resource type="Texture2D" uid="uid://dho3wl4l4vaej" path="res://cutscenes/intro/gfx/cutscene-cg-2.png" id="8_nibga"]
+[ext_resource type="AudioStream" uid="uid://t8ojutw8i4v1" path="res://dialogue_system/sfx/pita-blip.wav" id="13_43b1u"]
+[ext_resource type="Texture2D" uid="uid://b1cvcadseh0gh" path="res://cutscenes/intro/gfx/intro_particle.png" id="15_cardh"]
+[ext_resource type="Texture2D" uid="uid://cimtd3a0y4p7b" path="res://cutscenes/intro/gfx/intro_particle_burst.png" id="16_mu4he"]
+[ext_resource type="PackedScene" uid="uid://bb6086ts53cno" path="res://dialogue_system/dialogue_manager.tscn" id="17_kt1kx"]
+
+[sub_resource type="GDScript" id="GDScript_t6f8l"]
+resource_name = "guys"
+script/source = "extends Control
+
+var guy_index := 0
+
+func fade_in_next_guy() -> void:
+	var current_guy: TextureRect = get_child(guy_index)
+	var tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	
+	tween.tween_property(current_guy, \"modulate:a\", 1.0, 1.0)
+	
+	guy_index += 1
+"
+
+[sub_resource type="Animation" id="Animation_t6f8l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SceneImage:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_5d7a4")]
+}
+
+[sub_resource type="Animation" id="Animation_mkja3"]
+resource_name = "intro"
+length = 124.0
+step = 0.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroMusic")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7_sint0")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4, 16, 29, 32, 33, 61.5, 63.5, 65.5, 93.5, 98, 107, 123),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [0],
+"method": &"display_text_at_index"
+}, {
+"args": [1],
+"method": &"display_text_at_index"
+}, {
+"args": [-1.0, 2.0],
+"method": &"tween_to_brightness"
+}, {
+"args": [],
+"method": &"clear_text"
+}, {
+"args": [0.0, 2.0],
+"method": &"tween_to_brightness"
+}, {
+"args": [1.0, 2.0],
+"method": &"tween_to_brightness"
+}, {
+"args": [],
+"method": &"clear_text"
+}, {
+"args": [0.0, 2.0],
+"method": &"tween_to_brightness"
+}, {
+"args": [],
+"method": &"initialize_final_image"
+}, {
+"args": [],
+"method": &"move_image_down"
+}, {
+"args": [-1.0, 12.0],
+"method": &"tween_to_brightness"
+}, {
+"args": [0.0, 0.0],
+"method": &"tween_to_brightness"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(32, 35, 42, 52, 67.5, 72.5, 75, 81, 87, 94.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"show_image"
+}, {
+"args": [2],
+"method": &"display_text_at_index"
+}, {
+"args": [3],
+"method": &"display_text_at_index"
+}, {
+"args": [4],
+"method": &"display_text_at_index"
+}, {
+"args": [5],
+"method": &"display_text_at_index"
+}, {
+"args": [6],
+"method": &"display_text_at_index"
+}, {
+"args": [7],
+"method": &"display_text_at_index"
+}, {
+"args": [8],
+"method": &"display_text_at_index"
+}, {
+"args": [9],
+"method": &"display_text_at_index"
+}, {
+"args": [10],
+"method": &"display_text_at_index"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SceneImage:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(63.5, 93.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("8_nibga"), ExtResource("3_e4x2e")]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Base/V/Top/GUYS")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(69.666664, 73.2, 76.7, 80.26667, 83.833336),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"fade_in_next_guy"
+}, {
+"args": [],
+"method": &"fade_in_next_guy"
+}, {
+"args": [],
+"method": &"fade_in_next_guy"
+}, {
+"args": [],
+"method": &"fade_in_next_guy"
+}, {
+"args": [],
+"method": &"fade_in_next_guy"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.29999995, 123),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emit_particle_burst"
+}, {
+"args": [],
+"method": &"load_dialogue"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sint0"]
+_data = {
+&"RESET": SubResource("Animation_t6f8l"),
+&"intro": SubResource("Animation_mkja3")
+}
 
 [node name="IntroCutscene" type="CanvasLayer" unique_id=434793675]
 script = ExtResource("1_gvd6d")
+
+[node name="SceneImage" type="TextureRect" parent="." unique_id=768777244]
+visible = false
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 88.0
+texture = ExtResource("1_5d7a4")
+stretch_mode = 5
 
 [node name="Base" type="MarginContainer" parent="." unique_id=1080856198]
 anchors_preset = 15
@@ -19,31 +238,80 @@ grow_vertical = 2
 
 [node name="V" type="VBoxContainer" parent="Base" unique_id=1178133215]
 layout_mode = 2
+theme_override_constants/separation = 0
 
 [node name="Top" type="MarginContainer" parent="Base/V" unique_id=655569872]
 layout_mode = 2
 theme_override_constants/margin_top = 8
 
-[node name="SceneImage" type="TextureRect" parent="Base/V/Top" unique_id=768777244]
+[node name="_PADDING" type="TextureRect" parent="Base/V/Top" unique_id=2000759149]
+visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-texture = ExtResource("1_5d7a4")
+texture = ExtResource("3_e4x2e")
+stretch_mode = 5
+
+[node name="GUYS" type="Control" parent="Base/V/Top" unique_id=1570874657]
+layout_mode = 2
+script = SubResource("GDScript_t6f8l")
+
+[node name="GUY1" type="TextureRect" parent="Base/V/Top/GUYS" unique_id=1437525562]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 80.0
+texture = ExtResource("3_t6f8l")
+stretch_mode = 5
+
+[node name="GUY2" type="TextureRect" parent="Base/V/Top/GUYS" unique_id=2136627752]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 80.0
+texture = ExtResource("4_etq66")
+stretch_mode = 5
+
+[node name="GUY3" type="TextureRect" parent="Base/V/Top/GUYS" unique_id=1822343996]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 80.0
+texture = ExtResource("5_8u6cp")
+stretch_mode = 5
+
+[node name="GUY4" type="TextureRect" parent="Base/V/Top/GUYS" unique_id=173158044]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 80.0
+texture = ExtResource("6_yj4xp")
+stretch_mode = 5
+
+[node name="PENTAGRAM" type="TextureRect" parent="Base/V/Top/GUYS" unique_id=1806410836]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 80.0
+texture = ExtResource("7_bvcij")
 stretch_mode = 5
 
 [node name="Bottom" type="MarginContainer" parent="Base/V" unique_id=89867779]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_right = 16
 
 [node name="SceneText" type="RichTextLabel" parent="Base/V/Bottom" unique_id=83815020]
+z_index = 5
 texture_filter = 1
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("2_x71j5")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "Human, I remember you're genocides"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
+vertical_alignment = 1
 visible_characters_behavior = 1
 
 [node name="PauseCalculator" type="Node" parent="." unique_id=1328846054]
@@ -57,6 +325,85 @@ one_shot = true
 
 [node name="CutsceneDialogueManager" type="Node" parent="." unique_id=557042202]
 script = ExtResource("6_mkja3")
+blip_sfx = ExtResource("13_43b1u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=919717962]
+libraries/ = SubResource("AnimationLibrary_sint0")
+autoplay = &"intro"
+
+[node name="IntroMusic" type="AudioStreamPlayer" parent="." unique_id=844567743]
+
+[node name="SCREENMARGINS" type="Control" parent="." unique_id=1906730252]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Left" type="ColorRect" parent="SCREENMARGINS" unique_id=404330967]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 144.0
+color = Color(0, 0, 0, 1)
+
+[node name="Top" type="ColorRect" parent="SCREENMARGINS" unique_id=228010250]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 144.0
+offset_bottom = 8.0
+color = Color(0, 0, 0, 1)
+
+[node name="Bottom" type="ColorRect" parent="SCREENMARGINS" unique_id=750569934]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 72.0
+offset_right = 144.0
+offset_bottom = 144.0
+color = Color(0, 0, 0, 1)
+
+[node name="Right" type="ColorRect" parent="SCREENMARGINS" unique_id=1313169281]
+layout_mode = 0
+offset_left = 144.0
+offset_right = 160.0
+offset_bottom = 144.0
+color = Color(0, 0, 0, 1)
+
+[node name="Particles" type="CPUParticles2D" parent="." unique_id=2047540797]
+position = Vector2(146, 161)
+amount = 12
+texture = ExtResource("15_cardh")
+lifetime = 5.0
+randomness = 0.18
+lifetime_randomness = 0.16
+emission_shape = 3
+emission_rect_extents = Vector2(80, 2.83)
+direction = Vector2(-0.7, -1)
+spread = 50.29
+gravity = Vector2(0, 0)
+initial_velocity_min = 60.23
+initial_velocity_max = 118.64
+
+[node name="ParticleBurst" type="CPUParticles2D" parent="." unique_id=1309402542]
+position = Vector2(146, 161)
+emitting = false
+amount = 70
+texture = ExtResource("16_mu4he")
+lifetime = 5.0
+one_shot = true
+explosiveness = 0.61
+randomness = 0.18
+lifetime_randomness = 0.16
+emission_shape = 3
+emission_rect_extents = Vector2(80, 2.83)
+direction = Vector2(-0.7, -1)
+spread = 50.29
+gravity = Vector2(0, 0)
+initial_velocity_min = 197.48
+initial_velocity_max = 275.91
+
+[node name="DialogueManager" parent="." unique_id=838245424 instance=ExtResource("17_kt1kx")]
 
 [connection signal="pause_requested" from="PauseCalculator" to="." method="_on_PauseCalculator_pause_requested"]
 [connection signal="timeout" from="PauseTimer" to="." method="_on_PauseTimer_timeout"]
+[connection signal="finished" from="DialogueManager" to="." method="_on_dialogue_manager_finished"]
