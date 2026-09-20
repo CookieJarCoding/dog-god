@@ -90,7 +90,12 @@ func start_next_level() -> void:
 	await fade_to_black()
 
 	is_won = false
-	get_tree().change_scene_to_file(lvl_data.next_level)
+	if lvl_data.next_level == "":
+		#RoomLoader.exit_sokoban() # external code that terminates the sokoban section after the final level
+		pass
+	
+	else:
+		get_tree().change_scene_to_file(lvl_data.next_level)
 	
 
 		

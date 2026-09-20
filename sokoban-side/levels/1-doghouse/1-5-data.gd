@@ -13,7 +13,7 @@ func _enter_tree() -> void:
 	
 	palette = PaletteList.DOGHOUSE
 	palette_dark = PaletteList.ATTIC_DARK
-	next_level = "res://sokoban-side/levels/1-doghouse/1-5.tscn"
+	next_level = ""
 	
 	Level.lvl_data = self
 	
