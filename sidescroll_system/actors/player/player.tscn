@@ -85,6 +85,7 @@ font_size = 8
 
 [node name="Player" type="CharacterBody2D" unique_id=981155298]
 script = ExtResource("1_rkbax")
+speed = 60.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2062403349]
 position = Vector2(0, -16)
@@ -97,7 +98,6 @@ animation = &"walk"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=92072074]
 offset = Vector2(0, -39)
-limit_smoothed = true
 position_smoothing_speed = 7.0
 
 [node name="Bark" type="Label" parent="." unique_id=523306035]
