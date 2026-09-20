@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://clkf446obp2fl"]
+[gd_scene format=4 uid="uid://0c12q66quuk7"]
 
 [ext_resource type="Script" uid="uid://g0sg1wwp6738" path="res://sokoban-side/scripts/test_queue.gd" id="1_7ydx3"]
 [ext_resource type="Script" uid="uid://bkxkhfq4nety6" path="res://sokoban-side/scripts/sokoban_camera.gd" id="2_b1n8m"]
