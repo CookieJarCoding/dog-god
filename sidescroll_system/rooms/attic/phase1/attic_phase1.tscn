@@ -11,6 +11,7 @@ sokoban_scene = ExtResource("2_yj7e0")
 position = Vector2(253, 111)
 
 [node name="DarknessLayer" type="ColorRect" parent="." unique_id=1210406099]
+z_index = 3
 offset_right = 320.0
 offset_bottom = 145.0
 color = Color(0.16078432, 0.16078432, 0.16078432, 1)

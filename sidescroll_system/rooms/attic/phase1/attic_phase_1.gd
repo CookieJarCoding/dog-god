@@ -1,7 +1,5 @@
 extends Node2D
 
-@onready var darkness: ColorRect = $DarknessLayer
-
 var _dialogue_manager: DialogueManager
 
 @export var sokoban_scene: PackedScene
