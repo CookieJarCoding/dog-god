@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b3shsm00mmic4"]
+
+[ext_resource type="Script" uid="uid://b4e60mc6sl7sh" path="res://sidescroll_system/rooms/attic/phase1/attic_phase_1.gd" id="1_3iyed"]
+[ext_resource type="PackedScene" uid="uid://qlfkhjkcexmh" path="res://sidescroll_system/rooms/PLACEHOLDER_eldritchworld.tscn" id="2_yj7e0"]
+
+[node name="AtticPhase1" type="Node2D" unique_id=574536086]
+script = ExtResource("1_3iyed")
+sokoban_scene = ExtResource("2_yj7e0")
+
+[node name="SpawnMarker" type="Marker2D" parent="." unique_id=1583214564]
+position = Vector2(253, 111)
+
+[node name="DarknessLayer" type="ColorRect" parent="." unique_id=1210406099]
+offset_right = 320.0
+offset_bottom = 145.0
+color = Color(0.16078432, 0.16078432, 0.16078432, 1)
