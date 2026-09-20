@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" format=3 uid="uid://dfqhs8tr80ui1"]
 
-[ext_resource type="Texture2D" uid="uid://fo2esdjqht14" path="res://sidescroll_system/rooms/human_world_tileset.png" id="1_m4x6e"]
+[ext_resource type="Texture2D" uid="uid://fo2esdjqht14" path="res://sidescroll_system/rooms/human_world_tileset.png" id="1_341q4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t2rgg"]
-texture = ExtResource("1_m4x6e")
+texture = ExtResource("1_341q4")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -237,6 +237,7 @@ texture = ExtResource("1_m4x6e")
 12:17/0 = 0
 13:17/0 = 0
 14:17/0 = 0
+0:13/0 = 0
 
 [resource]
 sources/0 = SubResource("TileSetAtlasSource_t2rgg")
