@@ -9,4 +9,4 @@ script = ExtResource("1_v2bww")
 offset_right = 40.0
 offset_bottom = 23.0
 text = "eldritch world level
-press A to complete"
+press B to complete"
