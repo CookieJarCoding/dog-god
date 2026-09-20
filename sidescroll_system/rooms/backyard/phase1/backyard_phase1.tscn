@@ -16,6 +16,7 @@ position = Vector2(24, 112)
 
 [node name="Oldman" parent="." unique_id=533569569 instance=ExtResource("2_vu307")]
 position = Vector2(77, 112)
+dialogue = "Come on, boy!"
 
 [node name="Dogbowl" parent="." unique_id=2036189083 instance=ExtResource("3_mj17s")]
 z_index = 1

@@ -3,7 +3,8 @@ extends Area2D
 ## For objects that need to keep track of collision with the Player for triggering events
 ## Optionally accepts a Sprite2D to show a "lit up" state when Player is in range
 
-
+# If the Interactable plainly triggers short one-line dialogue
+@export var dialogue: String = ""
 # If a "glowing state" sprite is available
 @export var lit_sprite: Sprite2D = null
 
