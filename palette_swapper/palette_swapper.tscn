@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dmyktgkui3gwl"]
+
+[ext_resource type="Script" uid="uid://b2f6ks3tlj617" path="res://palette_swapper/palette_swapper.gd" id="1_1j05h"]
+[ext_resource type="Shader" uid="uid://curgk6p7xupkt" path="res://palette_swapper/palette_swapper.gdshader" id="1_kmpx1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d05hs"]
+load_path = "res://.godot/imported/0-placeholder-palette.png-1f70f15fd70adc83935b29e8d910900c.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rbhtj"]
+shader = ExtResource("1_kmpx1")
+shader_parameter/brightness = 0.0
+shader_parameter/source_palette = SubResource("CompressedTexture2D_d05hs")
+
+[node name="PaletteSwapper" type="Node" unique_id=884518087]
+script = ExtResource("1_1j05h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1029837675]
+layer = 10
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="CanvasLayer" unique_id=1135742663]
+top_level = true
+position = Vector2(80, 72)
+copy_mode = 2
+
+[node name="ScreenFilter" type="ColorRect" parent="CanvasLayer/BackBufferCopy" unique_id=994488388]
+top_level = true
+z_index = 500
+material = SubResource("ShaderMaterial_rbhtj")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

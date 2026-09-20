@@ -3,6 +3,8 @@ class_name Player
 
 var direction := Vector2i.UP
 
+var step := true # for dog walking animation
+
 func _enter_tree() -> void:
 	Level.player = self
 
@@ -41,26 +43,34 @@ func move(direction: Vector2i) -> void:
 			if sigil.sigil == Level.get_first_at_queue():
 				sigil.light_up()
 				Level.pop_first_sigil()
+				
 			else:
 				return
 	
 	elif pickup != null:
 		pickup.on_pickup()
 	
-	print(Level.if_win())
-	
 	slide(direction)
+	
+	if Level.if_win():
+		await Level.start_next_level()
 
 func edit_sprite(direction: Vector2i) -> void:
-	var sprite_region := Rect2(0, 0, 16, 16)
+	var x = 0
+	if step:
+		x = 16
+	
+	step = not step
+		
+	var sprite_region : Rect2
 	match direction:
 		Vector2i.UP:
-			sprite_region = Rect2(0, 32, 16, 16)
+			sprite_region = Rect2(x, 32, 16, 16)
 		Vector2i.RIGHT:
-			sprite_region = Rect2(0, 16, 16, 16)
+			sprite_region = Rect2(x, 16, 16, 16)
 		Vector2i.LEFT:
-			sprite_region = Rect2(0, 48, 16, 16)
+			sprite_region = Rect2(x, 48, 16, 16)
 		Vector2i.DOWN:
-			sprite_region = Rect2(0, 0, 16, 16)
+			sprite_region = Rect2(x, 0, 16, 16)
 					
 	$Sprite2D.region_rect = sprite_region

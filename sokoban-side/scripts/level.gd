@@ -51,9 +51,11 @@ func flip() -> void:
 	if camera.position.y <= 16*9/2:
 		camera.set_to_dark()
 		player.set_pos(Vector2i(player.tile.x, player.tile.y + 9))
+		PaletteSwapper.set_palette(lvl_data.palette_dark)
 	else:
 		camera.set_to_light() 
 		player.set_pos(Vector2i(player.tile.x, player.tile.y - 9))
+		PaletteSwapper.set_palette(lvl_data.palette)
 	
 
 func get_first_at_queue() -> Level.Sigil:
@@ -66,9 +68,11 @@ func add_sigil_at_front(sigil: Sigil) -> void:
 	sigil_queue.add_sigil_at_front(sigil)
 	
 func restart() -> void:
+	await fade_to_black()
+
+	is_won = false	
 	get_tree().reload_current_scene()
-	is_won = false
-	
+
 func if_win() -> bool:
 	var x = 0
 	for s in tile_sigils:
@@ -76,5 +80,16 @@ func if_win() -> bool:
 			x += 1
 	
 	return x >= len(tile_sigils)
+	
+func fade_to_black() -> void:
+	PaletteSwapper.tween_to_brightness(-1.0, 0.5)
+	await get_tree().create_timer(0.5).timeout
+	
+func start_next_level() -> void:
+	await fade_to_black()
+
+	is_won = false
+	get_tree().change_scene_to_file(lvl_data.next_level)
+	
 
 		
