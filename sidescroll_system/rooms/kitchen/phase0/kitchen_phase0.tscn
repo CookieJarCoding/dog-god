@@ -1,9 +1,31 @@
 [gd_scene format=3 uid="uid://cbh4vsuu4n4mt"]
 
 [ext_resource type="PackedScene" uid="uid://6721d6fb36ed" path="res://sidescroll_system/interactable/dogbowl/dogbowl.tscn" id="1_n6t3w"]
+[ext_resource type="Script" uid="uid://cg7kasgfrv5en" path="res://sidescroll_system/rooms/kitchen/phase0/kitchen_phase_0.gd" id="1_vvaut"]
+[ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://sidescroll_system/actors/oldman/oldman.tscn" id="4_bsgk5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y00b8"]
+size = Vector2(1, 20)
 
 [node name="KitchenPhase0" type="Node2D" unique_id=2120541700]
 z_index = 1
+script = ExtResource("1_vvaut")
 
 [node name="Dogbowl" parent="." unique_id=2036189083 instance=ExtResource("1_n6t3w")]
 position = Vector2(203, 112)
+is_full = false
+
+[node name="Oldman" parent="." unique_id=533569569 instance=ExtResource("4_bsgk5")]
+position = Vector2(180, 111)
+
+[node name="SpawnMarker" type="Marker2D" parent="." unique_id=287733259]
+position = Vector2(232, 111)
+
+[node name="DialogueTriggerArea" type="Area2D" parent="." unique_id=1958107324]
+position = Vector2(-3, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTriggerArea" unique_id=267031069]
+position = Vector2(119, 101)
+shape = SubResource("RectangleShape2D_y00b8")
+
+[connection signal="body_entered" from="DialogueTriggerArea" to="." method="_on_dialogue_trigger_area_body_entered"]
