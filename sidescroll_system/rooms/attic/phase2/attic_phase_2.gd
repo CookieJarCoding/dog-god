@@ -29,7 +29,8 @@ func _ready() -> void:
 func _on_dialogue_trigger_area_body_entered(body: Node2D) -> void:
 	if _is_dialogue_finished:
 		return
-
+	
+	body.set_physics_process(false)
 	_dialogue_manager.load_messages([
 		"[color=#1f1f1f]Ah, Brioche... you caused quite a ruckus![/color]",
 		"[color=#1f1f1f]What are you doing up here?[/color]",
@@ -55,6 +56,7 @@ func _on_dialogue_trigger_area_body_entered(body: Node2D) -> void:
 		"[color=#1f1f1f]I remember when you used to be a puppy...[/color]",
 	])
 	await _dialogue_manager.finished
+	body.set_physics_process(true)
 	_is_dialogue_finished = true
 	diary.enable_diary()
 	choice_ui.show()
