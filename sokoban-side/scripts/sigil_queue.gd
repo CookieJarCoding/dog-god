@@ -20,6 +20,7 @@ func construct_queue() -> void:
 	for qs in Level.lvl_data.sigil_queue:
 		var new_sigil = make_sigil(qs).instantiate()
 		new_sigil.position.x = 16*x
+		new_sigil.x = x
 		add_child(new_sigil)
 		queue.append_array([new_sigil])
 
@@ -55,7 +56,9 @@ func pop_first_at_queue() -> void:
 	queue.pop_front()
 	
 	for qs in queue:
-		var target_pos := Vector2(qs.position.x - 16, 0)
+		qs.x -= 1
+		
+		var target_pos := Vector2(qs.x*16, 0)
 		
 		tween.tween_property(qs, "position", target_pos, 0.3)
 
@@ -66,12 +69,15 @@ func add_sigil_at_front(s: Level.Sigil) -> void:
 	tween.set_trans(Tween.TRANS_CUBIC)
 	
 	for qs in queue:
-		var target_pos := Vector2(qs.position.x + 16, 0)
+		qs.x += 1
+		
+		var target_pos := Vector2(qs.x*16, 0)
 		
 		tween.tween_property(qs, "position", target_pos, 0.3)
 		
 	var new_sigil = make_sigil(s).instantiate()
 	new_sigil.position.y = 16
+	new_sigil.x = 0
 	add_child(new_sigil)
 	queue.push_front(new_sigil)
 	

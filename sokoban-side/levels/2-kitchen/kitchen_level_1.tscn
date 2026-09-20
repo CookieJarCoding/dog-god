@@ -203,7 +203,7 @@ texture = ExtResource("22_qqp0j")
 sources/2 = SubResource("TileSetAtlasSource_h317n")
 sources/0 = SubResource("TileSetAtlasSource_dnw0q")
 
-[node name="Main" type="Node2D" unique_id=1196459089]
+[node name="Main2" type="Node2D" unique_id=1196459089]
 script = ExtResource("1_pg4v0")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1047449224]
