@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://da8lfxbjsok43" path="res://sokoban-side/objects/candle_lit.tscn" id="20_tg32f"]
 [ext_resource type="PackedScene" uid="uid://cgxl5ob6r3pav" path="res://sokoban-side/objects/candle_unlit.tscn" id="21_3c6bl"]
 [ext_resource type="Texture2D" uid="uid://vtytkm3kyc88" path="res://sokoban-side/sprites/eldritch test.png" id="22_gj1ci"]
+[ext_resource type="PackedScene" uid="uid://cuibjeqdgoslu" path="res://sokoban-side/objects/blinking_eye_1.tscn" id="23_cb1rc"]
+[ext_resource type="PackedScene" uid="uid://ch8xp82dcj3ei" path="res://sokoban-side/objects/blinking_eye-2.tscn" id="24_2ufvs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_utpct"]
 texture = ExtResource("6_qcpef")
@@ -203,7 +205,7 @@ texture = ExtResource("22_gj1ci")
 sources/2 = SubResource("TileSetAtlasSource_h317n")
 sources/0 = SubResource("TileSetAtlasSource_dnw0q")
 
-[node name="Main" type="Node2D" unique_id=1196459089]
+[node name="Main2" type="Node2D" unique_id=1196459089]
 script = ExtResource("1_ktpvi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1047449224]
@@ -247,3 +249,9 @@ tile_set = SubResource("TileSet_yf5fn")
 
 [node name="Timer" type="Timer" parent="." unique_id=956596654]
 one_shot = true
+
+[node name="BlinkingEye" parent="." unique_id=1573144750 instance=ExtResource("23_cb1rc")]
+position = Vector2(120, 24)
+
+[node name="BlinkingEye2" parent="." unique_id=2130965056 instance=ExtResource("24_2ufvs")]
+position = Vector2(40, 120)

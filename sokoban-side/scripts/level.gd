@@ -30,6 +30,8 @@ func get_tile_type(target: Vector2i) -> int:
 		match tilemap.get_cell_source_id(target):
 			0:
 				return 1
+			4:
+				return 1
 			_:
 				return 0
 	else:

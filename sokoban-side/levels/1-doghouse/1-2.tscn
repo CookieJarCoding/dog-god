@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://da8lfxbjsok43" path="res://sokoban-side/objects/candle_lit.tscn" id="20_ru7g4"]
 [ext_resource type="PackedScene" uid="uid://cgxl5ob6r3pav" path="res://sokoban-side/objects/candle_unlit.tscn" id="21_7juff"]
 [ext_resource type="Texture2D" uid="uid://vtytkm3kyc88" path="res://sokoban-side/sprites/eldritch test.png" id="22_xu38q"]
+[ext_resource type="PackedScene" uid="uid://cuibjeqdgoslu" path="res://sokoban-side/objects/blinking_eye_1.tscn" id="23_6sap1"]
+[ext_resource type="PackedScene" uid="uid://ch8xp82dcj3ei" path="res://sokoban-side/objects/blinking_eye-2.tscn" id="24_l064p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_utpct"]
 texture = ExtResource("6_ukvf2")
@@ -243,3 +245,18 @@ tile_set = SubResource("TileSet_yf5fn")
 
 [node name="Timer" type="Timer" parent="." unique_id=956596654]
 one_shot = true
+
+[node name="BlinkingEye" parent="." unique_id=1573144750 instance=ExtResource("23_6sap1")]
+position = Vector2(31, 106)
+
+[node name="BlinkingEye2" parent="." unique_id=1768602198 instance=ExtResource("24_l064p")]
+position = Vector2(137, 90)
+
+[node name="BlinkingEye3" parent="." unique_id=331242728 instance=ExtResource("23_6sap1")]
+position = Vector2(15, 27)
+
+[node name="BlinkingEye4" parent="." unique_id=1923265442 instance=ExtResource("24_l064p")]
+position = Vector2(127, 32)
+
+[node name="BlinkingEye5" parent="." unique_id=1962986202 instance=ExtResource("23_6sap1")]
+position = Vector2(51, 35)
