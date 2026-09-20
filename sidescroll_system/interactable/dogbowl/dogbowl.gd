@@ -16,22 +16,27 @@ func _ready() -> void:
 
 
 func interact() -> void:
-	if not has_finished_tutorial:
-		await _trigger_intro_dialogue()
-		has_finished_tutorial = true
-	else:
-		# Switch to eldritch world
-		$"TEMP-TeleportIndicator".show() # Animation placeholder (optional)
-		RoomLoader.start_sokoban(sokoban_scene)
-
-
-func _trigger_intro_dialogue() -> void:
 	var dialogue_manager := get_dialogue_manager()
-	if dialogue_manager == null:
+	if is_full:
+		if not has_finished_tutorial:
+			await _trigger_intro_dialogue(dialogue_manager)
+			has_finished_tutorial = true
+		else:
+			# Switch to eldritch world
+			$"TEMP-TeleportIndicator".show() # Animation placeholder (optional)
+			RoomLoader.start_sokoban(sokoban_scene)
+	else:
+		dialogue_manager.load_messages([
+			"[color=#1f1f1f](My work is done here.)[/color]",
+		])
+
+
+func _trigger_intro_dialogue(dialogue: DialogueManager) -> void:
+	if dialogue == null:
 		push_error("No DialogueManager defined for this room.")
 		return
 
-	dialogue_manager.load_messages([
+	dialogue.load_messages([
 		"[color=#1f1f1f](My owner has spoiled me with fresh meat)[/color]",
 		"[color=#1f1f1f](in my food bowl.)[/color]",
 		"[color=#1f1f1f](For years, I have endured this disrespect.)[/color]",
@@ -49,7 +54,7 @@ func _trigger_intro_dialogue() -> void:
 		"[color=#1f1f1f](and with the proper rites,)[/color]",
 		"[tornado radius=1.0 freq=2.0][color=#1f1f1f](perhaps a passage into one.)[/color][/tornado]"
 	])
-	await dialogue_manager.finished
+	await dialogue.finished
 
 
 func _set_bowl_full(full: bool) -> void:
