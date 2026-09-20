@@ -6,8 +6,6 @@ static var has_finished_tutorial = false
 # For each Dogbowl instance, assign correct sokoban scene in the Inspector
 @export var sokoban_scene: PackedScene
 
-var is_dialogue_playing = false
-
 @onready var _sprite = $BaseSprite
 
 func _ready() -> void:
@@ -20,6 +18,11 @@ func interact() -> void:
 	if dialogue_manager == null:
 		push_error("No DialogueManager defined for this room.")
 		return
+	
+	# Block interactions when dialogue is playing
+	if dialogue_manager.is_active:
+		return
+	
 	if is_full:
 		if not has_finished_tutorial:
 			await _trigger_intro_dialogue(dialogue_manager)
