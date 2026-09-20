@@ -30,7 +30,7 @@ func _ready() -> void:
 	])
 
 
-func _on_dialogue_trigger_area_body_entered(body: Node2D) -> void:
+func _on_dialogue_trigger_area_body_entered(_body: Node2D) -> void:
 	if _is_dialogue_finished:
 		return
 	
