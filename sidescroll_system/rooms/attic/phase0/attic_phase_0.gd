@@ -32,7 +32,7 @@ func _fade_to_darkness():
 	_dialogue_manager.load_messages([
 		"[color=#1f1f1f]It's 12:00 AM. Peta is fast asleep.[/color]",
 		"[color=#1f1f1f]Brioche however, is getting stronger.[/color]",
-		"[color=#1f1f1f]Brioche, now standing on 2 legs.[/color]",
+		"[color=#1f1f1f]Brioche, now standing on two legs.[/color]",
 		"[color=#1f1f1f](At last, my plan is almost complete.)[/color]",
 		"[color=#1f1f1f](Reckoning is near.)[/color]",
 		"[color=#1f1f1f](The hour is perfect.)[/color]",
