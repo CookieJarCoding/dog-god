@@ -15,8 +15,6 @@ func _ready() -> void:
 
 
 func _on_dialogue_trigger_area_body_entered(body: Node2D) -> void:
-	print("area entered")
-	print(body.global_position)
 	if _is_dialogue_finished:
 		return
 	
