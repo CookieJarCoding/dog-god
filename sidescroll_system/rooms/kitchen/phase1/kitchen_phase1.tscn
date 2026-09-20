@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c6guvtwtnf552"]
+
+[ext_resource type="PackedScene" uid="uid://rvnrk3dvg65n" path="res://sidescroll_system/interactable/doggydoor/doggydoor.tscn" id="1_tjag7"]
+
+[node name="KitchenPhase1" type="Node2D" unique_id=1643179626]
+
+[node name="Doggydoor" parent="." unique_id=2126403347 instance=ExtResource("1_tjag7")]
+position = Vector2(24, 112)
