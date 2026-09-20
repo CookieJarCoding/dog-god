@@ -30,5 +30,6 @@ func _on_dialogue_trigger_area_body_entered(_body: Node2D) -> void:
 		"[color=#1f1f1f]Brioche growls in annoyance but[/color]",
 		"[color=#1f1f1f]eventually gives in because of food.[/color]",
 	])
+	await _dialogue_manager.finished
 	_is_dialogue_finished = true
 	
