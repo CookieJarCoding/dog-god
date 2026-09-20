@@ -3,11 +3,9 @@ extends LevelData
 func _enter_tree() -> void:
 	level_name = "Pearly Gates"
 	sigil_queue = [
-		Level.Sigil.A, 
+		Level.Sigil.B,
 		Level.Sigil.B,
 		Level.Sigil.A, 
-		Level.Sigil.D,
-		Level.Sigil.B,
 		Level.Sigil.D,
 		Level.Sigil.E, 
 	]

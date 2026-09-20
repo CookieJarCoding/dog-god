@@ -3,7 +3,6 @@ extends LevelData
 func _enter_tree() -> void:
 	level_name = "Shadow of a Doubt"
 	sigil_queue = [
-		Level.Sigil.A, 
 		Level.Sigil.D,
 		Level.Sigil.C,
 		Level.Sigil.A, 
