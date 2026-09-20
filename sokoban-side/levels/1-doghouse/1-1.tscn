@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://clkf446obp2fl"]
+[gd_scene format=4 uid="uid://cg1s2o17vud68"]
 
 [ext_resource type="Script" uid="uid://ki68u6esjum0" path="res://sokoban-side/levels/1-doghouse/1-1-data.gd" id="1_2lndk"]
 [ext_resource type="Script" uid="uid://bkxkhfq4nety6" path="res://sokoban-side/scripts/sokoban_camera.gd" id="2_ucbh3"]

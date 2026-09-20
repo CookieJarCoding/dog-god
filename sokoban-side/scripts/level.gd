@@ -74,6 +74,7 @@ func restart() -> void:
 	get_tree().reload_current_scene()
 
 func if_win() -> bool:
+	
 	var x = 0
 	for s in tile_sigils:
 		if s.is_lit:
