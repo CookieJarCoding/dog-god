@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bg2c45ktki055"]
+
+[ext_resource type="Texture2D" uid="uid://dfmowamdklh3i" path="res://cutscenes/intro/gfx/cutscene-cg-1.png" id="1_5d7a4"]
+[ext_resource type="Script" uid="uid://bm2d2wt8j2oty" path="res://cutscenes/intro/cutscene.gd" id="1_gvd6d"]
+[ext_resource type="FontFile" uid="uid://dyp15uxivo52b" path="res://fonts/16bfZX.ttf" id="2_x71j5"]
+[ext_resource type="Script" uid="uid://cml1m6vqsx8hk" path="res://dialogue_system/scripts/pause_calculator.gd" id="4_os728"]
+[ext_resource type="AudioStream" uid="uid://b7sfujslol2gg" path="res://dialogue_system/sfx/blop.wav" id="5_nimc8"]
+[ext_resource type="Script" uid="uid://cx6vf4wv3nhr2" path="res://cutscenes/intro/cutscene_dialogue_manager.gd" id="6_mkja3"]
+
+[node name="IntroCutscene" type="CanvasLayer" unique_id=434793675]
+script = ExtResource("1_gvd6d")
+
+[node name="Base" type="MarginContainer" parent="." unique_id=1080856198]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="V" type="VBoxContainer" parent="Base" unique_id=1178133215]
+layout_mode = 2
+
+[node name="Top" type="MarginContainer" parent="Base/V" unique_id=655569872]
+layout_mode = 2
+theme_override_constants/margin_top = 8
+
+[node name="SceneImage" type="TextureRect" parent="Base/V/Top" unique_id=768777244]
+layout_mode = 2
+texture = ExtResource("1_5d7a4")
+stretch_mode = 5
+
+[node name="Bottom" type="MarginContainer" parent="Base/V" unique_id=89867779]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="SceneText" type="RichTextLabel" parent="Base/V/Bottom" unique_id=83815020]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_x71j5")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Human, I remember you're genocides"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+visible_characters_behavior = 1
+
+[node name="PauseCalculator" type="Node" parent="." unique_id=1328846054]
+script = ExtResource("4_os728")
+
+[node name="DialogueBlip" type="AudioStreamPlayer" parent="." unique_id=1262958882]
+stream = ExtResource("5_nimc8")
+
+[node name="PauseTimer" type="Timer" parent="." unique_id=1734017047]
+one_shot = true
+
+[node name="CutsceneDialogueManager" type="Node" parent="." unique_id=557042202]
+script = ExtResource("6_mkja3")
+
+[connection signal="pause_requested" from="PauseCalculator" to="." method="_on_PauseCalculator_pause_requested"]
+[connection signal="timeout" from="PauseTimer" to="." method="_on_PauseTimer_timeout"]

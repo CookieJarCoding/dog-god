@@ -17,10 +17,10 @@ const SLIDE_ANIM_DURATION = 0.8
 @export var final_y_position: float = 112.0
 @export var dialogue_box_size: float = 32.0
 
-@onready var dialogue_label: RichTextLabel = $MainContainer/ContentContainer/DialogueLabel
+@onready var dialogue_label: RichTextLabel = get_node_or_null("MainContainer/ContentContainer/DialogueLabel")
 @onready var pause_timer: Timer = $PauseTimer
-@onready var pause_calculator: PauseCalculator = $PauseCalculator
-@onready var blip: AudioStreamPlayer = $DialogueBlip
+@onready var pause_calculator: PauseCalculator = get_node_or_null("PauseCalculator")
+@onready var blip: AudioStreamPlayer = get_node_or_null("DialogueBlip")
 
 
 var timer: float = 0
@@ -70,7 +70,7 @@ func display_next_character() -> void:
 		dialogue_label.visible_characters += 1
 		# NOTE: Using this implementation, the MINIMUM blip length is set by
 		# the length of the .wav file.
-		if not blip.playing:
+		if not blip.playing and pause_timer.is_stopped():
 			blip.pitch_scale = rng.randf_range(0.95, 1.08)
 			
 			# WARNING/TODO: There seems to be a short delay when playing an AudioStream
