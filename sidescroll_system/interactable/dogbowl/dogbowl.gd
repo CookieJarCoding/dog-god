@@ -32,9 +32,14 @@ func interact() -> void:
 			$"TEMP-TeleportIndicator".show() # Animation placeholder (optional)
 			RoomLoader.start_sokoban(sokoban_scene)
 	else:
-		dialogue_manager.load_messages([
-			"[color=#1f1f1f](My work is done here.)[/color]",
-		])
+		if RoomLoader._active_phase != 0:
+			dialogue_manager.load_messages([
+				"[color=#1f1f1f](My work is done here.)[/color]",
+			])
+		else:
+			dialogue_manager.load_messages([
+				"[color=#1f1f1f](It is not the right time yet.)[/color]",
+			])
 
 
 func _trigger_intro_dialogue(dialogue: DialogueManager) -> void:
