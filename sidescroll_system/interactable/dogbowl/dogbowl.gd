@@ -16,7 +16,10 @@ func _ready() -> void:
 
 
 func interact() -> void:
-	var dialogue_manager := get_dialogue_manager()
+	var dialogue_manager := DialogueManager.get_instance(get_tree())
+	if dialogue_manager == null:
+		push_error("No DialogueManager defined for this room.")
+		return
 	if is_full:
 		if not has_finished_tutorial:
 			await _trigger_intro_dialogue(dialogue_manager)
@@ -32,10 +35,6 @@ func interact() -> void:
 
 
 func _trigger_intro_dialogue(dialogue: DialogueManager) -> void:
-	if dialogue == null:
-		push_error("No DialogueManager defined for this room.")
-		return
-
 	dialogue.load_messages([
 		"[color=#1f1f1f](My owner has spoiled me with fresh meat)[/color]",
 		"[color=#1f1f1f](in my food bowl.)[/color]",

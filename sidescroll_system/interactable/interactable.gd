@@ -19,10 +19,6 @@ func interact() -> void:
 	pass
 
 
-func get_dialogue_manager() -> DialogueManager:
-	return get_tree().get_first_node_in_group('dialogue_manager') as DialogueManager
-
-
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		body.register_interactable(self)
