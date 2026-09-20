@@ -5,9 +5,6 @@
 [ext_resource type="TileSet" uid="uid://dfqhs8tr80ui1" path="res://sidescroll_system/rooms/human_world_tileset.tres" id="2_x0p77"]
 [ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://sidescroll_system/actors/player/player.tscn" id="3_2we6v"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y00b8"]
-distance = -54.0
-
 [node name="Attic" type="Node2D" unique_id=1168420187]
 script = ExtResource("1_x0p77")
 
@@ -33,13 +30,6 @@ tile_set = ExtResource("2_x0p77")
 
 [node name="Props" type="TileMapLayer" parent="Map" unique_id=625354737]
 tile_set = ExtResource("2_x0p77")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Map" unique_id=925785398]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/StaticBody2D" unique_id=587364150]
-position = Vector2(219, 94)
-rotation = -1.5707964
-shape = SubResource("WorldBoundaryShape2D_y00b8")
 
 [node name="Player" parent="." unique_id=981155298 instance=ExtResource("3_2we6v")]
 position = Vector2(255, 112)
