@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d2unxotvw3tin" path="res://sidescroll_system/actors/player/player.gd" id="1_rkbax"]
 [ext_resource type="Texture2D" uid="uid://rnkovfv5112e" path="res://sidescroll_system/actors/player/brioche.png" id="2_12cir"]
+[ext_resource type="AudioStream" uid="uid://rnnmskmbkifr" path="res://sidescroll_system/actors/player/brioche-bark.wav" id="3_olekr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbhhb"]
 size = Vector2(42, 32)
@@ -96,3 +97,6 @@ animation = &"walk"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=92072074]
 offset = Vector2(0, -39)
 position_smoothing_speed = 7.0
+
+[node name="Bark" type="AudioStreamPlayer2D" parent="." unique_id=1413952214]
+stream = ExtResource("3_olekr")

@@ -64,6 +64,7 @@ func get_horizontal_collision() -> Vector2:
 
 func _bark() -> void:
 	_is_barking = true
+	$Bark.play()
 	await get_tree().create_timer(0.20).timeout
 	_is_barking = false
 
