@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://chcyy6pm7f4af"]
+
+[ext_resource type="Script" path="res://music_handler/music_handler.gd" id="1_mv5wf"]
+[ext_resource type="AudioStream" path="res://SFX/sigil-collect.mp3" id="2_bketx"]
+[ext_resource type="AudioStream" path="res://SFX/sigil-paper.mp3" id="3_6y2so"]
+[ext_resource type="AudioStream" path="res://SFX/level complete - 1789916821298.mp3" id="4_73xg7"]
+
+[node name="MusicHandler" type="Node2D" unique_id=754875647]
+script = ExtResource("1_mv5wf")
+
+[node name="BaseMusic" type="AudioStreamPlayer" parent="." unique_id=1134458087]
+
+[node name="DarkMusic" type="AudioStreamPlayer" parent="." unique_id=403447041]
+
+[node name="SigilCollect" type="AudioStreamPlayer" parent="." unique_id=1169732487]
+stream = ExtResource("2_bketx")
+volume_db = -13.0
+
+[node name="SigilPaper" type="AudioStreamPlayer" parent="." unique_id=182107998]
+stream = ExtResource("3_6y2so")
+volume_db = -13.0
+
+[node name="LevelComplete" type="AudioStreamPlayer" parent="." unique_id=634226576]
+stream = ExtResource("4_73xg7")
+volume_db = -13.0
+
+[node name="BriocheBark" type="AudioStreamPlayer" parent="." unique_id=1925671112]
+stream = ExtResource("4_73xg7")
+volume_db = -13.0
+
+[node name="BriocheBlip" type="AudioStreamPlayer" parent="." unique_id=16836776]
+stream = ExtResource("4_73xg7")
+volume_db = -13.0
+
+[node name="PitaBlip" type="AudioStreamPlayer" parent="." unique_id=1914181077]
+stream = ExtResource("4_73xg7")
+volume_db = -13.0
