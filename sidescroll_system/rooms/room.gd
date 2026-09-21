@@ -4,7 +4,7 @@ extends Node2D
 @export var room_phases: Array[PackedScene] = []
 
 @onready var ground: TileMapLayer = $Map/Ground
-@onready var player: Player = $Player
+@onready var player: SidescrollPlayer = $Player
 @onready var camera: Camera2D = $Player/Camera2D
 @onready var _level_content: Node2D = $LevelContent
 

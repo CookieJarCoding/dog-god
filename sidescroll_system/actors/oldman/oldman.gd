@@ -1,4 +1,4 @@
-extends Interactable
+extends SidescrollInteractable
 
 @onready var _dialogue_manager := DialogueManager.get_instance(get_tree())
 
