@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://crsxccribfvab" path="res://sidescroll_system/rooms/attic/attic.gd" id="1_x0p77"]
 [ext_resource type="TileSet" uid="uid://dfqhs8tr80ui1" path="res://sidescroll_system/rooms/human_world_tileset.tres" id="2_x0p77"]
 [ext_resource type="PackedScene" uid="uid://dy20fqfm7y308" path="res://sidescroll_system/actors/player/player.tscn" id="3_2we6v"]
+[ext_resource type="AudioStream" uid="uid://dspo7jf3iowre" path="res://sidescroll_system/ost/overworldhome_bass.mp3" id="5_2we6v"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y00b8"]
 
@@ -46,3 +47,6 @@ z_index = 1
 position = Vector2(255, 112)
 
 [node name="LevelContent" type="Node2D" parent="." unique_id=1267080622]
+
+[node name="AtticMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1315793665]
+stream = ExtResource("5_2we6v")

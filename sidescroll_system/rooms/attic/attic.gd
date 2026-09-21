@@ -10,6 +10,8 @@ func _ready() -> void:
 	]
 	super()
 	PaletteSwapper.set_palette(PaletteList.HUMAN_BASE)
+	OverworldMusic.stop_human_music()
+	$AtticMusicPlayer.play()
 
 func _process(_delta) -> void:
 	# Prevent player movement in the "dark" attic sequence

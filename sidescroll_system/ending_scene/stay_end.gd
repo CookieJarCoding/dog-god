@@ -4,6 +4,7 @@ var dialogue_manager: DialogueManager
 
 
 func _ready() -> void:
+	$StayEndMusicPlayer.play()
 	PaletteSwapper.set_brightness(0.0)
 
 	dialogue_manager = DialogueManager.new()
