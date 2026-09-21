@@ -6,14 +6,21 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmglj"]
 size = Vector2(32, 80)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d0h0l"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wicnq"]
 atlas = ExtResource("2_wicnq")
 region = Rect2(0, 0, 32, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0h0l"]
+atlas = ExtResource("2_wicnq")
+region = Rect2(32, 0, 32, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_torcj"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_wicnq")
+}, {
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_d0h0l")
 }],
 "loop": 1,
@@ -32,3 +39,4 @@ shape = SubResource("RectangleShape2D_dmglj")
 position = Vector2(0, -40)
 sprite_frames = SubResource("SpriteFrames_torcj")
 animation = &"idle"
+frame_progress = 0.9791136
