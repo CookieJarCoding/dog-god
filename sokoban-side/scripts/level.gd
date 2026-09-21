@@ -11,6 +11,7 @@ var sigil_queue : SigilQueue = null # main container for sigil queue
 
 var tile_sigils: Array[TileSigil] = []
 var moveables: Array[Moveable] = []
+var sigil_papers: Array[SigilPaper] = []
 var interactables: Array[Interactable] = []
 var tilemap : TileMapLayer
 var camera : Camera2D = null
@@ -53,12 +54,18 @@ func flip() -> void:
 	if camera.position.y <= 16*9/2:
 		camera.set_to_dark()
 		player.set_pos(Vector2i(player.tile.x, player.tile.y + 9))
+		for p in sigil_papers:
+			p.set_pos(Vector2i(p.tile.x, p.tile.y + 9))
+			p.flip_activity()
 		PaletteSwapper.set_palette(lvl_data.palette_dark)
-		PaletteSwapper.set_brightness(-0.25)
+		PaletteSwapper.set_brightness(0)
 		MusicHandler.switch_to_dark()
 	else:
 		camera.set_to_light() 
 		player.set_pos(Vector2i(player.tile.x, player.tile.y - 9))
+		for p in sigil_papers:
+			p.set_pos(Vector2i(p.tile.x, p.tile.y - 9))
+			p.flip_activity()
 		PaletteSwapper.set_palette(lvl_data.palette)
 		PaletteSwapper.set_brightness(0.0)
 		MusicHandler.switch_to_light()

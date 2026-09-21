@@ -52,6 +52,8 @@ func move(direction: Vector2i) -> void:
 				return
 	
 	elif pickup != null:
+		if pickup is SigilPaper and pickup.is_block:
+			return
 		if pickup is SigilPaper and pickup.is_active:
 			MusicHandler.sigil_paper.play()
 		pickup.on_pickup()

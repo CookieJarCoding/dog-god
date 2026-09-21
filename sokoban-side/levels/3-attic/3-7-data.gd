@@ -1,19 +1,19 @@
 extends LevelData
 
 func _enter_tree() -> void:
-	level_name = "Shadow of a Doubt"
+	level_name = "Idolatry"
 	sigil_queue = [
-		Level.Sigil.D,
-		Level.Sigil.C,
+		Level.Sigil.B, 
 		Level.Sigil.A, 
-		Level.Sigil.C,
-		Level.Sigil.D,
-		Level.Sigil.F,
+		Level.Sigil.D, 
+		Level.Sigil.A, 
+		Level.Sigil.B, 
+		Level.Sigil.F, 
 	]
 	
 	palette = PaletteList.ATTIC_DARK
 	palette_dark = PaletteList.ATTIC
-	next_level = "res://sokoban-side/levels/3-attic/3-6.tscn"
+	next_level = "res://sokoban-side/levels/3-attic/dummy.tscn"
 	
 	Level.lvl_data = self
 	

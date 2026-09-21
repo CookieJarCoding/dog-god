@@ -1,0 +1,304 @@
+[gd_scene format=4 uid="uid://bjg3c4qti2wcc"]
+
+[ext_resource type="Script" uid="uid://jjw1xnonsch0" path="res://sokoban-side/levels/3-attic/3-7-data.gd" id="1_p0erk"]
+[ext_resource type="Script" uid="uid://bkxkhfq4nety6" path="res://sokoban-side/scripts/sokoban_camera.gd" id="2_xybpq"]
+[ext_resource type="FontFile" uid="uid://buydju4w5k7bh" path="res://sokoban-side/16bfZX.ttf" id="3_uk0lq"]
+[ext_resource type="Script" uid="uid://deywahrp8syx7" path="res://sokoban-side/scripts/label.gd" id="4_rlbu6"]
+[ext_resource type="Script" uid="uid://bmp3hmrdphdj0" path="res://sokoban-side/scripts/sigil_queue.gd" id="5_5kww4"]
+[ext_resource type="Texture2D" uid="uid://bvpedeesvilve" path="res://sokoban-side/sprites/eldritch-draft-3.png" id="6_w7gsa"]
+[ext_resource type="PackedScene" uid="uid://bd2513j5vrry6" path="res://sokoban-side/objects/tile_sigils/sigil_b.tscn" id="7_5428u"]
+[ext_resource type="PackedScene" uid="uid://bxtmikhf3wbgo" path="res://sokoban-side/objects/player.tscn" id="8_fsvbn"]
+[ext_resource type="PackedScene" uid="uid://dpcsbyxv8dv7u" path="res://sokoban-side/objects/tile_sigils/sigil_a.tscn" id="9_1xroo"]
+[ext_resource type="PackedScene" uid="uid://c4adt26dktsf" path="res://sokoban-side/objects/tile_sigils/sigil_c.tscn" id="10_qfx5q"]
+[ext_resource type="PackedScene" uid="uid://cdkd68luk3eic" path="res://sokoban-side/objects/tile_sigils/sigil_d.tscn" id="11_g2jfg"]
+[ext_resource type="PackedScene" uid="uid://wyl6tilb08mr" path="res://sokoban-side/objects/tile_sigils/sigil_e.tscn" id="12_0fysi"]
+[ext_resource type="PackedScene" uid="uid://cs2877gd3xgo2" path="res://sokoban-side/objects/tile_sigils/sigil_f.tscn" id="13_5ofi0"]
+[ext_resource type="PackedScene" uid="uid://dccu3vgd71pv6" path="res://sokoban-side/objects/sigil_paper/sigil_paper_a.tscn" id="14_c6weo"]
+[ext_resource type="PackedScene" uid="uid://dyjvvgg1j5qs6" path="res://sokoban-side/objects/sigil_paper/sigil_paper_b.tscn" id="15_1vwxv"]
+[ext_resource type="PackedScene" uid="uid://86scsjawkl62" path="res://sokoban-side/objects/sigil_paper/sigil_paper_c.tscn" id="16_8478x"]
+[ext_resource type="PackedScene" uid="uid://ykggqan4tfgs" path="res://sokoban-side/objects/sigil_paper/sigil_paper_d.tscn" id="17_0ql0i"]
+[ext_resource type="PackedScene" uid="uid://rfyso0jchd5m" path="res://sokoban-side/objects/sigil_paper/sigil_paper_e.tscn" id="18_bdbxp"]
+[ext_resource type="PackedScene" uid="uid://cfaoi4a04pp45" path="res://sokoban-side/objects/sigil_paper/sigil_paper_f.tscn" id="19_vir86"]
+[ext_resource type="PackedScene" uid="uid://da8lfxbjsok43" path="res://sokoban-side/objects/candle_lit.tscn" id="20_scqff"]
+[ext_resource type="PackedScene" uid="uid://cgxl5ob6r3pav" path="res://sokoban-side/objects/candle_unlit.tscn" id="21_uut8i"]
+[ext_resource type="PackedScene" uid="uid://b6yephbsgnvp3" path="res://sokoban-side/objects/sigil_paper/sigil_paper_a_inactive.tscn" id="22_od8ik"]
+[ext_resource type="PackedScene" uid="uid://bujd84mcjnptb" path="res://sokoban-side/objects/sigil_paper/sigil_paper_b_inactive.tscn" id="23_ewp21"]
+[ext_resource type="PackedScene" uid="uid://j3lc5mdpuh1x" path="res://sokoban-side/objects/sigil_paper/sigil_paper_c_inactive.tscn" id="24_4nwrt"]
+[ext_resource type="PackedScene" uid="uid://r7sq32hr22n2" path="res://sokoban-side/objects/sigil_paper/sigil_paper_d_inactive.tscn" id="25_i70kk"]
+[ext_resource type="PackedScene" uid="uid://cshgxyrmb5onu" path="res://sokoban-side/objects/sigil_paper/sigil_paper_e_inactive.tscn" id="26_cpryt"]
+[ext_resource type="PackedScene" uid="uid://01ti38en524y" path="res://sokoban-side/objects/sigil_paper/sigil_paper_f_inactive.tscn" id="27_wayjk"]
+[ext_resource type="Texture2D" uid="uid://vtytkm3kyc88" path="res://sokoban-side/sprites/eldritch test.png" id="28_dkws5"]
+[ext_resource type="PackedScene" uid="uid://ch8xp82dcj3ei" path="res://sokoban-side/objects/blinking_eye-2.tscn" id="29_en8h1"]
+[ext_resource type="PackedScene" uid="uid://cuibjeqdgoslu" path="res://sokoban-side/objects/blinking_eye_1.tscn" id="30_w1dop"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_00ioe"]
+texture = ExtResource("6_w7gsa")
+0:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+2:0/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+6:4/0 = 0
+5:8/0 = 0
+4:8/0 = 0
+3:8/0 = 0
+2:8/0 = 0
+1:8/0 = 0
+0:8/0 = 0
+6:6/0 = 0
+6:5/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_fejer"]
+resource_name = "Grid Sigils"
+scenes/1/scene = ExtResource("7_5428u")
+scenes/2/scene = ExtResource("8_fsvbn")
+scenes/3/scene = ExtResource("9_1xroo")
+scenes/4/scene = ExtResource("10_qfx5q")
+scenes/5/scene = ExtResource("11_g2jfg")
+scenes/6/scene = ExtResource("12_0fysi")
+scenes/8/scene = ExtResource("13_5ofi0")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4xnme"]
+resource_name = "Sigil Papers"
+scenes/1/scene = ExtResource("14_c6weo")
+scenes/2/scene = ExtResource("15_1vwxv")
+scenes/3/scene = ExtResource("16_8478x")
+scenes/4/scene = ExtResource("17_0ql0i")
+scenes/5/scene = ExtResource("18_bdbxp")
+scenes/6/scene = ExtResource("19_vir86")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_b32uv"]
+scenes/1/scene = ExtResource("20_scqff")
+scenes/2/scene = ExtResource("21_uut8i")
+scenes/3/scene = ExtResource("8_fsvbn")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_lg5r7"]
+scenes/1/scene = ExtResource("22_od8ik")
+scenes/2/scene = ExtResource("23_ewp21")
+scenes/3/scene = ExtResource("24_4nwrt")
+scenes/4/scene = ExtResource("25_i70kk")
+scenes/5/scene = ExtResource("26_cpryt")
+scenes/6/scene = ExtResource("27_wayjk")
+
+[sub_resource type="TileSet" id="TileSet_g4v7s"]
+sources/1 = SubResource("TileSetScenesCollectionSource_fejer")
+sources/0 = SubResource("TileSetAtlasSource_00ioe")
+sources/2 = SubResource("TileSetScenesCollectionSource_4xnme")
+sources/3 = SubResource("TileSetScenesCollectionSource_b32uv")
+sources/5 = SubResource("TileSetScenesCollectionSource_lg5r7")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgw1a"]
+texture = ExtResource("6_w7gsa")
+0:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+2:0/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+6:4/0 = 0
+5:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+2:8/0 = 0
+1:8/0 = 0
+0:8/0 = 0
+6:6/0 = 0
+6:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xr6v0"]
+texture = ExtResource("28_dkws5")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yf5fn"]
+sources/2 = SubResource("TileSetAtlasSource_xr6v0")
+sources/0 = SubResource("TileSetAtlasSource_tgw1a")
+
+[node name="Main" type="Node2D" unique_id=1196459089]
+script = ExtResource("1_p0erk")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1047449224]
+position = Vector2(80, 72)
+script = ExtResource("2_xybpq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=545682268]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1591659836]
+offset_top = 1.0
+offset_right = 160.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0.8156863, 0.8156863, 0.8156863, 1)
+theme_override_fonts/font = ExtResource("3_uk0lq")
+theme_override_font_sizes/font_size = 16
+text = "Label"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_rlbu6")
+
+[node name="SigilQueue" type="Node2D" parent="CanvasLayer" unique_id=733819604]
+position = Vector2(40, 137)
+script = ExtResource("5_5kww4")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2072392325 groups=["LevelTileMap"]]
+tile_map_data = PackedByteArray("AAD//wUAAAABAAAAAAD//wcAAAABAAAAAAD//wMAAAABAAAAAAD//wIAAAABAAAAAAD//wEAAAABAAAAAAD//wQAAAABAAAAAAD//wgAAAABAAAAAAAAAAgAAAACAAUAAAABAAgAAAADAAUAAAACAAgAAAADAAUAAAADAAgAAAADAAUAAAAEAAgAAAADAAUAAAAGAAgAAAADAAUAAAAHAAgAAAADAAUAAAAIAAgAAAADAAUAAAAJAAgAAAAEAAUAAAAKAAEAAAABAAAAAAAKAAIAAAABAAAAAAAKAAMAAAABAAAAAAAKAAQAAAABAAAAAAAKAAUAAAABAAAAAAAKAAYAAAABAAAAAAAKAAcAAAABAAAAAAAKAAgAAAABAAAAAAAKAAAAAAABAAAAAAAJAAAAAAAEAAQAAAAIAAAAAAADAAQAAAAHAAAAAAADAAQAAAAGAAAAAAADAAQAAAAFAAAAAAADAAQAAAAEAAAAAAADAAQAAAADAAAAAAADAAQAAAACAAAAAAADAAQAAAABAAAAAAADAAQAAAAAAAAAAAACAAQAAAD//wAAAAABAAAAAAD//wkAAAABAAAAAAD//woAAAABAAAAAAD//wwAAAABAAAAAAD//w0AAAABAAAAAAD//w4AAAABAAAAAAD//w8AAAABAAAAAAD//xAAAAABAAAAAAD//xEAAAABAAAAAAAAAAkAAAACAAQAAAAAABEAAAACAAUAAAABAAkAAAADAAQAAAABABEAAAADAAUAAAACAAkAAAADAAQAAAACABEAAAADAAUAAAADAAkAAAADAAQAAAADABEAAAADAAUAAAAEAAkAAAADAAQAAAAEABEAAAADAAUAAAAFAAkAAAADAAQAAAAGAAkAAAADAAQAAAAGABEAAAADAAUAAAAHAAkAAAADAAQAAAAHABEAAAADAAUAAAAIAAkAAAADAAQAAAAIABEAAAADAAUAAAAJAAkAAAAEAAQAAAAJABEAAAAEAAUAAAAKAAkAAAABAAAAAAAKAAoAAAABAAAAAAAKAAsAAAABAAAAAAAKAAwAAAABAAAAAAAKAA0AAAABAAAAAAAKAA4AAAABAAAAAAAKAA8AAAABAAAAAAAKABAAAAABAAAAAAAKABEAAAABAAAAAAAFABEAAAADAAUAAAD//wYAAAABAAAAAAD//wsAAAABAAAAAAAFAAgAAAADAAUAAAAAAAcAAAABAAAAAAAAAAEAAAABAAAAAAAEAAIAAAABAAAAAAAFAAYAAAAGAAEAAAAFAAQAAAABAAAAAAADAAEAAQAAAAAAAQAEAAYAAAAGAAEAAAAFAAIAAAABAAAAAAAGAAIAAAABAAAAAAAGAAQAAAABAAAAAAADAAIAAAABAAAAAAADAAMAAAABAAAAAAADAAQAAAABAAAAAAAGAAYAAAAHAAAAAAADAAYAAAAFAAEAAAADAAUAAwAAAAAAAQAFAAUABQAAAAAAAwABAAQAAQAAAAAAAgAAAAoAAAABAAAAAAAJAAoAAAABAAAAAAAAABAAAAABAAAAAAAGAA8AAAAHAAAAAAAFAA8AAAAGAAEAAAAEAA8AAAAGAAEAAAADAA8AAAAFAAEAAAAFAA0AAAABAAAAAAAGAA0AAAABAAAAAAAGAAsAAAABAAAAAAAFAAsAAAABAAAAAAAEAAsAAAABAAAAAAADAAsAAAABAAAAAAADAAwAAAABAAAAAAADAA0AAAABAAAAAAAGABAAAQAAAAAAAwAEAA0AAQAAAAAAAwAFAAwAAQAAAAAABAAEAA4AAQAAAAAABQAGAA4AAQAAAAAABgADAA4AAwAAAAAAAgAGAAMABQAAAAAABQACAAUABQAAAAAABAAFAAEAAwAAAAAAAQAGAAEAAAAGAAYAAAAEAAcAAwAAAAAAAQAFAAcAAAAGAAYAAAAEABAAAwAAAAAAAgAFAAoAAwAAAAAAAgADABAAAAAGAAYAAAAEAAoAAAAGAAYAAAABAAoAAAABAAAAAAABAAsAAAABAAAAAAABAAwAAAABAAAAAAABAAMAAAABAAAAAAABAAIAAAABAAAAAAABAAEAAAABAAAAAAAAAAYAAgAAAAAABQAEAAMAAQAAAAAAAwAIAAMAAAABAAAAAAAJAAMAAgAAAAAAAQAJAAIAAwAAAAAAAQAIAAEAAAABAAAAAAAJAAEAAAABAAAAAAAIAAoAAAABAAAAAAAIAAwAAAABAAAAAAAJAAsAAwAAAAAAAgAIAAsAAAABAAAAAAAIAAIAAAABAAAAAAAJABAAAAABAAAAAAAJAAcAAAABAAAAAAAJAAYAAgAAAAAABQAAAAwAAQAAAAAACAAIAA8AAAAIAAAAAAABAA8AAAAJAAAAAAACAA0AAAAJAAEAAAA=")
+tile_set = SubResource("TileSet_g4v7s")
+
+[node name="Background1" type="TileMapLayer" parent="TileMapLayer" unique_id=228871251 groups=["LevelTileMap"]]
+z_index = -1
+tile_map_data = PackedByteArray("AAAAAAoAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA8AAAAAAAAAAAAAABAAAAAAAAAAAAABAAoAAAAAAAAAAAABAAsAAAAAAAAAAAABAA0AAAAAAAAAAAABAA4AAAAAAAAAAAABABAAAAAAAAAAAAACAAoAAAAAAAAAAAACAAsAAAAAAAAAAAACAAwAAAAAAAAAAAACAA4AAAAAAAAAAAACAA8AAAAAAAAAAAACABAAAAAAAAAAAAADAAoAAAAGAAMAAAADAAsAAAAAAAAAAAADAAwAAAAAAAAAAAADAA0AAAAAAAAAAAADAA4AAAAAAAAAAAADAA8AAAAAAAAAAAADABAAAAAAAAAAAAAEAAsAAAAAAAAAAAAEAAwAAAAGAAMAAAAEAA0AAAAAAAAAAAAEAA4AAAAAAAAAAAAEAA8AAAAAAAAAAAAEABAAAAAAAAAAAAAFAAoAAAAAAAAAAAAFAAwAAAAAAAAAAAAFAA0AAAAAAAAAAAAFAA4AAAAAAAAAAAAFAA8AAAAAAAAAAAAFABAAAAAGAAUAAAAGAAoAAAAGAAUAAAAGAA0AAAAAAAAAAAAGAA4AAAAAAAAAAAAGAA8AAAAAAAAAAAAGABAAAAAAAAAAAAAHAAoAAAAAAAAAAAAHAA4AAAAAAAAAAAAHAA8AAAAAAAAAAAAHABAAAAAAAAAAAAAIAAoAAAAAAAAAAAAIAAsAAAAGAAUAAAAIAA8AAAAAAAAAAAAIABAAAAAAAAAAAAAJAAoAAAAAAAAAAAAJAAsAAAAAAAAAAAAJAAwAAAAAAAAAAAAJAA4AAAAAAAAAAAAJAA8AAAAAAAAAAAAJABAAAAAAAAAAAAACAA0AAAAAAAAAAAAAAAwAAAAAAAAAAAABAAwAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAUAAAAAAAAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAADAAYAAAAAAAAAAAADAAcAAAAGAAUAAAAEAAEAAAAGAAUAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAGAAMAAAAEAAUAAAAGAAMAAAAEAAYAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAGAAMAAAAFAAQAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAcAAAAGAAMAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAcAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAGAAUAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAcAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAMAAAAGAAMAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAEAAAAAAAAAAAABAA8AAAAAAAAAAAACAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAABAAQAAAAAAAAAAAAHAA0AAAAAAAAAAAAGAAwAAAAAAAAAAAAFAAsAAAAAAAAAAAAGAAsAAAAAAAAAAAAHAAsAAAAAAAAAAAAJAAQAAAAAAAAAAAAGAAUAAAAGAAMAAAAEAAcAAAAAAAAAAAAEAAoAAAAAAAAAAAAGAAEAAAAAAAAAAAAFAAcAAAAAAAAAAAAAAAIAAAAAAAAAAAAHAAwAAAAAAAAAAAAIAAwAAAAAAAAAAAAIAA0AAAAAAAAAAAAIAA4AAAAAAAAAAAAJAA0AAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_yf5fn")
+
+[node name="Background2" type="TileMapLayer" parent="TileMapLayer" unique_id=1232005874 groups=["LevelTileMap"]]
+tile_map_data = PackedByteArray("AAD//wAAAAABAAAAAAAGAAcAAAAAAAgAAAAFAAMAAAACAAgAAAAEAAUAAAADAAgAAAAGAAUAAAAEAAgAAAAEAAQAAAAAAAgAAAADAAoAAAABAAgAAAAAAAIAAAAFAAIAAAAEAAwAAAAAAAgAAAAAAAMAAAAFAAgAAAAAAAsAAAAFAAIAAAAIAAcAAAACAAMAAAAHAAcAAAABAAMAAAACAAcAAAABAAMAAAABAAcAAAAAAAMAAAAAAAYAAAAAAAMAAAAJAAYAAAACAAMAAAAJAAUAAAACAAIAAAAJAAQAAAACAAIAAAAAAAUAAAAAAAIAAAAAAAQAAAAAAAIAAAAIAAYAAAAIAAAAAAABAAYAAAAJAAAAAAACAAYAAAACAAIAAAAIAAQAAAABAAEAAAABAAQAAAABAAEAAAADAAUAAAABAAEAAAAHAAIAAAACAAIAAAAHAAQAAAAAAAIAAAAHAAYAAAAAAAIAAAAHAAEAAAACAAEAAAACAAEAAAAAAAEAAAAHAAMAAAACAAIAAAACAAIAAAAAAAIAAAACAAMAAAAAAAIAAAACAAQAAAAJAAEAAAACAAsAAAAAAAIAAAACAAwAAAAAAAIAAAAAAA4AAAAAAAIAAAAAAA0AAAAAAAIAAAAHAA8AAAAAAAIAAAAHAA0AAAAAAAIAAAABABAAAAAAAAMAAAAAAA8AAAAAAAMAAAACABAAAAABAAMAAAAHABAAAAABAAMAAAAIABAAAAACAAMAAAAJAA8AAAACAAMAAAAJAA4AAAACAAIAAAAJAA0AAAACAAIAAAAHAAwAAAACAAIAAAAHAAsAAAACAAIAAAACAA8AAAACAAIAAAAHAAoAAAACAAEAAAAIAA0AAAABAAEAAAABAA0AAAABAAEAAAACAAoAAAAAAAEAAAADAA4AAAABAAEAAAA=")
+tile_set = SubResource("TileSet_yf5fn")
+
+[node name="Timer" type="Timer" parent="." unique_id=956596654]
+one_shot = true
+
+[node name="BlinkingEye3" parent="." unique_id=1573144750 instance=ExtResource("30_w1dop")]
+position = Vector2(8, 24)
+
+[node name="BlinkingEye5" parent="." unique_id=271704213 instance=ExtResource("30_w1dop")]
+position = Vector2(8, 120)
+
+[node name="BlinkingEye4" parent="." unique_id=2004967773 instance=ExtResource("30_w1dop")]
+position = Vector2(56, 200)
+
+[node name="BlinkingEye6" parent="." unique_id=1608148837 instance=ExtResource("29_en8h1")]
+position = Vector2(152, 168)
+
+[node name="BlinkingEye6" parent="BlinkingEye6" unique_id=1278515299 instance=ExtResource("29_en8h1")]
+position = Vector2(0, 96)
+
+[node name="BlinkingEye6" parent="BlinkingEye6/BlinkingEye6" unique_id=109811049 instance=ExtResource("29_en8h1")]
+position = Vector2(-48, -192)

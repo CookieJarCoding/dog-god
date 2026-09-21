@@ -280,4 +280,4 @@ position = Vector2(24, 264)
 position = Vector2(152, 168)
 
 [node name="BlinkingEye4" parent="." unique_id=515885358 instance=ExtResource("24_1nyj1")]
-position = Vector2(16, 192)
+position = Vector2(8, 200)
