@@ -7,7 +7,6 @@ var _dialogue_manager: DialogueManager
 
 @onready var _collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var _sprite: AnimatedSprite2D = $AnimatedSprite2D 
-@onready var _bark_indicator: Label = $Bark
 
 var _nearby_objects: Array[Interactable] = []
 var _current_interactable: Interactable = null
