@@ -3,9 +3,12 @@ extends Area2D
 ## For objects that need to keep track of collision with the Player for triggering events
 ## Optionally accepts a Sprite2D to show a "lit up" state when Player is in range
 
-
+# If the Interactable plainly triggers short one-line dialogue
+@export var dialogue: String = ""
 # If a "glowing state" sprite is available
 @export var lit_sprite: Sprite2D = null
+# If a "glowing state" animated sprite is available
+@export var lit_sprite_animated: AnimatedSprite2D = null
 
 
 func _init() -> void:
@@ -19,15 +22,13 @@ func interact() -> void:
 	pass
 
 
-func get_dialogue_manager() -> DialogueManager:
-	return get_tree().get_first_node_in_group('dialogue_manager') as DialogueManager
-
-
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		body.register_interactable(self)
 		if lit_sprite:
 			lit_sprite.show()
+		if lit_sprite_animated:
+			lit_sprite_animated.show()
 
 
 func _on_body_exited(body: Node2D) -> void:
@@ -35,3 +36,5 @@ func _on_body_exited(body: Node2D) -> void:
 		body.unregister_interactable(self)
 		if lit_sprite:
 			lit_sprite.hide()
+		if lit_sprite_animated:
+			lit_sprite_animated.hide()

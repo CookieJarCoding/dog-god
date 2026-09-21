@@ -34,6 +34,11 @@ func _process(_delta: float) -> void:
 				hide()
 
 
+# Static getter to make DialogueManager available from any node
+static func get_instance(tree: SceneTree) -> DialogueManager:
+	return tree.get_first_node_in_group('dialogue_manager') as DialogueManager
+
+
 # NOTE: Opted to call this 'load_' instead of 'show_messages'
 # NOTE: load_messages() WILL immediately show the first dialogue with this implementation.
 func load_messages(message_list: Array) -> void:
@@ -82,6 +87,7 @@ func hide() -> void:
 	await current_dialogue_instance.dialogue_ended
 	current_dialogue_instance = null
 	is_active = false
+	is_hiding = false
 	finished.emit()
 
 

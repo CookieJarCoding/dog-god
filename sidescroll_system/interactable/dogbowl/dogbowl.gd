@@ -6,36 +6,54 @@ static var has_finished_tutorial = false
 # For each Dogbowl instance, assign correct sokoban scene in the Inspector
 @export var sokoban_scene: PackedScene
 
-var is_dialogue_playing = false
-
 @onready var _sprite = $BaseSprite
+
+var _is_transitioning := false
 
 func _ready() -> void:
 	lit_sprite = $GlowSprite
-	_set_bowl_full(is_full)
+	set_bowl_full(is_full)
 
 
 func interact() -> void:
-	var dialogue_manager := get_dialogue_manager()
+	if _is_transitioning:
+		return
+
+	var dialogue_manager := DialogueManager.get_instance(get_tree())
+	if dialogue_manager == null:
+		push_error("No DialogueManager defined for this room.")
+		return
+
+	# Block interactions when dialogue is playing
+	if dialogue_manager.is_active:
+		return
+
 	if is_full:
 		if not has_finished_tutorial:
 			await _trigger_intro_dialogue(dialogue_manager)
 			has_finished_tutorial = true
 		else:
 			# Switch to eldritch world
-			$"TEMP-TeleportIndicator".show() # Animation placeholder (optional)
+			_is_transitioning = true
+			OverworldMusic.stop_human_music()
+			for body in get_overlapping_bodies():
+				body.set_physics_process(false)
+				break
+
+			await _fade_to_darkness()
 			RoomLoader.start_sokoban(sokoban_scene)
 	else:
-		dialogue_manager.load_messages([
-			"[color=#1f1f1f](My work is done here.)[/color]",
-		])
+		if RoomLoader.get_active_phase() != 0:
+			dialogue_manager.load_messages([
+				"[color=#1f1f1f](My work is done here.)[/color]",
+			])
+		else:
+			dialogue_manager.load_messages([
+				"[color=#1f1f1f](It is not the right time yet.)[/color]",
+			])
 
 
 func _trigger_intro_dialogue(dialogue: DialogueManager) -> void:
-	if dialogue == null:
-		push_error("No DialogueManager defined for this room.")
-		return
-
 	dialogue.load_messages([
 		"[color=#1f1f1f](My owner has spoiled me with fresh meat)[/color]",
 		"[color=#1f1f1f](in my food bowl.)[/color]",
@@ -57,6 +75,13 @@ func _trigger_intro_dialogue(dialogue: DialogueManager) -> void:
 	await dialogue.finished
 
 
-func _set_bowl_full(full: bool) -> void:
+func _fade_to_darkness() -> void:
+	var tween := create_tween()
+	tween.tween_property($DarknessLayer, "modulate:a", 1.0, 1.0)
+	await tween.finished
+
+
+func set_bowl_full(full: bool) -> void:
+	is_full = full
 	_sprite.frame = 0 if full else 2
 	lit_sprite.frame = 1 if full else 3

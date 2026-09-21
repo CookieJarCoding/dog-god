@@ -3,17 +3,26 @@ extends CharacterBody2D
 
 @export var speed := 75.0
 
+var _dialogue_manager: DialogueManager
+
 @onready var _collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var _sprite: AnimatedSprite2D = $AnimatedSprite2D 
-@onready var _bark_indicator: Label = $Bark
 
 var _nearby_objects: Array[Interactable] = []
 var _current_interactable: Interactable = null
 var _is_barking := false
 
+
+func _ready() -> void:
+	_dialogue_manager = DialogueManager.get_instance(get_tree())
+
+
 func _physics_process(_delta: float) -> void:
 	_handle_animation()
 	velocity = Vector2.ZERO
+	if _dialogue_manager != null and _dialogue_manager.is_active:	
+		# Disable all movement and controls when dialogue is playing
+		return
 
 	if Input.is_action_pressed("right") && not _is_barking:
 		velocity.x += 1
@@ -55,6 +64,7 @@ func get_horizontal_collision() -> Vector2:
 
 func _bark() -> void:
 	_is_barking = true
+	$Bark.play()
 	await get_tree().create_timer(0.20).timeout
 	_is_barking = false
 

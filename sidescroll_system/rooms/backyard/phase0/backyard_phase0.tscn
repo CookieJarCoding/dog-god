@@ -7,3 +7,6 @@ z_index = 1
 
 [node name="Dogbowl" parent="." unique_id=2036189083 instance=ExtResource("1_a8xup")]
 position = Vector2(232, 112)
+
+[node name="SpawnMarker" type="Marker2D" parent="." unique_id=347162211]
+position = Vector2(170, 111)

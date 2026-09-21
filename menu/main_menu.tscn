@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://dyp15uxivo52b" path="res://fonts/16bfZX.ttf" id="1_4twx3"]
 [ext_resource type="Script" uid="uid://dihp14mr82jsq" path="res://menu/menu_control.gd" id="1_v88uf"]
 [ext_resource type="Script" uid="uid://ckunywl1rl0pm" path="res://menu/debug_control.gd" id="3_nibp5"]
+[ext_resource type="AudioStream" uid="uid://bk1qywmv20ptq" path="res://sidescroll_system/ost/title.mp3" id="4_1x3cv"]
 
 [sub_resource type="Theme" id="Theme_5aqg7"]
 
@@ -228,6 +229,10 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_x4uwf")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_mc64p")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_t8tr2")
 text = "Back"
+
+[node name="MenuMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=544343265]
+stream = ExtResource("4_1x3cv")
+autoplay = true
 
 [connection signal="pressed" from="Menu/MenuContainer/Buttons/Start" to="Menu/MenuContainer/Buttons" method="_on_start_pressed"]
 [connection signal="pressed" from="Menu/MenuContainer/Buttons/Debug" to="Menu/MenuContainer/Buttons" method="_on_debug_pressed"]

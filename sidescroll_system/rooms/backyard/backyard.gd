@@ -6,3 +6,5 @@ func _ready() -> void:
 		preload("res://sidescroll_system/rooms/backyard/phase1/backyard_phase1.tscn"),	
 	]
 	super()
+	PaletteSwapper.set_palette(PaletteList.HUMAN_BASE)
+	OverworldMusic.play_human_music()

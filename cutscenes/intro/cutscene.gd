@@ -141,7 +141,5 @@ func load_dialogue() -> void:
 
 
 func _on_dialogue_manager_finished() -> void:
-	## NOTE: Change scene happens here
-	## This is just a placeholder fn
 	get_tree().call_deferred("change_scene_to_packed", backyard_scene)
 	

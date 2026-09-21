@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://02oi7giyfewt"]
+[gd_scene format=3 uid="uid://rvnrk3dvg65n"]
 
-[ext_resource type="Script" uid="uid://crebxn5vh0k4t" path="res://sidescroll_system/rooms/backyard/phase1/doggydoor.gd" id="1_f52q3"]
-[ext_resource type="Texture2D" uid="uid://du34scndhtm3f" path="res://sidescroll_system/rooms/backyard/human-test-2.png" id="2_88rby"]
+[ext_resource type="Script" uid="uid://n6tyhg61wmno" path="res://sidescroll_system/interactable/doggydoor/doggydoor.gd" id="1_2cnxj"]
+[ext_resource type="Texture2D" uid="uid://fo2esdjqht14" path="res://sidescroll_system/rooms/human_world_tileset.png" id="2_tbjpy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y00b8"]
 size = Vector2(16, 32)
 
 [node name="Doggydoor" type="Area2D" unique_id=2126403347]
-script = ExtResource("1_f52q3")
+script = ExtResource("1_2cnxj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1050062150]
 position = Vector2(0, -16)
@@ -15,7 +15,7 @@ shape = SubResource("RectangleShape2D_y00b8")
 
 [node name="BaseSprite" type="Sprite2D" parent="." unique_id=1862927457]
 position = Vector2(0, -16)
-texture = ExtResource("2_88rby")
+texture = ExtResource("2_tbjpy")
 hframes = 20
 vframes = 9
 frame = 67
@@ -23,7 +23,7 @@ frame = 67
 [node name="GlowSprite" type="Sprite2D" parent="." unique_id=1163695513]
 visible = false
 position = Vector2(0, -16)
-texture = ExtResource("2_88rby")
+texture = ExtResource("2_tbjpy")
 hframes = 20
 vframes = 9
 frame = 69
