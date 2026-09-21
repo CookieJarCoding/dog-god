@@ -9,11 +9,8 @@ func _ready() -> void:
 	main_menu.get_children()[0].grab_focus.call_deferred()
 	debug_menu.hide()
 
-func _process(delta: float) -> void:
-	pass
-
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://sidescroll_system/rooms/backyard/backyard.tscn")
+	get_tree().change_scene_to_file("res://cutscenes/intro/intro_cutscene.tscn")
 
 func _on_debug_pressed() -> void:
 	main_menu.hide()

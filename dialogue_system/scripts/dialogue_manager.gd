@@ -15,12 +15,11 @@ signal finished
 var messages := []
 var active_dialogue_index := 0
 var is_active := false
+var is_hiding := false
 var current_dialogue_instance: Dialogue
 
+@export var blip_sfx: AudioStream
 
-
-func _ready() -> void:
-	pass
 
 
 func _process(_delta: float) -> void:
@@ -56,6 +55,8 @@ func load_messages(message_list: Array) -> void:
 	add_sibling.call_deferred(dialogue)
 	
 	current_dialogue_instance = dialogue
+	if blip_sfx:
+		current_dialogue_instance.set_blip_sfx(blip_sfx)
 	
 	# WARNING: This is apparently necessary to make this work. Without it,
 	# show_current_messages() -> dialogue.update_message() internally does something 
@@ -71,9 +72,14 @@ func show_current_message() -> void:
 
 
 func hide() -> void:
+	if is_hiding:
+		return
+	
+	is_hiding = true
 	# Nice, this is being responsible with signals LOL
 	current_dialogue_instance.disconnect("message_completed", on_message_completed)
 	current_dialogue_instance.slide_down()
+	await current_dialogue_instance.dialogue_ended
 	current_dialogue_instance = null
 	is_active = false
 	finished.emit()
