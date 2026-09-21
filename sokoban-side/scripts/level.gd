@@ -100,6 +100,7 @@ func fade_to_black() -> void:
 func fade_to_white() -> void:
 	PaletteSwapper.tween_to_brightness(1.0, 0.5)
 	await get_tree().create_timer(0.5).timeout
+
 	
 func fade_to_normal() -> void:
 	PaletteSwapper.tween_to_brightness(0.0, 0.5)
@@ -113,7 +114,6 @@ func start_next_level() -> void:
 		# await fade_to_white()
 		MusicHandler.stop()
 		RoomLoader.finish_sokoban() # external code that terminates the sokoban section after the final level
-		# await fade_to_normal()
 
 	
 	else:

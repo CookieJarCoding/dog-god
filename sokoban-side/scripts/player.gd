@@ -24,9 +24,6 @@ func _input(event: InputEvent) -> void:
 		elif event.is_action_pressed("B"):
 			Level.restart()
 			return
-		elif event.is_action_pressed("Q") and OS.is_debug_build():
-			Level.start_next_level()
-			return
 		else:
 			return
 	else:
