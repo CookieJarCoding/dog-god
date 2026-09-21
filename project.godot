@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="dog-god"
-run/main_scene="uid://hum8rxcvj5wh"
+run/main_scene="uid://bg2c45ktki055"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/image="uid://dxb5idkitr0pw"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -24,7 +25,7 @@ PaletteSwapper="*uid://dmyktgkui3gwl"
 
 window/size/viewport_width=160
 window/size/viewport_height=144
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [global_group]
 
