@@ -97,17 +97,27 @@ func fade_to_black() -> void:
 	PaletteSwapper.tween_to_brightness(-1.0, 0.5)
 	await get_tree().create_timer(0.5).timeout
 	
+func fade_to_white() -> void:
+	PaletteSwapper.tween_to_brightness(1.0, 0.5)
+	await get_tree().create_timer(0.5).timeout
+	
+func fade_to_normal() -> void:
+	PaletteSwapper.tween_to_brightness(0.0, 0.5)
+	await get_tree().create_timer(0.5).timeout
+	
 func start_next_level() -> void:
 	MusicHandler.level_complete.play()
-	await fade_to_black()
 
 	
 	if lvl_data.next_level == "":
+		# await fade_to_white()
 		MusicHandler.stop()
-		RoomLoader.exit_sokoban() # external code that terminates the sokoban section after the final level
-		pass
+		RoomLoader.finish_sokoban() # external code that terminates the sokoban section after the final level
+		# await fade_to_normal()
+
 	
 	else:
+		await fade_to_black()
 		get_tree().change_scene_to_file(lvl_data.next_level)
 	
 

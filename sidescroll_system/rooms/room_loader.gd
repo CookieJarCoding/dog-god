@@ -19,11 +19,9 @@ func start_sokoban(sokoban: PackedScene) -> void:
 
 	get_tree().change_scene_to_packed(sokoban)
 
-
 func finish_sokoban() -> void:
 	_active_phase += 1
 	get_tree().change_scene_to_file(_active_room_path)
-
 
 func get_active_phase() -> int:
 	return _active_phase
