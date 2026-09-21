@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://be5rlk05h31wb" path="res://sidescroll_system/actors/oldman/oldman.gd" id="1_mnlrb"]
 [ext_resource type="Texture2D" uid="uid://dh6qo0mhpjykx" path="res://sidescroll_system/actors/oldman/peter.png" id="2_wicnq"]
+[ext_resource type="Texture2D" uid="uid://dfg70026usn4n" path="res://sidescroll_system/actors/oldman/peter-glow.png" id="3_d0h0l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmglj"]
 size = Vector2(23, 80)
@@ -28,6 +29,28 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_37tlh"]
+atlas = ExtResource("3_d0h0l")
+region = Rect2(0, 0, 34, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egefb"]
+atlas = ExtResource("3_d0h0l")
+region = Rect2(34, 0, 34, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_up8l4"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_37tlh")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_egefb")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
 [node name="Oldman" type="Area2D" unique_id=533569569]
 script = ExtResource("1_mnlrb")
 
@@ -39,5 +62,11 @@ shape = SubResource("RectangleShape2D_dmglj")
 position = Vector2(0, -40)
 sprite_frames = SubResource("SpriteFrames_torcj")
 animation = &"idle"
-frame_progress = 0.9791136
+flip_h = true
+
+[node name="GlowSprite" type="AnimatedSprite2D" parent="." unique_id=2110199459]
+visible = false
+position = Vector2(0, -40)
+sprite_frames = SubResource("SpriteFrames_up8l4")
+animation = &"idle"
 flip_h = true

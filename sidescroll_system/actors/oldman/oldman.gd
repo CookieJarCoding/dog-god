@@ -4,7 +4,10 @@ extends Interactable
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("idle")
+	$GlowSprite.play("idle")
 	$AnimatedSprite2D.flip_h = true
+	$GlowSprite.flip_h = true
+	lit_sprite_animated = $GlowSprite
 
 	
 func interact() -> void:
