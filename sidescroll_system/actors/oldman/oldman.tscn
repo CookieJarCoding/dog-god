@@ -1,10 +1,25 @@
 [gd_scene format=3 uid="uid://ccnj075abovx"]
 
-[ext_resource type="Texture2D" uid="uid://dopv36wown4ph" path="res://sidescroll_system/actors/oldman/temp-peter.png" id="1_4q5nd"]
 [ext_resource type="Script" uid="uid://be5rlk05h31wb" path="res://sidescroll_system/actors/oldman/oldman.gd" id="1_mnlrb"]
+[ext_resource type="Texture2D" uid="uid://dh6qo0mhpjykx" path="res://sidescroll_system/actors/oldman/peter.png" id="2_wicnq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmglj"]
 size = Vector2(32, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0h0l"]
+atlas = ExtResource("2_wicnq")
+region = Rect2(0, 0, 32, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_torcj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0h0l")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Oldman" type="Area2D" unique_id=533569569]
 script = ExtResource("1_mnlrb")
@@ -13,7 +28,7 @@ script = ExtResource("1_mnlrb")
 position = Vector2(0, -40)
 shape = SubResource("RectangleShape2D_dmglj")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1120787858]
-position = Vector2(7.6293945e-06, -39.999996)
-scale = Vector2(0.09726444, 0.12066366)
-texture = ExtResource("1_4q5nd")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1974634081]
+position = Vector2(0, -40)
+sprite_frames = SubResource("SpriteFrames_torcj")
+animation = &"idle"
