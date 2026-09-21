@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dh6qo0mhpjykx" path="res://sidescroll_system/actors/oldman/peter.png" id="2_wicnq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmglj"]
-size = Vector2(32, 80)
+size = Vector2(23, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wicnq"]
 atlas = ExtResource("2_wicnq")
@@ -32,7 +32,7 @@ animations = [{
 script = ExtResource("1_mnlrb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1916171360]
-position = Vector2(0, -40)
+position = Vector2(0.5, -40)
 shape = SubResource("RectangleShape2D_dmglj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1974634081]
