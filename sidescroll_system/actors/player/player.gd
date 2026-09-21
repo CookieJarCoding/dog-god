@@ -8,8 +8,8 @@ var _dialogue_manager: DialogueManager
 @onready var _collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var _sprite: AnimatedSprite2D = $AnimatedSprite2D 
 
-var _nearby_objects: Array[Interactable] = []
-var _current_interactable: Interactable = null
+var _nearby_objects: Array[SidescrollInteractable] = []
+var _current_interactable: SidescrollInteractable = null
 var _is_barking := false
 
 
@@ -40,12 +40,12 @@ func _physics_process(_delta: float) -> void:
 		_current_interactable.interact()
 
 
-func register_interactable(object: Interactable) -> void:
+func register_interactable(object: SidescrollInteractable) -> void:
 	_nearby_objects.append(object)
 	_current_interactable = _nearby_objects.back()
 
 
-func unregister_interactable(object: Interactable) -> void:
+func unregister_interactable(object: SidescrollInteractable) -> void:
 	_nearby_objects.erase(object)
 	if _nearby_objects.is_empty():
 		_current_interactable = null

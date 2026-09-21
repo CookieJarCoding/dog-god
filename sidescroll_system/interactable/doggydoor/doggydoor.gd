@@ -1,4 +1,4 @@
-extends Interactable
+extends SidescrollInteractable
 
 @onready var sprite = $BaseSprite
 

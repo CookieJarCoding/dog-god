@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var darkness: ColorRect = $DarknessLayer
-@onready var diary: Interactable = $Diary
+@onready var diary: SidescrollInteractable = $Diary
 @onready var choice_ui: Control = $Choice
 
 var _dialogue_manager: DialogueManager

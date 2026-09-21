@@ -1,4 +1,4 @@
-class_name Interactable
+class_name SidescrollInteractable
 extends Area2D
 ## For objects that need to keep track of collision with the Player for triggering events
 ## Optionally accepts a Sprite2D to show a "lit up" state when Player is in range
