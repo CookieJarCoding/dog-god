@@ -25,7 +25,7 @@ func construct_queue() -> void:
 		queue.append_array([new_sigil])
 
 		x += 1
-	
+		
 
 func _exit_tree() -> void:
 	Level.sigil_queue = null
