@@ -3,6 +3,7 @@ extends Node2D
 var _dialogue_manager: DialogueManager
 
 func _ready() -> void:
+	OverworldMusic.play_human_music()
 	_dialogue_manager = DialogueManager.get_instance(get_tree())
 	if _dialogue_manager == null:
 		push_error("No DialogueManager defined for this room.")

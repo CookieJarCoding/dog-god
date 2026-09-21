@@ -7,3 +7,4 @@ func _ready() -> void:
 	]
 	super()
 	PaletteSwapper.set_palette(PaletteList.HUMAN_BASE)
+	OverworldMusic.play_human_music()

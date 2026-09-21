@@ -35,6 +35,7 @@ func interact() -> void:
 		else:
 			# Switch to eldritch world
 			_is_transitioning = true
+			OverworldMusic.stop_human_music()
 			for body in get_overlapping_bodies():
 				body.set_physics_process(false)
 				break
