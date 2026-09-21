@@ -9,6 +9,7 @@ func _ready() -> void:
 		preload("res://sidescroll_system/rooms/attic/phase2/attic_phase2.tscn")
 	]
 	super()
+	PaletteSwapper.set_palette(PaletteList.ATTIC_DARK)
 
 func _process(_delta) -> void:
 	# Prevent player movement in the "dark" attic sequence

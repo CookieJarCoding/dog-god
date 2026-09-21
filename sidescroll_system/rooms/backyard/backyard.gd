@@ -6,3 +6,4 @@ func _ready() -> void:
 		preload("res://sidescroll_system/rooms/backyard/phase1/backyard_phase1.tscn"),	
 	]
 	super()
+	PaletteSwapper.set_palette(PaletteList.BACKYARD)
