@@ -18,6 +18,7 @@ is_full = false
 [node name="Oldman" parent="." unique_id=533569569 instance=ExtResource("4_bsgk5")]
 z_index = -1
 position = Vector2(180, 111)
+dialogue = "Dinner will be ready in a bit!"
 
 [node name="SpawnMarker" type="Marker2D" parent="." unique_id=287733259]
 position = Vector2(232, 111)
