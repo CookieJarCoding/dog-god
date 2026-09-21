@@ -7,7 +7,7 @@ var _dialogue_manager: DialogueManager
 @export var sokoban_scene: PackedScene
 
 func _ready() -> void:
-	await PaletteSwapper.tween_to_brightness(0, 2)
+	PaletteSwapper.tween_to_brightness(0, 2)
 	_dialogue_manager = DialogueManager.get_instance(get_tree())
 	if _dialogue_manager == null:
 		push_error("No DialogueManager defined for this room.")

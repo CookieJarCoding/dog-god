@@ -8,12 +8,17 @@ static var has_finished_tutorial = false
 
 @onready var _sprite = $BaseSprite
 
+var _is_transitioning := false
+
 func _ready() -> void:
 	lit_sprite = $GlowSprite
 	set_bowl_full(is_full)
 
 
 func interact() -> void:
+	if _is_transitioning:
+		return
+
 	var dialogue_manager := DialogueManager.get_instance(get_tree())
 	if dialogue_manager == null:
 		push_error("No DialogueManager defined for this room.")
@@ -29,6 +34,11 @@ func interact() -> void:
 			has_finished_tutorial = true
 		else:
 			# Switch to eldritch world
+			_is_transitioning = true
+			for body in get_overlapping_bodies():
+				body.set_physics_process(false)
+				break
+
 			await _fade_to_darkness()
 			RoomLoader.start_sokoban(sokoban_scene)
 	else:

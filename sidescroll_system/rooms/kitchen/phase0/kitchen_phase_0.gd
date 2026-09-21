@@ -7,7 +7,7 @@ var _dialogue_manager: DialogueManager
 var _is_dialogue_finished = false
 
 func _ready() -> void:
-	await PaletteSwapper.tween_to_brightness(0, 2)
+	PaletteSwapper.tween_to_brightness(0, 2)
 	oldman.get_node("AnimatedSprite2D").flip_h = false
 	oldman.get_node("GlowSprite").flip_h = false
 	_dialogue_manager = DialogueManager.get_instance(get_tree())
