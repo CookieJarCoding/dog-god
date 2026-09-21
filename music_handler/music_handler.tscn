@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://brehu4v8qno1t"]
+[gd_scene format=3 uid="uid://chcyy6pm7f4af"]
 
 [ext_resource type="Script" uid="uid://dppnp67erv15b" path="res://music_handler/music_handler.gd" id="1_mv5wf"]
 [ext_resource type="AudioStream" uid="uid://vfye8ketpk3p" path="res://SFX/sigil-collect.mp3" id="2_bketx"]

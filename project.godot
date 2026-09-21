@@ -11,21 +11,18 @@ config_version=5
 [application]
 
 config/name="dog-god"
-run/main_scene="uid://cg1s2o17vud68"
+run/main_scene="uid://hum8rxcvj5wh"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/image="uid://dxb5idkitr0pw"
 config/icon="res://music/icon.svg"
-
-[autoload]
-
-PaletteSwapper="*uid://dmyktgkui3gwl"
-MusicHandler="*uid://brehu4v8qno1t"
-Level="*uid://cc0qeiuagkodd"
 
 [autoload]
 
 RoomLoader="*uid://bvcusp4d171ca"
 PaletteSwapper="*uid://dmyktgkui3gwl"
+MusicHandler="*uid://chcyy6pm7f4af"
 OverworldMusic="*uid://35nen8svr0ag"
+Level="*uid://cc0qeiuagkodd"
 
 [display]
 

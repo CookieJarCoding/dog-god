@@ -103,7 +103,8 @@ func start_next_level() -> void:
 
 	
 	if lvl_data.next_level == "":
-		#RoomLoader.exit_sokoban() # external code that terminates the sokoban section after the final level
+		MusicHandler.stop()
+		RoomLoader.exit_sokoban() # external code that terminates the sokoban section after the final level
 		pass
 	
 	else:

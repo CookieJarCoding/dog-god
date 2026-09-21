@@ -34,4 +34,3 @@ func switch_to_dark() -> void:
 func stop() -> void:
 	light.stop()
 	dark.stop()
-
