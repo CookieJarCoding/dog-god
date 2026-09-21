@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bu5fnh7dt85i1"]
+
+[ext_resource type="Script" uid="uid://dd8wpjc6ntfbr" path="res://sidescroll_system/ending_scene/destroy_end.gd" id="1_uuxc2"]
+[ext_resource type="AudioStream" uid="uid://5wg5jh5sxklk" path="res://sidescroll_system/ending_scene/bite.wav" id="2_3tuup"]
+[ext_resource type="AudioStream" uid="uid://ccsavbbe70f87" path="res://sidescroll_system/ost/eldritch1.mp3" id="3_bfjbr"]
+
+[node name="DestroyEnd" type="Node2D" unique_id=1337686665]
+script = ExtResource("1_uuxc2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1035067503]
+offset_right = 160.0
+offset_bottom = 144.0
+color = Color(0.16078432, 0.16078432, 0.16078432, 1)
+
+[node name="Bite" type="AudioStreamPlayer2D" parent="." unique_id=1908323238]
+stream = ExtResource("2_3tuup")
+
+[node name="DestroyEndMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=959687480]
+stream = ExtResource("3_bfjbr")

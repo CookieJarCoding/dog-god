@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b7atww0li68x2"]
+
+[ext_resource type="PackedScene" uid="uid://rvnrk3dvg65n" path="res://sidescroll_system/interactable/doggydoor/doggydoor.tscn" id="1_fnxfd"]
+[ext_resource type="Script" uid="uid://rfi1uvg46hkg" path="res://sidescroll_system/rooms/backyard/phase1/backyard_phase_1.gd" id="1_qxqxy"]
+[ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://sidescroll_system/actors/oldman/oldman.tscn" id="2_vu307"]
+[ext_resource type="PackedScene" uid="uid://yelmm142vbkf" path="res://sidescroll_system/rooms/kitchen/kitchen.tscn" id="3_lep72"]
+[ext_resource type="PackedScene" uid="uid://6721d6fb36ed" path="res://sidescroll_system/interactable/dogbowl/dogbowl.tscn" id="3_mj17s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y00b8"]
+size = Vector2(1, 20)
+
+[node name="BackyardPhase1" type="Node2D" unique_id=479091806]
+script = ExtResource("1_qxqxy")
+
+[node name="Doggydoor" parent="." unique_id=2126403347 instance=ExtResource("1_fnxfd")]
+position = Vector2(24, 112)
+next_room = ExtResource("3_lep72")
+
+[node name="Oldman" parent="." unique_id=533569569 instance=ExtResource("2_vu307")]
+position = Vector2(77, 112)
+dialogue = "Come on, boy!"
+
+[node name="Dogbowl" parent="." unique_id=2036189083 instance=ExtResource("3_mj17s")]
+z_index = 1
+position = Vector2(232, 112)
+is_full = false
+
+[node name="DialogueTriggerArea" type="Area2D" parent="." unique_id=1443649931]
+position = Vector2(139, 111)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTriggerArea" unique_id=637205010]
+position = Vector2(-16, 0)
+shape = SubResource("RectangleShape2D_y00b8")
+
+[node name="SpawnMarker" type="Marker2D" parent="." unique_id=1053355718]
+position = Vector2(213, 111)
+
+[connection signal="body_entered" from="DialogueTriggerArea" to="." method="_on_dialogue_trigger_area_body_entered"]

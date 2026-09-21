@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ce6srsb2b27pc"]
+
+[ext_resource type="PackedScene" uid="uid://bb6086ts53cno" path="res://dialogue_system/dialogue_manager.tscn" id="1_np6i0"]
+
+[node name="_SAMPLEGAME" type="Node" unique_id=628078191]
+
+[node name="DialogueManager" parent="." unique_id=838245424 instance=ExtResource("1_np6i0")]

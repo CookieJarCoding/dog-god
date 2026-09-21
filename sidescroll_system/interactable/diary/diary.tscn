@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://fett8h7rdxxl"]
+
+[ext_resource type="Script" uid="uid://dgu132k8obkdi" path="res://sidescroll_system/interactable/diary/diary.gd" id="1_ekxxu"]
+[ext_resource type="Texture2D" uid="uid://fo2esdjqht14" path="res://sidescroll_system/rooms/human_world_tileset.png" id="2_spd8v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y00b8"]
+size = Vector2(16, 16)
+
+[node name="Diary" type="Area2D" unique_id=917921223]
+script = ExtResource("1_ekxxu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1363963756]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_y00b8")
+
+[node name="BaseSprite" type="Sprite2D" parent="." unique_id=17282862]
+position = Vector2(0, -8)
+texture = ExtResource("2_spd8v")
+hframes = 20
+vframes = 18
+frame = 314
+
+[node name="GlowSprite" type="Sprite2D" parent="." unique_id=1438532780]
+visible = false
+position = Vector2(0, -8)
+texture = ExtResource("2_spd8v")
+hframes = 20
+vframes = 18
+frame = 315

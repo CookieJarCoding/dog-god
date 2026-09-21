@@ -6,30 +6,18 @@
 
 extends Node
 
+signal tween_done
 
 @onready var screen_filter := $CanvasLayer/BackBufferCopy/ScreenFilter
 
 var current_palette: Palette
+var tween
 
 
-
-#func _physics_process(_delta: float) -> void:
-	#if OS.is_debug_build():
-		#print(
-			#"Brightness: ", get_current_brightness(),
-			#"; Palette: ", get_current_palette_name()
-		#)
-		#
-		#if Input.is_action_just_pressed("up"):
-			#tween_to_brightness(1.0, 1.0)
-		#if Input.is_action_just_pressed("down"):
-			#tween_to_brightness(-1.0, 1.0)
-		#if Input.is_action_just_pressed("A"):
-			#tween_to_brightness(0.0, 1.0)
-		#if Input.is_action_just_pressed("left"):
-			#set_palette(PaletteList.BASE)
-		#if Input.is_action_just_pressed("right"):
-			#set_palette(PaletteList.DOGHOUSE)
+func _ready() -> void:
+	# NOTE: Placeholder
+	set_palette(PaletteList.DOGHOUSE)
+	hide_if_missing_palettes()
 
 
 func hide_if_missing_palettes() -> void:
@@ -58,11 +46,16 @@ func set_brightness(new_brightness: float) -> void:
 
 func tween_to_brightness(new_brightness: float, duration: float) -> void:
 	new_brightness = clampf(new_brightness, -1, 1)
-	var tween = create_tween()
+	if tween:
+		return
+	
+	tween = create_tween()
 	tween.tween_property(screen_filter.material, "shader_parameter/brightness", new_brightness, duration)
 	
 	await tween.finished
+	tween_done.emit()
 	tween.kill()
+	tween = null
 
 
 
