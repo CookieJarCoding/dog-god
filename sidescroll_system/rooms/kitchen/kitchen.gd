@@ -6,4 +6,4 @@ func _ready() -> void:
 		preload("res://sidescroll_system/rooms/kitchen/phase1/kitchen_phase1.tscn"),	
 	]
 	super()
-	PaletteSwapper.set_palette(PaletteList.KITCHEN)
+	PaletteSwapper.set_palette(PaletteList.HUMAN_BASE)
