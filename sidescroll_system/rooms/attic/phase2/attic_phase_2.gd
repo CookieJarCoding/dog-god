@@ -29,8 +29,10 @@ func _ready() -> void:
 func _on_dialogue_trigger_area_body_entered(body: Node2D) -> void:
 	if _is_dialogue_finished:
 		return
+	var _player_sprite = body.get_node("AnimatedSprite2D") as AnimatedSprite2D
 	
 	body.set_physics_process(false)
+	_player_sprite.play("idle")
 	_dialogue_manager.load_messages([
 		"[color=#1f1f1f]Ah, Brioche... you caused quite a ruckus![/color]",
 		"[color=#1f1f1f]What are you doing up here?[/color]",
@@ -42,6 +44,7 @@ func _on_dialogue_trigger_area_body_entered(body: Node2D) -> void:
 		"[color=#1f1f1f]Is that my diary, boy?[/color]",
 	])
 	await _dialogue_manager.finished
+	_player_sprite.flip_h = true
 
 	# Delay for dramatic effect
 	await get_tree().create_timer(1).timeout
