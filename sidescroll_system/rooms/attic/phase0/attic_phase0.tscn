@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d3mxryaa45sna"]
 
 [ext_resource type="Script" uid="uid://bdqjf6kht6ydq" path="res://sidescroll_system/rooms/attic/phase0/attic_phase_0.gd" id="1_iha6u"]
-[ext_resource type="PackedScene" uid="uid://qlfkhjkcexmh" path="res://sidescroll_system/rooms/PLACEHOLDER_eldritchworld.tscn" id="2_wapun"]
+[ext_resource type="PackedScene" uid="uid://doflqpadog0ci" path="res://sokoban-side/levels/3-attic/3-1.tscn" id="2_wapun"]
 
 [node name="AtticPhase0" type="Node2D" unique_id=2104888004]
 z_index = 3
