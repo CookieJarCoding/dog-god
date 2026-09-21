@@ -12,17 +12,20 @@ func _exit_tree() -> void:
 	Level.player = null
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("up"):
-		direction = (Vector2i.UP)
-	elif event.is_action_pressed("down"):
-		direction = (Vector2i.DOWN)
-	elif event.is_action_pressed("left"):
-		direction = (Vector2i.LEFT)
-	elif event.is_action_pressed("right"):
-		direction = (Vector2i.RIGHT)
-	elif event.is_action_pressed("Q"):
-		Level.restart()
-		return
+	if not Level.if_win():
+		if event.is_action_pressed("up"):
+			direction = (Vector2i.UP)
+		elif event.is_action_pressed("down"):
+			direction = (Vector2i.DOWN)
+		elif event.is_action_pressed("left"):
+			direction = (Vector2i.LEFT)
+		elif event.is_action_pressed("right"):
+			direction = (Vector2i.RIGHT)
+		elif event.is_action_pressed("Q"):
+			Level.restart()
+			return
+		else:
+			return
 	else:
 		return
 
