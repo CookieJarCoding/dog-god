@@ -1,7 +1,7 @@
 extends Dialogue
 class_name Cutscene
 
-const backyard_scene := preload("res://sidescroll_system/world/humanworld.tscn")
+const backyard_scene := preload("res://sidescroll_system/rooms/backyard/backyard.tscn")
 const images := [
 	preload("res://cutscenes/intro/gfx/cutscene-cg-1.png"),
 	preload("res://cutscenes/intro/gfx/cutscene-cg-2.png")

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="dog-god"
-run/main_scene="uid://bg2c45ktki055"
+run/main_scene="uid://hum8rxcvj5wh"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/image="uid://dxb5idkitr0pw"
 config/icon="res://icon.svg"
