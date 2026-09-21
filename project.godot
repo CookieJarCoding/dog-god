@@ -18,9 +18,10 @@ config/icon="res://music/icon.svg"
 
 [autoload]
 
-RoomLoader="*uid://bvcusp4d171ca"
-PaletteSwapper="*uid://dmyktgkui3gwl"
 MusicHandler="*uid://chcyy6pm7f4af"
+PaletteSwapper="*uid://dmyktgkui3gwl"
+Level="*uid://cc0qeiuagkodd"
+RoomLoader="*uid://bvcusp4d171ca"
 OverworldMusic="*uid://35nen8svr0ag"
 Level="*uid://cc0qeiuagkodd"
 
