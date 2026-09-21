@@ -11,7 +11,7 @@ func _enter_tree() -> void:
 	
 	palette = PaletteList.KITCHEN
 	palette_dark = PaletteList.ATTIC_DARK
-	next_level = "res://sokoban-side/levels/3-attic/3-1.tscn"
+	next_level = ""
 	
 	Level.lvl_data = self
 	

@@ -13,7 +13,7 @@ func _enter_tree() -> void:
 	
 	palette = PaletteList.ATTIC_DARK
 	palette_dark = PaletteList.ATTIC
-	next_level = "res://sokoban-side/levels/3-attic/dummy.tscn"
+	next_level = ""
 	
 	Level.lvl_data = self
 	
