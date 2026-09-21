@@ -4,22 +4,20 @@ extends VBoxContainer
 @onready var debug_menu: VBoxContainer = $"../DebugButtons"
 @onready var focus_mark: Label = $/root/BaseControl/FocusMark
 
+var credits = preload("res://menu/credits.tscn")
+
 func _ready() -> void:
 	get_viewport().gui_focus_changed.connect(_on_button_focus_changed)
 	main_menu.get_children()[0].grab_focus.call_deferred()
-	debug_menu.hide()
-	PaletteSwapper.set_palette(PaletteList.DOGHOUSE)
+	PaletteSwapper.set_palette(PaletteList.ATTIC)
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://cutscenes/intro/intro_cutscene.tscn")
 
-func _on_debug_pressed() -> void:
-	main_menu.hide()
-	debug_menu.show()
-	debug_menu.get_children()[0].grab_focus.call_deferred()
-
 func _on_credits_pressed() -> void:
-	print("Credits")
+	var instance = credits.instantiate()
+	get_tree().current_scene.add_child(instance)
+	
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()

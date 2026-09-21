@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://d4nwf06kvl8jb"]
+
+[ext_resource type="Script" uid="uid://wsue6h76thxk" path="res://menu/credits.gd" id="1_nidem"]
+[ext_resource type="FontFile" uid="uid://dyp15uxivo52b" path="res://fonts/16bfZX.ttf" id="2_x2hwc"]
+
+[node name="Credits" type="Control" unique_id=1844884464]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nidem")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1702715658]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 144.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=517713491]
+layout_mode = 0
+offset_top = 116.0
+offset_right = 160.0
+offset_bottom = 645.0
+theme_override_fonts/font = ExtResource("2_x2hwc")
+text = "CREDITS
+
+DIRECTOR
+Kiwi
+
+ARTISTS
+Kiwi
+Cassie
+Michelle
+Omi
+
+PROGRAMMERS
+Randolf
+Jelly
+Gab
+Michelle
+
+GAME DESIGNERS
+Kiwi
+Cassie
+Gab
+
+WRITERS
+Kip
+
+SOUND DESIGNERS
+Apollo
+Jet
+
+Special thanks
+Amanda
+Jensen
+Caitlin
+Lance
+Igo
+
+Made for GBJAM 14
+with theme \"OLD GOLD\""
+horizontal_alignment = 1

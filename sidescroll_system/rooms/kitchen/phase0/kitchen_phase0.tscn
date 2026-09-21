@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://6721d6fb36ed" path="res://sidescroll_system/interactable/dogbowl/dogbowl.tscn" id="1_n6t3w"]
 [ext_resource type="Script" uid="uid://cg7kasgfrv5en" path="res://sidescroll_system/rooms/kitchen/phase0/kitchen_phase_0.gd" id="1_vvaut"]
+[ext_resource type="PackedScene" uid="uid://clkf446obp2fl" path="res://sokoban-side/levels/2-kitchen/kitchen_level_1.tscn" id="3_vvaut"]
 [ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://sidescroll_system/actors/oldman/oldman.tscn" id="4_bsgk5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y00b8"]
@@ -14,6 +15,7 @@ script = ExtResource("1_vvaut")
 [node name="Dogbowl" parent="." unique_id=2036189083 instance=ExtResource("1_n6t3w")]
 position = Vector2(203, 112)
 is_full = false
+sokoban_scene = ExtResource("3_vvaut")
 
 [node name="Oldman" parent="." unique_id=533569569 instance=ExtResource("4_bsgk5")]
 z_index = -1
