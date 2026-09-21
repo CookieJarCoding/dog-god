@@ -23,7 +23,7 @@ func interact() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body is Player:
+	if body is SidescrollPlayer:
 		body.register_interactable(self)
 		if lit_sprite:
 			lit_sprite.show()
@@ -32,7 +32,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_body_exited(body: Node2D) -> void:
-	if body is Player:
+	if body is SidescrollPlayer:
 		body.unregister_interactable(self)
 		if lit_sprite:
 			lit_sprite.hide()

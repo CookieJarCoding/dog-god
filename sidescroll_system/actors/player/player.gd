@@ -1,4 +1,4 @@
-class_name Player
+class_name SidescrollPlayer
 extends CharacterBody2D
 
 @export var speed := 75.0
