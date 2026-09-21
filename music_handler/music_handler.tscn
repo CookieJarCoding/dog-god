@@ -23,3 +23,15 @@ volume_db = -13.0
 [node name="LevelComplete" type="AudioStreamPlayer" parent="." unique_id=634226576]
 stream = ExtResource("4_73xg7")
 volume_db = -13.0
+
+[node name="BriocheBark" type="AudioStreamPlayer" parent="." unique_id=1925671112]
+stream = ExtResource("4_73xg7")
+volume_db = -13.0
+
+[node name="BriocheBlip" type="AudioStreamPlayer" parent="." unique_id=16836776]
+stream = ExtResource("4_73xg7")
+volume_db = -13.0
+
+[node name="PitaBlip" type="AudioStreamPlayer" parent="." unique_id=1914181077]
+stream = ExtResource("4_73xg7")
+volume_db = -13.0

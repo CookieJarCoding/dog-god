@@ -3,10 +3,13 @@ extends Node2D
 @onready var light = $BaseMusic
 @onready var dark = $DarkMusic
 
-# SOKOBAN SFX
+# SFX
 @onready var sigil_collect = $SigilCollect
 @onready var sigil_paper = $SigilPaper
 @onready var level_complete = $LevelComplete
+@onready var brioche_bark = $BriocheBark
+@onready var brioche_blip = $BriocheBlip
+@onready var pita_blip = $PitaBlip
 
 func _ready() -> void:
 	light.volume_db = 0
