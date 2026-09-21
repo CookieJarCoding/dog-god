@@ -1,15 +1,15 @@
 extends Control
 
-@onready var _attack_pita_label = $AttackPita
+@onready var _destroy_world_label = $DestroyWorld
 @onready var _read_diary_label = $ReadDiary
 
 
-func _on_attack_pita_area_body_entered(body: Node2D) -> void:
-	_set_choice_active(_attack_pita_label)
+func _on_destroy_world_area_body_entered(body: Node2D) -> void:
+	_set_choice_active(_destroy_world_label)
 
 
-func _on_attack_pita_area_body_exited(body: Node2D) -> void:
-	_set_choice_inactive(_attack_pita_label)
+func _on_destroy_world_area_body_exited(body: Node2D) -> void:
+	_set_choice_inactive(_destroy_world_label)
 
 
 func _on_read_diary_area_body_entered(body: Node2D) -> void:

@@ -59,9 +59,9 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("5_w5m5b")
 
-[node name="AttackPitaArea" type="Area2D" parent="Choice" unique_id=538614957]
+[node name="DestroyWorldArea" type="Area2D" parent="Choice" unique_id=538614957]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Choice/AttackPitaArea" unique_id=2084747901]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Choice/DestroyWorldArea" unique_id=2084747901]
 position = Vector2(62, 102)
 shape = SubResource("RectangleShape2D_y00b8")
 
@@ -72,30 +72,30 @@ position = Vector2(103, 65)
 position = Vector2(17, 37)
 shape = SubResource("RectangleShape2D_dmglj")
 
-[node name="AttackPita" type="Label" parent="Choice" unique_id=2131497742]
+[node name="DestroyWorld" type="Label" parent="Choice" unique_id=2131497742]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 65.0
-offset_right = 48.0
-offset_bottom = 88.0
-text = "Attack
-Pita"
+offset_left = 4.0
+offset_top = 61.0
+offset_right = 49.0
+offset_bottom = 84.0
+text = "Destroy
+world"
 label_settings = SubResource("LabelSettings_qu2bh")
 horizontal_alignment = 1
 
 [node name="ReadDiary" type="Label" parent="Choice" unique_id=717563928]
 layout_mode = 0
 offset_left = 103.0
-offset_top = 65.0
+offset_top = 61.0
 offset_right = 137.0
-offset_bottom = 88.0
+offset_bottom = 84.0
 text = "Read
 diary"
 label_settings = SubResource("LabelSettings_mbhhb")
 horizontal_alignment = 1
 
 [connection signal="body_entered" from="DialogueTriggerArea" to="." method="_on_dialogue_trigger_area_body_entered"]
-[connection signal="body_entered" from="Choice/AttackPitaArea" to="Choice" method="_on_attack_pita_area_body_entered"]
-[connection signal="body_exited" from="Choice/AttackPitaArea" to="Choice" method="_on_attack_pita_area_body_exited"]
+[connection signal="body_entered" from="Choice/DestroyWorldArea" to="Choice" method="_on_destroy_world_area_body_entered"]
+[connection signal="body_exited" from="Choice/DestroyWorldArea" to="Choice" method="_on_destroy_world_area_body_exited"]
 [connection signal="body_entered" from="Choice/ReadDiaryArea" to="Choice" method="_on_read_diary_area_body_entered"]
 [connection signal="body_exited" from="Choice/ReadDiaryArea" to="Choice" method="_on_read_diary_area_body_exited"]
