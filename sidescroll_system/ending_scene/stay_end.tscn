@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://bw2quya54ubp7"]
 
-[node name="StayEnd" type="Node2D" unique_id=1494377601]
+[ext_resource type="Script" uid="uid://00ldu1iakqfb" path="res://sidescroll_system/ending_scene/stay_end.gd" id="1_isfhv"]
 
-[node name="Label" type="Label" parent="." unique_id=133884046]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "good end"
+[node name="StayEnd" type="Node2D" unique_id=1494377601]
+script = ExtResource("1_isfhv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1318277735]
+offset_right = 160.0
+offset_bottom = 144.0
+color = Color(0.7882353, 0.7882353, 0.7882353, 1)

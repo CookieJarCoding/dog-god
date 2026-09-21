@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://bu5fnh7dt85i1"]
 
-[node name="DestroyEnd" type="Node2D" unique_id=1337686665]
+[ext_resource type="Script" uid="uid://dd8wpjc6ntfbr" path="res://sidescroll_system/ending_scene/destroy_end.gd" id="1_uuxc2"]
 
-[node name="Label" type="Label" parent="." unique_id=227248055]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "bad end"
+[node name="DestroyEnd" type="Node2D" unique_id=1337686665]
+script = ExtResource("1_uuxc2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1035067503]
+offset_right = 160.0
+offset_bottom = 144.0
+color = Color(0.16078432, 0.16078432, 0.16078432, 1)
