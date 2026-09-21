@@ -1,4 +1,4 @@
-extends Interactable
+extends SidescrollInteractable
 
 static var has_finished_tutorial = false
 

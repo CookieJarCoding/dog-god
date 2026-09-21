@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var dogbowl := $Dogbowl
-@onready var oldman: Interactable = $Oldman
+@onready var oldman: SidescrollInteractable = $Oldman
 
 var _dialogue_manager: DialogueManager
 var _is_dialogue_finished = false
