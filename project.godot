@@ -25,7 +25,7 @@ Level="*uid://cc0qeiuagkodd"
 
 window/size/viewport_width=160
 window/size/viewport_height=144
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [global_group]
 
