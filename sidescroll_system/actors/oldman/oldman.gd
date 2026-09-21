@@ -1,9 +1,12 @@
 extends Interactable
 
-func _ready() -> void:
-	$AnimatedSprite2D.play("idle")
 @onready var _dialogue_manager := DialogueManager.get_instance(get_tree())
 
+
+func _ready() -> void:
+	$AnimatedSprite2D.play("idle")
+
+	
 func interact() -> void:
 	if dialogue:
 		if _dialogue_manager == null:

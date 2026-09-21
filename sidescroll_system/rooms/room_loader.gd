@@ -13,10 +13,10 @@ func start_sokoban(sokoban: PackedScene) -> void:
 	if not is_instance_valid(sokoban):
 		push_error("Invalid sokoban scene.")
 		return
-	
+
 	# Save path to current room for returning from sokoban
 	_active_room_path = get_tree().current_scene.scene_file_path
-	
+
 	get_tree().change_scene_to_packed(sokoban)
 
 
