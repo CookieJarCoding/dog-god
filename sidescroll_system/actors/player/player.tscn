@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://rnkovfv5112e" path="res://sidescroll_system/actors/player/brioche.png" id="2_12cir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbhhb"]
-size = Vector2(48, 32)
+size = Vector2(42, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ngfx4"]
 atlas = ExtResource("2_12cir")
@@ -85,7 +85,7 @@ script = ExtResource("1_rkbax")
 speed = 60.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2062403349]
-position = Vector2(0, -16)
+position = Vector2(-3, -16)
 shape = SubResource("RectangleShape2D_mbhhb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1546726595]
