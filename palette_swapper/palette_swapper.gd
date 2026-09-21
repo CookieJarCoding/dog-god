@@ -16,7 +16,7 @@ var tween
 
 func _ready() -> void:
 	# NOTE: Placeholder
-	set_palette(PaletteList.DOGHOUSE)
+	set_palette(PaletteList.HUMAN_BASE)
 	hide_if_missing_palettes()
 
 
