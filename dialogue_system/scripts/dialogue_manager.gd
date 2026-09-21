@@ -87,6 +87,7 @@ func hide() -> void:
 	await current_dialogue_instance.dialogue_ended
 	current_dialogue_instance = null
 	is_active = false
+	is_hiding = false
 	finished.emit()
 
 
