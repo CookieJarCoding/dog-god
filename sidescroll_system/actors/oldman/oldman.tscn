@@ -40,3 +40,4 @@ position = Vector2(0, -40)
 sprite_frames = SubResource("SpriteFrames_torcj")
 animation = &"idle"
 frame_progress = 0.9791136
+flip_h = true

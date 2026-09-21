@@ -1,11 +1,13 @@
 extends Node2D
 
 @onready var dogbowl := $Dogbowl
+@onready var oldman_sprite := $Oldman/AnimatedSprite2D
 
 var _dialogue_manager: DialogueManager
 var _is_dialogue_finished = false
 
 func _ready() -> void:
+	oldman_sprite.flip_h = false
 	_dialogue_manager = DialogueManager.get_instance(get_tree())
 	if _dialogue_manager == null:
 		push_error("No DialogueManager defined for this room.")
@@ -53,6 +55,7 @@ func _on_dialogue_trigger_area_body_entered(_body: Node2D) -> void:
 	])
 	await _dialogue_manager.finished
 	_is_dialogue_finished = true
+	oldman_sprite.flip_h = true
 	dogbowl.set_bowl_full(true)
 	await get_tree().create_timer(1).timeout
 	_dialogue_manager.load_messages([
