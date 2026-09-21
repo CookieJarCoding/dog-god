@@ -17,4 +17,5 @@ func interact() -> void:
 		return
 	# Special case for Attic
 	if RoomLoader.get_active_phase() == 2:
+		await PaletteSwapper.tween_to_brightness(-1.0, 3.0)
 		get_tree().change_scene_to_file("res://sidescroll_system/ending_scene/destroy_end.tscn")
