@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ch8xp82dcj3ei"]
+
+[ext_resource type="Script" uid="uid://ch0t6diqafwjd" path="res://sokoban-side/objects/blinking_eye.gd" id="1_sh8iv"]
+[ext_resource type="Texture2D" uid="uid://bukjq6nye8uis" path="res://sokoban-side/sprites/final/eye-wall-sheet-2.png" id="3_xt4lx"]
+[ext_resource type="Texture2D" uid="uid://d3eq2rpukavi4" path="res://sokoban-side/sprites/final/eye-wall-sheet-3.png" id="4_smlsk"]
+[ext_resource type="Texture2D" uid="uid://djnbf6tup81pc" path="res://sokoban-side/sprites/final/eye-wall-sheet-4.png" id="5_c5r81"]
+
+[node name="BlinkingEye" type="Node2D" unique_id=1573144750]
+script = ExtResource("1_sh8iv")
+
+[node name="EyeWallSheet2" type="Sprite2D" parent="." unique_id=1660214317]
+visible = false
+position = Vector2(24, -16)
+texture = ExtResource("3_xt4lx")
+
+[node name="EyeWallSheet1" type="Sprite2D" parent="." unique_id=983029417]
+texture = ExtResource("4_smlsk")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="EyeWallSheet4" type="Sprite2D" parent="." unique_id=1206894656]
+visible = false
+position = Vector2(24, 31)
+texture = ExtResource("5_c5r81")

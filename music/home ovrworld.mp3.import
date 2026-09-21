@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxn37tq1vq7dp"
+path="res://.godot/imported/home ovrworld.mp3-2eb6d7e82969bd26992109616b2e46d9.mp3str"
+
+[deps]
+
+source_file="res://music/home ovrworld.mp3"
+dest_files=["res://.godot/imported/home ovrworld.mp3-2eb6d7e82969bd26992109616b2e46d9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

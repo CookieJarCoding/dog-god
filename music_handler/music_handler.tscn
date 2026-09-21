@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://chcyy6pm7f4af"]
+[gd_scene format=3 uid="uid://brehu4v8qno1t"]
 
-[ext_resource type="Script" path="res://music_handler/music_handler.gd" id="1_mv5wf"]
-[ext_resource type="AudioStream" path="res://SFX/sigil-collect.mp3" id="2_bketx"]
-[ext_resource type="AudioStream" path="res://SFX/sigil-paper.mp3" id="3_6y2so"]
-[ext_resource type="AudioStream" path="res://SFX/level complete - 1789916821298.mp3" id="4_73xg7"]
+[ext_resource type="Script" uid="uid://dppnp67erv15b" path="res://music_handler/music_handler.gd" id="1_mv5wf"]
+[ext_resource type="AudioStream" uid="uid://vfye8ketpk3p" path="res://SFX/sigil-collect.mp3" id="2_bketx"]
+[ext_resource type="AudioStream" uid="uid://dh0vja7mt5ody" path="res://SFX/sigil-paper.mp3" id="3_6y2so"]
+[ext_resource type="AudioStream" uid="uid://cui6v2pe3xc2j" path="res://SFX/level complete - 1789916821298.mp3" id="4_73xg7"]
 
 [node name="MusicHandler" type="Node2D" unique_id=754875647]
 script = ExtResource("1_mv5wf")

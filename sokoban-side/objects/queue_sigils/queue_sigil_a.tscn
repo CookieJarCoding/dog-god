@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b8o2le4hbs3up"]
+
+[ext_resource type="Script" uid="uid://bdj0hxpc661ab" path="res://sokoban-side/scripts/queue_sigils/queue_sigil_a.gd" id="1_3gcyh"]
+[ext_resource type="Texture2D" uid="uid://hwool50hewpt" path="res://sokoban-side/sprites/eldritch-test-1.png" id="1_je7ee"]
+
+[node name="QueueSigilA" type="Node2D" unique_id=2077213951]
+script = ExtResource("1_3gcyh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=25786807]
+texture = ExtResource("1_je7ee")
+region_enabled = true
+region_rect = Rect2(80, 80, 16, 16)
+
+[node name="SigilSymbol" type="Sprite2D" parent="." unique_id=1595846068]
+texture = ExtResource("1_je7ee")
+region_enabled = true
+region_rect = Rect2(0, 96, 16, 16)
