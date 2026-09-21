@@ -21,8 +21,11 @@ func _input(event: InputEvent) -> void:
 			direction = (Vector2i.LEFT)
 		elif event.is_action_pressed("right"):
 			direction = (Vector2i.RIGHT)
-		elif event.is_action_pressed("Q"):
+		elif event.is_action_pressed("B"):
 			Level.restart()
+			return
+		elif event.is_action_pressed("Q") and OS.is_debug_build():
+			Level.start_next_level()
 			return
 		else:
 			return
