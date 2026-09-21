@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://blpjp8ds6dx1i" path="res://sidescroll_system/rooms/attic/attic.tscn" id="2_p7p1w"]
 [ext_resource type="PackedScene" uid="uid://6721d6fb36ed" path="res://sidescroll_system/interactable/dogbowl/dogbowl.tscn" id="3_e4hi6"]
 [ext_resource type="PackedScene" uid="uid://ccnj075abovx" path="res://sidescroll_system/actors/oldman/oldman.tscn" id="4_vlcig"]
+[ext_resource type="AudioStream" uid="uid://rnnmskmbkifr" path="res://sidescroll_system/actors/player/brioche-bark.wav" id="6_h2fmu"]
 
 [node name="KitchenPhase1" type="Node2D" unique_id=1643179626]
 script = ExtResource("1_vlcig")
@@ -24,3 +25,6 @@ dialogue = "Time for bed!"
 
 [node name="SpawnMarker" type="Marker2D" parent="." unique_id=1579946933]
 position = Vector2(221, 111)
+
+[node name="Boof" type="AudioStreamPlayer" parent="." unique_id=1414839778]
+stream = ExtResource("6_h2fmu")

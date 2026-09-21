@@ -9,7 +9,8 @@ func _ready() -> void:
 	if _dialogue_manager == null:
 		push_error("No DialogueManager defined for this room.")
 		return
-
+	
+	$BooksDrop.play()
 	_dialogue_manager.load_messages([
 		"[color=#1f1f1f]Brioche accidentally knocks over a few[/color]",
 		"[color=#1f1f1f]books, making a loud noise.[/color]",

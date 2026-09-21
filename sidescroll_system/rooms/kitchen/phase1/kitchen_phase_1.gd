@@ -7,7 +7,7 @@ func _ready() -> void:
 	if _dialogue_manager == null:
 		push_error("No DialogueManager defined for this room.")
 		return
-
+	
 	_dialogue_manager.load_messages([
 		"[color=#1f1f1f]My, my, Brioche![/color]",
 		"[color=#1f1f1f]You basically inhaled your food! Hehe.[/color]",
@@ -18,9 +18,20 @@ func _ready() -> void:
 		"[color=#1f1f1f]Hey, hey, no. The bowl stays. You can't eat that.[/color]",
 		"[color=#1f1f1f]Pita chuckles.[/color]",
 		"[color=#1f1f1f]Brioche rolls her eyes.[/color]",
+	])
+	await _dialogue_manager.finished
+	$Boof.play()
+	_dialogue_manager.load_messages([
 		"[color=#1f1f1f]Boof![/color]",
+	])
+	await _dialogue_manager.finished
+	_dialogue_manager.load_messages([
 		"[color=#1f1f1f]Pita yawns.[/color]",
 		"[color=#1f1f1f]C'mon boy, let's hit the sack, whaddouyou think?[/color]",
+	])
+	await _dialogue_manager.finished
+	$Boof.play()
+	_dialogue_manager.load_messages([
 		"[color=#1f1f1f]Boof.[/color]",
 		"[color=#1f1f1f](Alas, I could not consume more of this)[/color]",
 		"[color=#1f1f1f](portal. Nevertheless, it is still activated.)[/color]",

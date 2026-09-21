@@ -22,6 +22,7 @@ func load_dialogue() -> void:
 	# Delay for dramatic effect
 	await get_tree().create_timer(1.0).timeout
 
+	$Bite.play()
 	dialogue_manager.load_messages([
 		"[color=#1F1F1F]Brioche lunges at Pita, biting down hard[/color]",
 		"[color=#1F1F1F]on his stomach, causing him to writhe[/color]",
