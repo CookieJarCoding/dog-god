@@ -51,7 +51,7 @@ func pop_first_at_queue() -> void:
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_CUBIC)
 	
-	tween.tween_property(queue[0], "position", Vector2(0, 16), 0.5)
+	tween.tween_property(queue[0], "position", Vector2(0, 16), 0.3)
 	
 	queue.pop_front()
 	
@@ -81,5 +81,5 @@ func add_sigil_at_front(s: Level.Sigil) -> void:
 	add_child(new_sigil)
 	queue.push_front(new_sigil)
 	
-	tween.tween_property(new_sigil, "position", Vector2(0, 0), 0.5)
+	tween.tween_property(new_sigil, "position", Vector2(0, 0), 0.3)
 	
