@@ -1,10 +1,84 @@
 [gd_scene format=3 uid="uid://dy20fqfm7y308"]
 
 [ext_resource type="Script" uid="uid://d2unxotvw3tin" path="res://sidescroll_system/actors/player/player.gd" id="1_rkbax"]
-[ext_resource type="Texture2D" uid="uid://cu0tocvqxc7sn" path="res://sidescroll_system/actors/player/temp-brioche-2.png" id="2_12cir"]
+[ext_resource type="Texture2D" uid="uid://rnkovfv5112e" path="res://sidescroll_system/actors/player/brioche.png" id="2_12cir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbhhb"]
-size = Vector2(32, 32)
+size = Vector2(48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngfx4"]
+atlas = ExtResource("2_12cir")
+region = Rect2(48, 64, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsxi8"]
+atlas = ExtResource("2_12cir")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv7gv"]
+atlas = ExtResource("2_12cir")
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m35hn"]
+atlas = ExtResource("2_12cir")
+region = Rect2(48, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbg1d"]
+atlas = ExtResource("2_12cir")
+region = Rect2(96, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78gec"]
+atlas = ExtResource("2_12cir")
+region = Rect2(144, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojhdf"]
+atlas = ExtResource("2_12cir")
+region = Rect2(192, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pf6e"]
+atlas = ExtResource("2_12cir")
+region = Rect2(240, 32, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_torcj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngfx4")
+}],
+"loop": 1,
+"name": &"bark",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsxi8")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_fv7gv")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_m35hn")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_mbg1d")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_78gec")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_ojhdf")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_5pf6e")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pcyuw"]
 font_size = 8
@@ -16,10 +90,10 @@ script = ExtResource("1_rkbax")
 position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_mbhhb")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2024771709]
-position = Vector2(1.3709068e-06, -16.011112)
-scale = Vector2(0.13617022, 0.12946469)
-texture = ExtResource("2_12cir")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1546726595]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_torcj")
+animation = &"walk"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=92072074]
 offset = Vector2(0, -39)
