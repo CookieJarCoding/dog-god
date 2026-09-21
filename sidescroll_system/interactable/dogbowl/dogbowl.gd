@@ -29,7 +29,7 @@ func interact() -> void:
 			has_finished_tutorial = true
 		else:
 			# Switch to eldritch world
-			$"TEMP-TeleportIndicator".show() # Animation placeholder (optional)
+			await _fade_to_darkness()
 			RoomLoader.start_sokoban(sokoban_scene)
 	else:
 		if RoomLoader.get_active_phase() != 0:
@@ -62,6 +62,12 @@ func _trigger_intro_dialogue(dialogue: DialogueManager) -> void:
 		"[tornado radius=1.0 freq=2.0][color=#1f1f1f](perhaps a passage into one.)[/color][/tornado]"
 	])
 	await dialogue.finished
+
+
+func _fade_to_darkness() -> void:
+	var tween := create_tween()
+	tween.tween_property($DarknessLayer, "modulate:a", 1.0, 1.0)
+	await tween.finished
 
 
 func set_bowl_full(full: bool) -> void:
