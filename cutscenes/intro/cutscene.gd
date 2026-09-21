@@ -61,6 +61,9 @@ func _ready() -> void:
 	RenderingServer.set_default_clear_color(Color("#1f1f1f"))
 	PaletteSwapper.set_palette(PaletteList.ATTIC)
 
+func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("start"):
+		_on_dialogue_manager_finished()
 
 func stop_text_scrolling() -> void:
 	is_fully_visible = false

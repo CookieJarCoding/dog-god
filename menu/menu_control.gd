@@ -1,10 +1,9 @@
 extends VBoxContainer
 
 @onready var main_menu: VBoxContainer = self
-@onready var debug_menu: VBoxContainer = $"../DebugButtons"
 @onready var focus_mark: Label = $/root/BaseControl/FocusMark
 
-var credits = preload("res://menu/credits.tscn")
+var credits := preload("res://menu/credits.tscn")
 
 func _ready() -> void:
 	get_viewport().gui_focus_changed.connect(_on_button_focus_changed)
@@ -15,9 +14,11 @@ func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://cutscenes/intro/intro_cutscene.tscn")
 
 func _on_credits_pressed() -> void:
-	var instance = credits.instantiate()
+	get_viewport().gui_disable_input = true
+	var instance := credits.instantiate()
 	get_tree().current_scene.add_child(instance)
-	
+	await instance.tree_exited
+	get_viewport().gui_disable_input = false
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
